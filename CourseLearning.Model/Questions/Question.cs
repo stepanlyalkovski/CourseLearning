@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ORM.Questions
+namespace CourseLearning.Model.Questions
 {
     public class Question
     {

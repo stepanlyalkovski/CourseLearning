@@ -1,4 +1,4 @@
-﻿namespace ORM.Questions
+﻿namespace CourseLearning.Model.Questions
 {
     public class QuestionControl
     {

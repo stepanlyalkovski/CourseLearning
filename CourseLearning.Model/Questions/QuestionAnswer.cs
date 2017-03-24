@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using ORM.Lessons;
+using CourseLearning.Model.Lessons;
 
-namespace ORM.Questions
+namespace CourseLearning.Model.Questions
 {
     public class QuestionAnswer
     {

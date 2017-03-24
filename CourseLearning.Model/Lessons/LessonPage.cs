@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using ORM.ContentStorage;
-using ORM.Questions;
+using CourseLearning.Model.ContentStorage;
+using CourseLearning.Model.Questions;
 
-namespace ORM.Lessons
+namespace CourseLearning.Model.Lessons
 {
     public class LessonPage
     {

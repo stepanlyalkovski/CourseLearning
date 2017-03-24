@@ -15,7 +15,7 @@ namespace ORM
                 //Database.SetInitializer(new DropCreateDatabaseAlways<CourseDbContext>());
         }
 
-        public CourseDbContext() : base("ConsoleDb")
+        public CourseDbContext() : base("ConsoleApp")
         {
             
         }

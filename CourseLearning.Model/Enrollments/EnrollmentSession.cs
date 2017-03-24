@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using ORM.Courses;
+using CourseLearning.Model.Courses;
 
-namespace ORM.Enrollments
+namespace CourseLearning.Model.Enrollments
 {
     public class EnrollmentSession
     {
