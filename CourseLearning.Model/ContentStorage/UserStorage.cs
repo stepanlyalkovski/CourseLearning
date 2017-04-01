@@ -4,7 +4,6 @@ namespace CourseLearning.Model.ContentStorage
 {
     public class UserStorage
     {
-        [ForeignKey("User")]
         public int UserStorageId { get; set; }
 
         public virtual User User { get; set; }

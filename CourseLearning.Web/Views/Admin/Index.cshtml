@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/angular.route")
+    @Scripts.Render("~/bundles/angular.ui-router")
+
+    @Scripts.Render("~/bundles/adminApp")
+    @Scripts.Render("~/bundles/sharedApp")
+</head>
+<body ng-app="app">
+    <div data-ui-view></div>
+</body>
+</html>

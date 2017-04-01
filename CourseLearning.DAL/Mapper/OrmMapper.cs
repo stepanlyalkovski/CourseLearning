@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace CourseLearning.Model.Mapper
+namespace CourseLearning.DAL.Mapper
 {
     public static class OrmMapper
     {
@@ -15,8 +15,11 @@ namespace CourseLearning.Model.Mapper
 
         private static void ConfigureMapper(IMapperConfigurationExpression config)
         {
-            config.CreateMap<CourseLearning.Model.User, ORM.User>();
+            config.CreateMap<CourseLearning.Model.User, ORM.User>();//.ForMember(m => m.EnrollmentSessions, opt => opt.Ignore());
+            config.CreateMap<CourseLearning.Model.ContentStorage.UserStorage, ORM.ContentStorage.UserStorage>();
             config.CreateMap<CourseLearning.Model.Courses.Course, ORM.Courses.Course>();
+
+            config.CreateMap<CourseLearning.Model.Enrollments.EnrollmentSession, ORM.Enrollments.EnrollmentSession>();
         }
     }
 

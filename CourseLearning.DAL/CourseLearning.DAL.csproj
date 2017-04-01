@@ -55,8 +55,13 @@
   <ItemGroup>
     <Compile Include="BaseRepository.cs" />
     <Compile Include="CourseRepository.cs" />
+    <Compile Include="IRepositoryFactory.cs" />
+    <Compile Include="Mapper\DalMapper.cs" />
     <Compile Include="Mapper\OrmMapper.cs" />
+    <Compile Include="Mapper\TestMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CourseLearning.DAL.Interface\CourseLearning.DAL.Interface.csproj">

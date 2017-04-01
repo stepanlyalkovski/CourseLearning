@@ -1,17 +1,22 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using ORM.ContentStorage;
 using ORM.Enrollments;
 
 namespace ORM
 {
-    public class User
+    public class User : DbEntity
     {
-        public int UserId { get; set; }
+        [Key]
+        [Column("UserId")]
+        public override int Id { get; set; }
 
         public string Name { get; set; }
 
-        public virtual IList<EnrollmentSession> EnrollmentSessions { get; set; }
+        public IList<EnrollmentSession> EnrollmentSessions { get; set; }
 
-        public virtual UserStorage UserStorage { get; set; }
+        public UserStorage UserStorage { get; set; }
+
     }
 }

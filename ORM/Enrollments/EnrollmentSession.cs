@@ -11,10 +11,10 @@ namespace ORM.Enrollments
 
         public int CourseSessionId { get; set; }
 
-        public virtual CourseSession CourseSession { get; set; }
+        //public virtual CourseSession CourseSession { get; set; }
 
         public virtual User User { get; set; }
 
-        public virtual IList<EnrollmentSessionModule> EnrollmentSessionModules { get; set; }
+        //public virtual IList<EnrollmentSessionModule> EnrollmentSessionModules { get; set; }
     }
 }

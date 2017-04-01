@@ -12,10 +12,10 @@ namespace ORM
     {
         static CourseDbContext()
         {
-                //Database.SetInitializer(new DropCreateDatabaseAlways<CourseDbContext>());
+                Database.SetInitializer(new CourseDbInitializer());
         }
 
-        public CourseDbContext() : base("ConsoleApp")
+        public CourseDbContext() : base("CourseDb")
         {
             
         }

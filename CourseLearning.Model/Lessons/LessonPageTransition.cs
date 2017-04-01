@@ -6,7 +6,6 @@
 
         public LessonPage StartLessonPage { get; set; }
 
-        [ForeignKey("StartLessonPage")]
         public int StartPageId { get; set; }
 
         public int EndPageId { get; set; }

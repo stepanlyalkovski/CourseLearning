@@ -8,7 +8,6 @@ namespace CourseLearning.Model.Enrollments
 
         public EnrollmentSessionLesson EnrollmentSessionLesson { get; set; }
 
-        [ForeignKey("EnrollmentSessionLesson")]
         public int EnrollmentSessionLessonId { get; set; }
 
         public LessonPage LessonPage { get; set; }

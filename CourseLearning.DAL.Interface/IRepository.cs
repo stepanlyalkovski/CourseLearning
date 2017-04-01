@@ -9,12 +9,14 @@ namespace CourseLearning.DAL.Interface
 {
     public interface IRepository<TEntity>  where TEntity : class
     {
-        TEntity Find(int id);
+        Task<TEntity> Find(int id);
 
         void Add(TEntity entity);
 
         void Update(TEntity entity);
 
         void Delete(TEntity entity);
+
+        int GetLastId();
     }
 }

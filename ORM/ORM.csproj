@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Article.cs" />
+    <Compile Include="CourseDbInitializer.cs" />
     <Compile Include="Courses\Course.cs" />
     <Compile Include="CourseDbContext.cs" />
     <Compile Include="Courses\CourseSession.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Enrollments\EnrollmentSessionArticle.cs" />
     <Compile Include="Enrollments\EnrollmentSessionModule.cs" />
     <Compile Include="Enrollments\EnrollmentSessionQuiz.cs" />
+    <Compile Include="IDbEntity.cs" />
     <Compile Include="Label.cs" />
     <Compile Include="Enrollments\EnrollmentSessionLesson.cs" />
     <Compile Include="Enrollments\EnrollmentSessionLessonPage.cs" />

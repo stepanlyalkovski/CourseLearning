@@ -8,7 +8,6 @@
 
         public int QuizId { get; set; }
 
-        [Column("SeqNum")]
         public int SequenceNumber { get; set; }
 
         public virtual Question Question { get; set; }

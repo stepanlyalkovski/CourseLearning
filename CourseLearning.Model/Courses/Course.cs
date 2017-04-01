@@ -8,6 +8,8 @@ namespace CourseLearning.Model.Courses
 
         public string Name { get; set; }
 
+        public string Description { get; set; }
+
         public IList<Label> Labels { get; set; }
 
         public IList<Module> Modules { get; set; }

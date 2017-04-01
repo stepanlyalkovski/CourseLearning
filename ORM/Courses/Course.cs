@@ -4,21 +4,27 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ORM.Courses
 {
-    public class Course
+    public class Course : DbEntity
     {
-        public int CourseId { get; set; }
+        [Key]
+        [Column("CourseId")]
+        public override int Id { get; set; }
 
         [Index("CourseIndex", IsUnique = true)]
         [MaxLength(50)]
         public string Name { get; set; }
 
+        public string Description { get; set; }
+
         public IList<Label> Labels { get; set; }
 
-        public virtual IList<Module> Modules { get; set; }
-        
+        public IList<Module> Modules { get; set; }
+
         public int CreatorId { get; set; }
 
         [ForeignKey("CreatorId")]
-        public virtual User Creator { get; set; }
+        public User Creator { get; set; }
+
+
     }
 }

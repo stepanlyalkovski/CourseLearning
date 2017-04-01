@@ -1,34 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CourseLearning.DAL.Interface;
+using CourseLearning.DAL.Mapper;
 using CourseLearning.Model;
-using CourseLearning.Model.Mapper;
+using ORM;
 
 namespace CourseLearning.DAL
 {
-    public abstract class BaseRepository<TDalEntity, TOrmEntity> where TOrmEntity : class, IRepository<TDalEntity> where TDalEntity : BaseEntity
+    public abstract class BaseRepository<TDalEntity, TOrmEntity> : IRepository<TDalEntity> where TDalEntity : class where TOrmEntity : DbEntity
     {
-        protected readonly DbContext Context;
+        public readonly DbContext Context;
+        private TOrmEntity lastAddedEntity;
 
-        public BaseRepository(DbContext context)
+        protected BaseRepository(DbContext context)
         {
             Context = context;
         }
 
-        public virtual TDalEntity Find(int id)
+        public virtual async Task<TDalEntity> Find(int id)
         {
-            throw new NotImplementedException();
-          // return Context.Set<TOrmEntity>().Find(id);
+            var ormModel = await Context.Set<TOrmEntity>().FindAsync(id);
+            return ToDalModel(ormModel);
         }
 
         public virtual void Add(TDalEntity entity)
         {
             var ormModel = ToOrmModel(entity);
             Context.Entry(ormModel).State = EntityState.Added;
+            lastAddedEntity = ormModel;
         }
 
         public virtual void Update(TDalEntity entity)
@@ -43,9 +47,19 @@ namespace CourseLearning.DAL
             Context.Entry(ormModel).State = EntityState.Deleted;
         }
 
-        protected TOrmEntity ToOrmModel(TDalEntity dalModel)
+        public int GetLastId()
+        {
+            return lastAddedEntity.Id;
+        }
+
+        protected virtual TOrmEntity ToOrmModel(TDalEntity dalModel)
         {
             return OrmMapper.Mapper.Map<TDalEntity, TOrmEntity>(dalModel);
+        }
+
+        protected virtual TDalEntity ToDalModel(TOrmEntity ormModel)
+        {
+            return DalMapper.Mapper.Map<TOrmEntity, TDalEntity>(ormModel);
         }
     }
 }
