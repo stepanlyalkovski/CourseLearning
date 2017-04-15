@@ -6,11 +6,11 @@
 
         public int QuizId { get; set; }
 
-        public virtual Quiz Quiz { get; set; }
+        public Quiz Quiz { get; set; }
 
         public int EnrollmentSessionModuleId { get; set; }
 
-        public virtual EnrollmentSessionModule EnrollmentSessionModule { get; set; }
+        public EnrollmentSessionModule EnrollmentSessionModule { get; set; }
 
         public bool IsCompleted { get; set; }
     }

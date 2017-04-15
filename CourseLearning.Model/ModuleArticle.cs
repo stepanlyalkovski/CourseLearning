@@ -3,7 +3,7 @@
     public class ModuleArticle
     {
         public int ModuleArticleId { get; set; }
-        public virtual Module Module { get; set; }
-        public virtual Article Article { get; set; }
+        public Module Module { get; set; }
+        public Article Article { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using CourseLearning.Model.Lessons;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using CourseLearning.Model.Lessons;
 
 namespace CourseLearning.Model.Enrollments
 {
@@ -8,6 +9,7 @@ namespace CourseLearning.Model.Enrollments
 
         public EnrollmentSessionLesson EnrollmentSessionLesson { get; set; }
 
+        [ForeignKey("EnrollmentSessionLesson")]
         public int EnrollmentSessionLessonId { get; set; }
 
         public LessonPage LessonPage { get; set; }

@@ -1,4 +1,6 @@
-﻿namespace CourseLearning.Model.Lessons
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace CourseLearning.Model.Lessons
 {
     public class LessonPageTransition
     {
@@ -6,6 +8,7 @@
 
         public LessonPage StartLessonPage { get; set; }
 
+        [ForeignKey("StartLessonPage")]
         public int StartPageId { get; set; }
 
         public int EndPageId { get; set; }

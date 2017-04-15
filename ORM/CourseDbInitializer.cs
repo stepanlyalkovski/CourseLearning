@@ -1,5 +1,7 @@
-﻿using System.Data.Entity;
-using ORM.ContentStorage;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
+using CourseLearning.Model;
+using CourseLearning.Model.ContentStorage;
 
 namespace ORM
 {
@@ -7,7 +9,15 @@ namespace ORM
     {
         protected override void Seed(CourseDbContext db)
         {
-            User testuser = new User { Name = "testuser", UserStorage = new UserStorage { Name = "test user storage" } };
+            StorageFolder mainFolder = new StorageFolder { Name = "Main", IsDefaultFolder = true };
+            UserStorage storage = new UserStorage
+            {
+                Name = "test user storage",
+                StorageFolders = new List<StorageFolder> { mainFolder }
+            };
+
+            User testuser = new User { Name = "testuser", UserStorage = storage };
+            
             db.Users.Add(testuser);
             db.SaveChanges();
             base.InitializeDatabase(db);

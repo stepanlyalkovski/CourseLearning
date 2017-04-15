@@ -5,13 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CourseLearning.Application.Interface;
+using CourseLearning.Application.Mapper;
 using CourseLearning.DAL.Interface;
-using CourseLearning.Model;
 using CourseLearning.Model.Courses;
+using CourseLearning.Model.DTO;
+using User = CourseLearning.Model.User;
 
 namespace CourseLearning.Application
 {
-    public class CourseService : ICourseService
+    public class CourseService : BaseEntityService<Course, CourseDTO>, ICourseService
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -26,31 +28,39 @@ namespace CourseLearning.Application
             return 999;
         }
 
-        public async Task<int> Add(Course course)
+        public async Task<IList<CourseDTO>> GetUserCreatedCoursesAsync(int userId)
         {
+            var courses = await _unitOfWork.Courses.GetUserCreateCoursesAsync(userId);
+            return ToEntitiesDTO(courses);
+        }
+
+        public async Task<int> Add(CourseDTO courseDTO)
+        {            
             var tempUser = await Temp_InserUserAsync();
             if (tempUser == null)
             {
                 throw new OperationCanceledException("user doesn't exist in database");
             }
 
+            var course = ToEntity(courseDTO);
             course.CreatorId = tempUser.UserId;       
             _unitOfWork.Courses.Add(course);
-            await _unitOfWork.Complete();
-            return _unitOfWork.Courses.GetLastId();
+            await _unitOfWork.CompleteAsync();
+            return course.CourseId;
         }
 
-        public async Task<Course> Get(int id)
+        public async Task<CourseDTO> Get(int id)
         {
-            return await _unitOfWork.Courses.Find(id);
+            var course = await _unitOfWork.Courses.FindAsync(id);
+            return ToEntityDTO(course);
         }
 
-        public Task Delete(Course entity)
+        public Task Delete(CourseDTO entity)
         {
             throw new NotImplementedException();
         }
 
-        public Task Update(Course entity)
+        public Task Update(CourseDTO entity)
         {
             throw new NotImplementedException();
         }

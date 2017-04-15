@@ -15,6 +15,6 @@ namespace CourseLearning.Model
 
         public StorageFolder StorageFolder { get; set; }
 
-        public virtual IList<Module> Modules { get; set; }
+        public IList<Module> Modules { get; set; }
     }
 }

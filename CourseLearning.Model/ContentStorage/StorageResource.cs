@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using CourseLearning.Model.Lessons;
 
 namespace CourseLearning.Model.ContentStorage
@@ -7,8 +8,9 @@ namespace CourseLearning.Model.ContentStorage
     {
         public int StorageResourceId { get; set; }
 
-        public virtual StorageFolder StorageFolder { get; set; }
+        public StorageFolder StorageFolder { get; set; }
 
+        [ForeignKey("StorageFolder")]
         public int StorageFolderId { get; set; }
 
         public string MimeType { get; set; }

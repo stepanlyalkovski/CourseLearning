@@ -1,0 +1,7 @@
+﻿<h2>Courses</h2>
+<div ng-repeat="x in courseListCtrl.courses" class="list-group" >
+    <a ui-sref="admin.course({id: x.courseId})" class="list-group-item">
+        <h3 class="list-group-item-heading">{{::x.name}}</h3>
+        <p class="list-group-item-text">{{::x.description}}</p>
+    </a>
+</div>

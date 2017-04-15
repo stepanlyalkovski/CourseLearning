@@ -1,4 +1,6 @@
-﻿namespace CourseLearning.Model.Questions
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace CourseLearning.Model.Questions
 {
     public class QuizQuestion
     {
@@ -8,10 +10,11 @@
 
         public int QuizId { get; set; }
 
+        [Column("SeqNum")]
         public int SequenceNumber { get; set; }
 
-        public virtual Question Question { get; set; }
+        public Question Question { get; set; }
       
-        public virtual Quiz Quiz { get; set; }
+        public Quiz Quiz { get; set; }
     }
 }

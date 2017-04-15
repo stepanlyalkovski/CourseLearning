@@ -9,7 +9,7 @@ namespace CourseLearning.Model.Questions
 
         public bool IsRightAnswered { get; set; }
 
-        public virtual Question Question { get; set; }
+        public Question Question { get; set; }
 
         public int QuestionId { get; set; }
 
@@ -21,6 +21,6 @@ namespace CourseLearning.Model.Questions
 
         public Lesson Lesson { get; set; }
 
-        public virtual IList<QuestionControlAnswer> QuestionControlAnswerList { get; set; }
+        public IList<QuestionControlAnswer> QuestionControlAnswerList { get; set; }
     }
 }

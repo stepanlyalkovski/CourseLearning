@@ -14,14 +14,14 @@ namespace CourseLearning.Model.Enrollments
 
         public int EnrollmentSessionId { get; set; }
 
-        public virtual EnrollmentSession EnrollmentSession { get; set; }
+        public EnrollmentSession EnrollmentSession { get; set; }
 
-        public virtual Module Module { get; set; }
+        public Module Module { get; set; }
 
-        public virtual IList<EnrollmentSessionArticle> EnrollmentSessionArticles { get; set; }
+        public IList<EnrollmentSessionArticle> EnrollmentSessionArticles { get; set; }
 
-        public virtual IList<EnrollmentSessionQuiz> EnrollmentSessionQuizzes { get; set; }
+        public IList<EnrollmentSessionQuiz> EnrollmentSessionQuizzes { get; set; }
 
-        public virtual IList<EnrollmentSessionLesson> EnrollmentSessionLessons { get; set; }
+        public IList<EnrollmentSessionLesson> EnrollmentSessionLessons { get; set; }
     }
 }

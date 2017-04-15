@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using CourseLearning.Model.Courses;
 using CourseLearning.Model.Lessons;
 
@@ -12,12 +13,12 @@ namespace CourseLearning.Model
 
         public string Description { get; set; }
 
-        public virtual Course Course { get; set; }
+        public Course Course { get; set; }
 
-        public virtual IList<Article> Articles { get; set; }
+        public IList<Article> Articles { get; set; }
 
-        public virtual IList<Quiz> Quizzes { get; set; }
+        public IList<Quiz> Quizzes { get; set; }
 
-        public virtual IList<Lesson> Lessons { get; set; }
+        public IList<Lesson> Lessons { get; set; }
     }
 }

@@ -3,7 +3,8 @@
 
     angular.module('app', [
         'ngRoute',
-        'ui.router'
+        'ui.router',
+        'ngResource'
     ])
         .config(config);
 
@@ -25,12 +26,18 @@
                 templateUrl: '/App/test/test.html',
                 controller: 'testCtrl as testC'
             })
-            .state('admin.course',
+            .state('admin.courseList',
             {
                 url: '/course',
-                templateUrl: '/App/admin/demo/course.html',
-                controller: 'courseCtrl as courseCtrl'
-            });
+                templateUrl: '/App/admin/course/courseList/courseList.html',
+                controller: 'courseListCtrl as courseListCtrl'
+            })
+            .state('admin.course',
+                {
+                    url: '/course/:id',
+                    templateUrl: '/App/admin/course/course.html',
+                    controller: 'courseCtrl as courseCtrl'
+                });
 
         $urlRouterProvider.otherwise('admin/test');
         //$routeProvider

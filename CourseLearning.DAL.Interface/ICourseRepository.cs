@@ -9,6 +9,6 @@ namespace CourseLearning.DAL.Interface
 {
     public interface ICourseRepository : IRepository<Course>
     {
-
+        Task<IList<Course>> GetUserCreateCoursesAsync(int userId);
     }
 }

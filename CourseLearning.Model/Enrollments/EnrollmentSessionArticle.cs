@@ -8,10 +8,10 @@
 
         public int ArticleId { get; set; }
 
-        public virtual Article Article { get; set; }
+        public Article Article { get; set; }
 
         public int EnrollmentSessionModuleId { get; set; }
 
-        public virtual EnrollmentSessionModule EnrollmentSessionModule { get; set; }
+        public EnrollmentSessionModule EnrollmentSessionModule { get; set; }
     }
 }

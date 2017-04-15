@@ -12,6 +12,18 @@ namespace CourseLearning.DAL
 
         public ICourseRepository Courses { get; }
 
+        public IModuleRepository Modules { get; }
+
+        public IArticleRepository Articles { get; }
+
+        public IStorageFolderRepository StorageFolders { get; }
+
+        public IResourceRepository Resources { get; }
+
+        public IQuizRepository Quizzes { get; }
+
+        public IQuestionRepository Questions { get; }
+
         public IUserRepository Users { get; }
 
         public UnitOfWork(DbContext context, IRepositoryFactory repositoryFactory)
@@ -21,15 +33,15 @@ namespace CourseLearning.DAL
 
             Courses = repositoryFactory.CreateCourseRepository(context);
             Users = repositoryFactory.CreateUserRepository(context);
+            Modules = repositoryFactory.CreateModuleRepository(context);
+            Articles = repositoryFactory.CreateArticleRepository(context);
+            StorageFolders = repositoryFactory.CreateStorageFolderRepository(context);
+            Resources = repositoryFactory.CreateResourceRepository(context);
+            Quizzes = repositoryFactory.CreateQuizRepository(context);
+            Questions = repositoryFactory.CreateQuestionRepository(context);
         }
 
-        private void InitializeRepositories(IRepositoryFactory repositoryFactory)
-        {
-            //Courses = repositoryFactory.CreateCourseRepository(_context);
-        }
-
-
-        public Task<int> Complete()
+        public Task<int> CompleteAsync()
         {
             return _context.SaveChangesAsync();
         }

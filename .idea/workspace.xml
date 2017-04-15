@@ -2,21 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3b05a3-45a8-445c-98b3-cd203457b798" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Application/BaseService.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.DAL/Mapper/DalMapper.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.DAL/Mapper/OrmMapper.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.DAL/Mapper/TestMapper.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Model/BaseEntity.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Model/BaseOrmEntity.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Article.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/ContentStorage/StorageFolder.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/ContentStorage/StorageResource.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/ContentStorage/UserStorage.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Courses/Course.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Courses/CourseSession.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSession.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSessionArticle.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSessionLesson.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSessionLessonPage.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSessionModule.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSessionQuiz.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/IDbEntity.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Label.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Lessons/Lesson.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Lessons/LessonPage.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Lessons/LessonPageTransition.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Lessons/LessonPageTransitionType.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/ModuleArticle.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Modulle.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Questions/Question.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Questions/QuestionAnswer.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Questions/QuestionControl.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Questions/QuestionControlAnswer.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Questions/QuestionControlType.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Questions/QuizQuestion.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Quiz.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/User.cs" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application.Interface/CourseLearning.Application.Interface.csproj" afterPath="$PROJECT_DIR$/CourseLearning.Application.Interface/CourseLearning.Application.Interface.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application.Interface/ICourseService.cs" afterPath="$PROJECT_DIR$/CourseLearning.Application.Interface/ICourseService.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application/CourseLearning.Application.csproj" afterPath="$PROJECT_DIR$/CourseLearning.Application/CourseLearning.Application.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application/CourseService.cs" afterPath="$PROJECT_DIR$/CourseLearning.Application/CourseService.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL.Interface/CourseLearning.DAL.Interface.csproj" afterPath="$PROJECT_DIR$/CourseLearning.DAL.Interface/CourseLearning.DAL.Interface.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL.Interface/IRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL.Interface/IRepository.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL.Interface/IUnitOfWork.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL.Interface/IUnitOfWork.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/BaseRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/BaseRepository.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/CourseLearning.DAL.csproj" afterPath="$PROJECT_DIR$/CourseLearning.DAL/CourseLearning.DAL.csproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/CourseRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/CourseRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/Mapper/OrmMapper.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/Mapper/OrmMapper.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/BaseEntity.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/BaseEntity.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/IRepositoryFactory.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/IRepositoryFactory.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/UnitOfWork.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/UnitOfWork.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/UserRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/UserRepository.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DependencyResolver/Resolverconfig.cs" afterPath="$PROJECT_DIR$/CourseLearning.DependencyResolver/Resolverconfig.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Article.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Article.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/ContentStorage/StorageFolder.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/ContentStorage/StorageFolder.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/ContentStorage/StorageResource.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/ContentStorage/StorageResource.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/ContentStorage/UserStorage.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/ContentStorage/UserStorage.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/CourseLearning.Model.csproj" afterPath="$PROJECT_DIR$/CourseLearning.Model/CourseLearning.Model.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Courses/Course.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Courses/Course.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Courses/CourseSession.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Courses/CourseSession.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSession.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSession.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionArticle.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionArticle.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionLesson.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionLesson.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionLessonPage.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionLessonPage.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionModule.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionModule.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionQuiz.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionQuiz.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Lessons/Lesson.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Lessons/Lesson.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Lessons/LessonPage.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Lessons/LessonPage.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Lessons/LessonPageTransition.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Lessons/LessonPageTransition.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/ModuleArticle.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/ModuleArticle.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Modulle.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Modulle.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Questions/Question.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Questions/Question.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuestionAnswer.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuestionAnswer.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuestionControlAnswer.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuestionControlAnswer.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuizQuestion.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuizQuestion.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Quiz.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Quiz.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/User.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/User.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/packages.config" afterPath="$PROJECT_DIR$/CourseLearning.Model/packages.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/AdminControllers/CourseController.cs" afterPath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/AdminControllers/CourseController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/TestController.cs" afterPath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/TestController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.WebAPI/CourseLearning.WebAPI.csproj" afterPath="$PROJECT_DIR$/CourseLearning.WebAPI/CourseLearning.WebAPI.csproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.sln" afterPath="$PROJECT_DIR$/CourseLearning.sln" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ORM/Courses/Course.cs" afterPath="$PROJECT_DIR$/ORM/Courses/Course.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSession.cs" afterPath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSession.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ORM/User.cs" afterPath="$PROJECT_DIR$/ORM/User.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ORM/CourseDbContext.cs" afterPath="$PROJECT_DIR$/ORM/CourseDbContext.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ORM/CourseDbInitializer.cs" afterPath="$PROJECT_DIR$/ORM/CourseDbInitializer.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ORM/ORM.csproj" afterPath="$PROJECT_DIR$/ORM/ORM.csproj" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,28 +98,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="appClient.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CourseLearning.Web/App/appClient.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.cshtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CourseLearning.Web/Views/Home/Index.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,8 +118,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="284" />
-    <option name="y" value="281" />
+    <option name="x" value="269" />
+    <option name="y" value="109" />
     <option name="width" value="1400" />
     <option name="height" value="844" />
   </component>
@@ -94,6 +138,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,14 +248,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="D:/opt_soft/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -223,32 +267,33 @@
       <option name="presentableId" value="Default" />
       <updated>1490543491924</updated>
       <workItem from="1490543493200" duration="3273000" />
+      <workItem from="1491853530283" duration="168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3273000" />
+    <option name="totallyTimeSpent" value="3441000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="284" y="281" width="1400" height="844" extended-state="0" />
+    <frame x="269" y="109" width="1400" height="844" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24944974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24944974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,11 +307,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CourseLearning.Web/App/testCtrl.js">
+    <entry file="file://$PROJECT_DIR$/CourseLearning.Web/App/appClient.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1490647960008" expanded="true" signature="783:905" ph="{...}" />
+            <marker date="1490647960008" expanded="true" signature="783:788" ph="{&quot;templateUrl&quot;: '/App/test/test.html'...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -278,10 +326,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CourseLearning.Web/App/testCtrl.js" />
     <entry file="file://$PROJECT_DIR$/CourseLearning.Web/App/appClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        <state relative-caret-position="510">
+          <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+          <folding>
+            <marker date="1490647960008" expanded="true" signature="783:905" ph="{...}" />
+            <marker date="1490647960008" expanded="true" signature="783:788" ph="{&quot;templateUrl&quot;: '/App/test/test.html'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CourseLearning.Web/Views/Home/Index.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="37" column="19" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
           <folding />
         </state>
       </provider>

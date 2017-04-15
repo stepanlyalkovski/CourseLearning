@@ -12,16 +12,16 @@ namespace CourseLearning.Model.Lessons
 
         public string MainText { get; set; }
 
-        public virtual Lesson Lesson { get; set; }
+        public Lesson Lesson { get; set; }
 
         public int?  QuestionId { get; set; }
         
-        public virtual Question Question { get; set; }
+        public Question Question { get; set; }
 
-        public virtual IList<StorageResource> StorageResources { get; set; }
+        public IList<StorageResource> StorageResources { get; set; }
 
-        public virtual LessonPageTransitionType LessonPageTransitionType { get; set; }
+        public LessonPageTransitionType LessonPageTransitionType { get; set; }
 
-        public virtual IList<LessonPageTransition> LessonPageTransitions { get; set; }
+        public IList<LessonPageTransition> LessonPageTransitions { get; set; }
     }
 }

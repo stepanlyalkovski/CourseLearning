@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using CourseLearning.Model.ContentStorage;
 using CourseLearning.Model.Enrollments;
 
@@ -10,8 +12,9 @@ namespace CourseLearning.Model
 
         public string Name { get; set; }
 
-        public virtual IList<EnrollmentSession> EnrollmentSessions { get; set; }
+        public IList<EnrollmentSession> EnrollmentSessions { get; set; }
 
-        public virtual UserStorage UserStorage { get; set; }
+        public UserStorage UserStorage { get; set; }
+
     }
 }

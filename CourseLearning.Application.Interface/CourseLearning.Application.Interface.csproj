@@ -40,12 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IArticleService.cs" />
     <Compile Include="ICourseService.cs" />
     <Compile Include="IEntityService.cs" />
+    <Compile Include="IModuleService.cs" />
+    <Compile Include="IQuestionService.cs" />
+    <Compile Include="IQuizService.cs" />
+    <Compile Include="IStorageFolderService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CourseLearning.Model.DTO\CourseLearning.Model.DTO.csproj">
+      <Project>{40c75ac0-a150-435e-9f3d-cc4426ebcda0}</Project>
+      <Name>CourseLearning.Model.DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CourseLearning.Model\CourseLearning.Model.csproj">
       <Project>{add25456-d448-4fe8-92b1-4ef974b30fbb}</Project>
       <Name>CourseLearning.Model</Name>

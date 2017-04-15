@@ -14,6 +14,6 @@ namespace CourseLearning.Model.Questions
 
         public IList<Label> Labels { get; set; }
 
-        public virtual IList<QuestionControl> QuestionControlList { get; set; }
+        public IList<QuestionControl> QuestionControlList { get; set; }
     }
 }

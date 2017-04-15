@@ -18,8 +18,12 @@ namespace CourseLearning.Web
             bundles.Add(new ScriptBundle("~/bundles/angular.ui-router").Include(
                         "~/Scripts/angular-ui-router.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular.resource").Include(
+                        "~/Scripts/angular-resource.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/sharedApp")
                 .IncludeDirectory("~/App/config", "*.js", true)
+                .IncludeDirectory("~/App/shared", "*.js", true)
                 .IncludeDirectory("~/App/test", "*.js", true));
 
             bundles.Add(new ScriptBundle("~/bundles/clientApp")

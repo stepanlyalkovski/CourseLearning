@@ -12,6 +12,18 @@ namespace CourseLearning.DAL.Interface
 
         IUserRepository Users { get; }
 
-        Task<int> Complete();
+        IModuleRepository Modules { get; }
+
+        IArticleRepository Articles { get; }
+
+        IStorageFolderRepository StorageFolders { get; }
+
+        IResourceRepository Resources { get; }
+
+        IQuizRepository Quizzes { get; }
+
+        IQuestionRepository Questions { get; }
+
+        Task<int> CompleteAsync();
     }
 }

@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Configuration\CourseLearningConfiguration.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -128,13 +129,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\admin\course\course.html" />
+    <Content Include="App\admin\course\course.js" />
+    <Content Include="App\admin\course\courseListCtrl.js" />
+    <Content Include="App\admin\course\courseList\courseList.html" />
+    <Content Include="App\admin\course\courseList\courseListCtrl.js" />
     <Content Include="App\admin\demo\course.html" />
-    <Content Include="App\admin\demo\courseCtrl.js" />
+    <Content Include="App\admin\demo\courseListCtrl.js" />
+    <Content Include="App\admin\resources\factory.js" />
+    <Content Include="App\admin\services\courseSvc.js" />
     <Content Include="App\admin\_master\masterCtrl.js" />
     <Content Include="App\admin\_master\_master.html" />
     <Content Include="App\appAdmin.js" />
     <Content Include="App\appClient.js" />
-    <Content Include="App\config\factory.js" />
+    <Content Include="App\config\app.config.js" />
+    <Content Include="App\shared\helpers\apiUrlsBuilderSvc.js" />
     <Content Include="App\test\mainCtrl.js" />
     <Content Include="App\test\test.html" />
     <Content Include="App\test\testCtrl.js" />
@@ -947,6 +956,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App\shared\services\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>

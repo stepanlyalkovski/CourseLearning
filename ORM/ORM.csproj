@@ -49,41 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Article.cs" />
     <Compile Include="CourseDbInitializer.cs" />
-    <Compile Include="Courses\Course.cs" />
     <Compile Include="CourseDbContext.cs" />
-    <Compile Include="Courses\CourseSession.cs" />
-    <Compile Include="Enrollments\EnrollmentSession.cs" />
-    <Compile Include="Enrollments\EnrollmentSessionArticle.cs" />
-    <Compile Include="Enrollments\EnrollmentSessionModule.cs" />
-    <Compile Include="Enrollments\EnrollmentSessionQuiz.cs" />
-    <Compile Include="IDbEntity.cs" />
-    <Compile Include="Label.cs" />
-    <Compile Include="Enrollments\EnrollmentSessionLesson.cs" />
-    <Compile Include="Enrollments\EnrollmentSessionLessonPage.cs" />
-    <Compile Include="Lessons\Lesson.cs" />
-    <Compile Include="Lessons\LessonPage.cs" />
-    <Compile Include="Lessons\LessonPageTransition.cs" />
-    <Compile Include="Lessons\LessonPageTransitionType.cs" />
-    <Compile Include="ModuleArticle.cs" />
-    <Compile Include="Modulle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Questions\Question.cs" />
-    <Compile Include="Questions\QuestionAnswer.cs" />
-    <Compile Include="Questions\QuestionControl.cs" />
-    <Compile Include="Questions\QuestionControlAnswer.cs" />
-    <Compile Include="Questions\QuestionControlType.cs" />
-    <Compile Include="Quiz.cs" />
-    <Compile Include="Questions\QuizQuestion.cs" />
-    <Compile Include="ContentStorage\StorageFolder.cs" />
-    <Compile Include="ContentStorage\StorageResource.cs" />
-    <Compile Include="ContentStorage\UserStorage.cs" />
-    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CourseLearning.Model\CourseLearning.Model.csproj">
+      <Project>{add25456-d448-4fe8-92b1-4ef974b30fbb}</Project>
+      <Name>CourseLearning.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

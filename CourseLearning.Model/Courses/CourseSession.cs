@@ -12,7 +12,7 @@ namespace CourseLearning.Model.Courses
 
         public bool IsActive { get; set; }
 
-        public virtual Course Course { get; set; }
+        public Course Course { get; set; }
 
     }
 }

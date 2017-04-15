@@ -40,8 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IArticleRepository.cs" />
     <Compile Include="ICourseRepository.cs" />
+    <Compile Include="IModuleRepository.cs" />
+    <Compile Include="IQuestionRepository.cs" />
+    <Compile Include="IQuizRepository.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="IResourceRepository.cs" />
+    <Compile Include="IStorageFolderRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,10 +1,11 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using ORM.ContentStorage;
-using ORM.Courses;
-using ORM.Enrollments;
-using ORM.Lessons;
-using ORM.Questions;
+using CourseLearning.Model;
+using CourseLearning.Model.ContentStorage;
+using CourseLearning.Model.Courses;
+using CourseLearning.Model.Enrollments;
+using CourseLearning.Model.Lessons;
+using CourseLearning.Model.Questions;
 
 namespace ORM
 {

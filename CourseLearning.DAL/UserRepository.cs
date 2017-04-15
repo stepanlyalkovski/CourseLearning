@@ -1,11 +1,12 @@
 ﻿using System.Data.Entity;
+using System.Linq;
 using System.Threading.Tasks;
 using CourseLearning.DAL.Interface;
 using CourseLearning.Model;
 
 namespace CourseLearning.DAL
 {
-    public class UserRepository : BaseRepository<User, ORM.User>, IUserRepository
+    public class UserRepository : BaseRepository<User>, IUserRepository
     {
         public UserRepository(DbContext context) : base(context)
         {
@@ -13,9 +14,12 @@ namespace CourseLearning.DAL
 
         public async Task<User> GetAsync(string name)
         {
-            var ormUser = await Context.Set<ORM.User>().FirstOrDefaultAsync(u => u.Name == name);
-            return ToDalModel(ormUser);
+            return await Context.Set<User>().FirstOrDefaultAsync(u => u.Name == name);
         }
 
+        public override async Task<User> FindAsync(int id)
+        {
+            return await Context.Set<User>().Include(u => u.UserStorage).FirstOrDefaultAsync(u => u.UserId == id);
+        }
     }
 }

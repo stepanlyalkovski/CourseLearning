@@ -1,0 +1,29 @@
+﻿<h2>Course Content</h2>
+
+<ul>
+    <li ng-repeat="courseModule in courseCtrl.courseModules">
+        {{courseModule.name}} :
+        {{courseModule.description}}
+        <hr>
+    </li>
+</ul>
+
+<div ng-controller="testCtrl"></div>
+<a ui-sref="admin.courseList" class="btn btn-info">Back</a>
+<!--<ng-form name="courseForm">-->
+    <!--<label for="course-title">Course Title</label>-->
+    <!--<input id ="course-title" type="text" name="courseTitle" ng-model="courseListCtrl.createdCourse.name" required>-->
+    <!--<br>-->
+    <!--<label for="course-description">Course Description</label>-->
+    <!--<textarea name="courseDescription"-->
+              <!--id="course-description"-->
+              <!--cols="30"-->
+              <!--rows="10"-->
+              <!--ng-model="courseListCtrl.createdCourse.description">-->
+    <!--</textarea>-->
+    <!--<button type="submit" ng-click="courseListCtrl.saveCourseForm()">Save</button>-->
+<!--</ng-form>-->
+
+<!--<hr>-->
+<!--{{courseListCtrl.someCourse}} <br>-->
+<!--{{courseListCtrl.courses}}-->

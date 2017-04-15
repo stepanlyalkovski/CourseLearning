@@ -53,13 +53,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArticleRepository.cs" />
     <Compile Include="BaseRepository.cs" />
     <Compile Include="CourseRepository.cs" />
     <Compile Include="IRepositoryFactory.cs" />
-    <Compile Include="Mapper\DalMapper.cs" />
-    <Compile Include="Mapper\OrmMapper.cs" />
-    <Compile Include="Mapper\TestMapper.cs" />
+    <Compile Include="ModuleRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionRepository.cs" />
+    <Compile Include="QuizRepository.cs" />
+    <Compile Include="ResourceRepository.cs" />
+    <Compile Include="StorageFolderRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
     <Compile Include="UserRepository.cs" />
   </ItemGroup>

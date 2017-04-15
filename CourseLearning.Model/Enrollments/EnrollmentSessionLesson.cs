@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using CourseLearning.Model.Lessons;
 
 namespace CourseLearning.Model.Enrollments
@@ -11,12 +12,13 @@ namespace CourseLearning.Model.Enrollments
 
         public EnrollmentSessionModule EnrollmentSessionModule { get; set; }
 
+        [ForeignKey("EnrollmentSessionModule")]
         public int EnrollmentSessionModuleId { get; set; }
 
         public Lesson Lesson { get; set; }
 
         public int LessonId { get; set; }
 
-        public virtual IList<EnrollmentSessionLessonPage> EnrollmentSessionLessonPages { get; set; }
+        public IList<EnrollmentSessionLessonPage> EnrollmentSessionLessonPages { get; set; }
     }
 }

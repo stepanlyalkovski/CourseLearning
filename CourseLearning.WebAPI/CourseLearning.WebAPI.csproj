@@ -231,7 +231,13 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminControllers\AdminArticleController.cs" />
+    <Compile Include="Controllers\AdminControllers\AdminModuleController.cs" />
+    <Compile Include="Controllers\AdminControllers\AdminUserStorageController.cs" />
     <Compile Include="Controllers\AdminControllers\CourseController.cs" />
+    <Compile Include="Controllers\AdminControllers\QuestionController.cs" />
+    <Compile Include="Controllers\AdminControllers\QuizController.cs" />
+    <Compile Include="Controllers\AdminControllers\StorageFolderController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
@@ -325,9 +331,9 @@
       <Project>{26078fc0-7c8c-4466-b372-166570547d95}</Project>
       <Name>CourseLearning.DependencyResolver</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CourseLearning.Model\CourseLearning.Model.csproj">
-      <Project>{add25456-d448-4fe8-92b1-4ef974b30fbb}</Project>
-      <Name>CourseLearning.Model</Name>
+    <ProjectReference Include="..\CourseLearning.Model.DTO\CourseLearning.Model.DTO.csproj">
+      <Project>{40c75ac0-a150-435e-9f3d-cc4426ebcda0}</Project>
+      <Name>CourseLearning.Model.DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

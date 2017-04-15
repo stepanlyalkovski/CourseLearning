@@ -6,11 +6,11 @@
 
         public int QuestionControlId { get; set; }
 
-        public virtual QuestionControl QuestionControl { get; set; }
+        public QuestionControl QuestionControl { get; set; }
 
         public int QuestionAnswerId { get; set; }
 
-        public virtual QuestionAnswer QuestionAnswer { get; set; }
+        public QuestionAnswer QuestionAnswer { get; set; }
 
         public string StringAnswerValue { get; set; }
 

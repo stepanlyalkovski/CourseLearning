@@ -10,9 +10,9 @@ namespace CourseLearning.Model.Lessons
 
         public string Description { get; set; }
 
-        public virtual Module Module { get; set; }
+        public Module Module { get; set; }
 
-        public virtual IList<LessonPage> LessonPages { get; set; }
+        public IList<LessonPage> LessonPages { get; set; }
 
         public int? FirstPageId { get; set; }
 
