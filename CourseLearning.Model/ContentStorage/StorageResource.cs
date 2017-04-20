@@ -8,6 +8,8 @@ namespace CourseLearning.Model.ContentStorage
     {
         public int StorageResourceId { get; set; }
 
+        public string Name { get; set; }
+
         public StorageFolder StorageFolder { get; set; }
 
         [ForeignKey("StorageFolder")]

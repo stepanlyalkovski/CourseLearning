@@ -10,7 +10,7 @@ using CourseLearning.Model.DTO;
 
 namespace CourseLearning.WebAPI.Controllers.AdminControllers
 {
-    [RoutePrefix("api/admin/folder")]
+    [RoutePrefix("api/admin/storageFolder")]
     public class StorageFolderController : ApiController
     {
         private readonly IStorageFolderService _storageFolderService;

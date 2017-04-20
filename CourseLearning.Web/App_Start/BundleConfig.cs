@@ -21,10 +21,24 @@ namespace CourseLearning.Web
             bundles.Add(new ScriptBundle("~/bundles/angular.resource").Include(
                         "~/Scripts/angular-resource.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular.ui")
+                .Include("~/Scripts/angular-ui/ui-bootstrap.js")
+                .Include("~/Scripts/angular-ui/ui-bootstrap-tpls.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/lodash")
+                .Include("~/Scripts/lodash.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/fileUpload")
+                .Include("~/bower_components/ng-file-upload/ng-file-upload-shim.js")
+                .Include("~/bower_components/ng-file-upload/ng-file-upload.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/tinymce")
+                .Include("~/bower_components/tinymce/tinymce.js")
+                .Include("~/bower_components/angular-ui-tinymce/src/tinymce.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/sharedApp")
                 .IncludeDirectory("~/App/config", "*.js", true)
-                .IncludeDirectory("~/App/shared", "*.js", true)
-                .IncludeDirectory("~/App/test", "*.js", true));
+                .IncludeDirectory("~/App/shared", "*.js", true));
 
             bundles.Add(new ScriptBundle("~/bundles/clientApp")
                 .Include("~/App/appClient.js"));
@@ -48,6 +62,9 @@ namespace CourseLearning.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/tinymceSkin")
+                .Include("~/bower_components/tinymce/skins/lightgray/skin.min.css"));
         }
     }
 }

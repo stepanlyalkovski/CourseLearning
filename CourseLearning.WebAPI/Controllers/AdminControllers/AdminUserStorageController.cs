@@ -21,11 +21,12 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
         }
 
         
-        [Route("{id:int}")]
+        [Route("")]
         [HttpGet]
-        public async Task<IHttpActionResult> GetStorageFolders(int id)
+        public async Task<IHttpActionResult> GetStorageFolders()
         {
-           return Ok(await _storageFolderService.GetStorageFoldersAsync(id));
+            int creatorId = 1; //TODO User id
+           return Ok(await _storageFolderService.GetStorageFoldersAsync(creatorId));
         }
 
         //[Route("{id:int}/modules")]

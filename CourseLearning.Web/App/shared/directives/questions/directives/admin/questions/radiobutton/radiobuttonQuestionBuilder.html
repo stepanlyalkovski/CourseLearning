@@ -1,0 +1,37 @@
+﻿<data-ng-form name="radiobuttonQuestionForm">
+    <div class="form-group">
+        <label for="questionHeading" class="vsi-input-label module-form__label" data-ng-class="{'module-form__label module-form__label--required' : vm.rules.questionHeading.required}">Heading</label>
+        <input id="questionHeading" name="questionHeading" type="text" class="module-form__input vsi-input-validate"
+               data-ng-maxlength="vm.validationRules.questionHeading.maxlength"
+               maxlength="{{ :: vm.validationRules.questionHeading.maxlength }}"
+               data-ng-required="vm.validationRules.questionHeading.required"
+               data-ng-model="vm.question.questionHeading" />
+    </div>
+
+    <div class="form-group">
+        <label for="radiobuttonCount" class="vsi-input-label module-form__label module-form__label--required">Number</label>
+        <select id="radiobuttonCount"
+                name="radiobuttonCount"
+                class="module-form__select vsi-input-validate"
+                data-ng-options="item for item in vm.countRangeList"
+                data-ng-change="vm.setCountRangeFn()"
+                data-ng-required="true"
+                data-ng-model="vm.countRange">
+            <option value="" class="hidden" disabled>Select One</option>
+        </select>
+    </div>
+    
+    <div data-ng-repeat="control in vm.question.controlList | orderBy : $index+1 track by $index+1" class="alert alert-admin">
+        <div class="form-group">
+            <label for="radiobuttonLabel{{$index}}" class="vsi-input-label module-form__label module-form__label--required">Label {{$index+1}}</label>
+            <input type="text" 
+                   id="radiobuttonLabel{{$index}}"
+                   name="radiobuttonLabel{{$index}}"
+                   class="module-form__input vsi-input-validate"
+                   data-ng-model="control.controlHeading"
+                   data-ng-required="true"
+                   data-ng-maxlength=":: vm.validationRules.radiobuttonHeading.maxlength"
+                   maxlength="{{ :: vm.validationRules.radiobuttonHeading.maxlength }}"/>
+        </div>
+    </div>
+</data-ng-form>

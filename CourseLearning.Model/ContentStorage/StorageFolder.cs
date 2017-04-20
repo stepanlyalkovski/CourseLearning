@@ -8,7 +8,7 @@ namespace CourseLearning.Model.ContentStorage
     {
         public int StorageFolderId { get; set; }
 
-        [Index("StorageFolderIndex", IsUnique = true)]
+        //[Index("StorageFolderIndex", IsUnique = true)]
         [MaxLength(25)]
         public string Name { get; set; }
 
@@ -18,7 +18,7 @@ namespace CourseLearning.Model.ContentStorage
 
         public IList<StorageResource> Resources { get; set; }
 
-        public IList<Article> Articles { get; set; }
+        //public IList<Article> Articles { get; set; }
 
         public bool IsDefaultFolder { get; set; }
     }

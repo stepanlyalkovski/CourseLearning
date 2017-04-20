@@ -30,7 +30,6 @@ namespace CourseLearning.DAL
 
             return await Context.Set<StorageFolder>()
                 .Include(f => f.Resources)
-                .Include(f => f.Articles)
                 .FirstOrDefaultAsync(f => f.StorageFolderId == storageFolderId);
         }
     }

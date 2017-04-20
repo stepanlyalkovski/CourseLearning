@@ -12,7 +12,7 @@ namespace CourseLearning.Model.DTO
 
         public CourseDTO Course { get; set; }
 
-        public IList<StorageArticleDTO> Articles { get; set; }
+        public IList<ArticleDTO> Articles { get; set; }
 
         public IList<QuizDTO> Quizzes { get; set; }
 

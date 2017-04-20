@@ -1,0 +1,6 @@
+﻿<h2>{{storageCtrl.title}}</h2>
+<ul>
+    <li ng-repeat="storageFolder in storageCtrl.storageFolders">
+        <a ui-sref="admin.folder({id: storageFolder.storageFolderId})">{{storageFolder.name}}</a>
+    </li>
+</ul>

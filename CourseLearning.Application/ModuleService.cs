@@ -61,7 +61,7 @@ namespace CourseLearning.Application
             return ToEntitiesDTO(modules);
         }
 
-        public async Task AttachArticle(StorageArticleDTO article, int moduleId)
+        public async Task AttachArticle(ArticleDTO article, int moduleId)
         {
             if (article == null)
             {

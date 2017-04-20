@@ -50,6 +50,7 @@ namespace CourseLearning.DependencyResolver
             kernel.Bind<IStorageFolderService>().To<StorageFolderService>();
             kernel.Bind<IQuizService>().To<QuizService>();
             kernel.Bind<IQuestionService>().To<QuestionService>();
+            kernel.Bind<IResourceService>().To<ResourceService>();
 
 
             // Repositories

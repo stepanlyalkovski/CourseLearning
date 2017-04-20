@@ -8,6 +8,8 @@ namespace CourseLearning.DAL.Interface
     {
         Task<IList<QuizQuestion>> GetQuizQuestions(int quizId);
 
+        Task<IList<Question>> GetCreatorQuestions(int creatorId);
+
         void AddQuizQuestion(QuizQuestion quizQuestion);
     }
 }

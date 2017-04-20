@@ -40,7 +40,7 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
 
         [Route("{moduleId:int}/articles")]
         [HttpPost]
-        public async Task<IHttpActionResult> AttachArticle(int moduleId, [FromBody] StorageArticleDTO article)
+        public async Task<IHttpActionResult> AttachArticle(int moduleId, [FromBody] ArticleDTO article)
         {
             await _moduleService.AttachArticle(article, moduleId);
             return Ok();
@@ -58,7 +58,9 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
         public async Task<IHttpActionResult> AddQuiz(int moduleId, [FromBody] QuizDTO quiz)
         {
             quiz.ModuleId = moduleId; //TODO find a better solution to set module id
-            return Ok(await _quizService.Add(quiz));
+            int createdId = await _quizService.Add(quiz);
+            var createdQuiz = new QuizDTO { QuizId = createdId };
+            return Created(Request.RequestUri + $"/{createdId}", createdQuiz);
         }
 
     }

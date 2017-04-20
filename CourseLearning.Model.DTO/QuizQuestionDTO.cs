@@ -11,7 +11,5 @@
         public int SequenceNumber { get; set; }
 
         public QuestionDTO Question { get; set; }
-
-        public QuizDTO Quiz { get; set; }
     }
 }

@@ -7,7 +7,9 @@ namespace CourseLearning.Application.Interface
 {
     public interface IQuestionService : IEntityService<QuestionDTO>
     {
-        Task<IList<QuizQuestionDTO>> GetQuizQuestions(int quizId);
+        Task<IList<QuizQuestionDTO>> GetQuizQuestionsAsync(int quizId);
+
+        Task<IList<QuestionDTO>> GetCreatorQuestionsAsync(int creatorId);
 
         Task<int> AddQuizQuestion(QuizQuestionDTO quizQuestion);
     }

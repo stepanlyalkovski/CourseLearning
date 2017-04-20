@@ -1,0 +1,22 @@
+﻿<h2>Courses</h2>
+<div ng-repeat="x in courseListCtrl.courses" class="list-group" >
+    <a ui-sref="admin.course({id: x.courseId})" class="list-group-item">
+        <h3 class="list-group-item-heading">{{::x.name}}</h3>
+        <p class="list-group-item-text">{{::x.description}}</p>
+    </a>
+</div>
+<hr>
+<h2>Demo add</h2>
+<ng-form name="courseForm">
+    <label for="course-title">Course Title</label>
+    <input id ="course-title" type="text" name="courseTitle" ng-model="courseListCtrl.createdCourse.name" required>
+    <br>
+    <label for="course-description">Course Description</label>
+    <textarea name="courseDescription"
+              id="course-description"
+              cols="30"
+              rows="10"
+              ng-model="courseListCtrl.createdCourse.description">
+    </textarea>
+    <button type="submit" ng-click="courseListCtrl.saveCourseForm()">Save</button>
+</ng-form>

@@ -29,9 +29,20 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
 
         [Route("")]
         [HttpPost]
-        public async Task<IHttpActionResult> Post(StorageArticleDTO article)
+        public async Task<IHttpActionResult> Post(ArticleDTO article)
         {
-            return Ok(await _articleService.Add(article));
+            int creatorId = 1; //TODO update when user will be created
+            article.CreatorId = creatorId;
+            int createdId = await _articleService.Add(article);
+            return Created(Request.RequestUri + $"/{createdId}", new ArticleDTO { ArticleId = createdId });
+        }
+
+        [Route("")]
+        [HttpGet]
+        public async Task<IHttpActionResult> GetCreatedArticles()
+        {
+            int creatorId = 1; //TODO update when user will be created
+            return Ok(await _articleService.GetCreatorArticlesAsync(creatorId));
         }
     }
 }

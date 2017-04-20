@@ -6,7 +6,7 @@ namespace CourseLearning.Model.DTO
     {
         public int StorageResourceId { get; set; }
 
-        public StorageFolderDTO StorageFolder { get; set; }
+        public string Name { get; set; }
 
         public int StorageFolderId { get; set; }
 

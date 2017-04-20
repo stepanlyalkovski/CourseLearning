@@ -1,0 +1,53 @@
+﻿<div class="hidden-print" data-ng-if="!vm.isPrintable">
+    <div id="quest-heading-{{::vm.question.questionId}}"
+         class="common-text__paragraph common-text__paragraph--sub-titled"
+         data-ng-class="{ 'module-form__label--required-with-padding': vm.question.config.rules.isRequired }"
+         data-ng-if="vm.question.questionHeading">
+        {{::vm.question.questionHeading}}
+    </div>
+    <div class="common-text__paragraph">
+        <div data-ng-init="vm.bindMetaToSubject(this, control)" data-ng-repeat="control in vm.question.controlList" class="form-group">
+            <div data-ng-class="{'col-lg-2 col-md-2 col-sm-2 col-xs-3 module-form__label': control.config.rules.isHidden, 'module-form__label--required-with-padding': vm.question.config.rules.isRequired && vm.question.controlList.length === 1 && !vm.question.questionHeading}"
+                 class="col-sm-12">
+                <input id="qst-{{::control.questionControlId || control.$uid}}"
+                       name="qst-val-{{::vm.question.questionId || control.$uid}}"
+                       type="checkbox"
+                       data-ng-model="$answer.boolVal"
+                       data-ng-required="vm.requiredValidation" />
+                <label for="qst-{{::control.questionControlId || control.$uid}}" data-ng-class="{'checkbox-required': vm.form.$submitted && vm.form['qst-val-' + vm.question.questionId].$invalid }">{{::control.controlHeading}}</label>
+            </div>
+        </div>
+        <div class="vsi-input-error-messages" data-ng-if="vm.isRequiredErrorVisible() && vm.form.$submitted">
+            <div class="vsi-input-error-messages__line vsi-input-error-messages__line--no-margin">
+                <span class="icon icon-warning vsi-input-error-messages__icon"></span><span class="vsi-input-error-messages__text">{{vm.question.config.messages.required}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-ng-class="{'visible-print': !vm.isPrintable }">
+    <div data-ng-if="vm.question.questionHeading && vm.isPrintableHeaderNeeded()">
+        <div class="row">
+            <div class="at-cqdk col-lg-6 col-md-6 col-sm-6 col-xs-6 vsi-grid__property-name">
+                {{vm.question.questionHeading}}
+            </div>
+            <div class="at-cqdv col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-right">
+                <span data-ng-bind="vm.generateHeadingPreview()"></span>
+            </div>
+        </div>
+    </div>
+    <div data-ng-if="!vm.question.questionHeading">
+        <div data-ng-init="vm.bindMetaToSubject(this, control)" data-ng-repeat="control in vm.question.controlList">
+            <div class="row" data-ng-if="$answer.boolVal">
+                <div data-ng-if="!$last || $last === $first || $last && !$answer.stringVal">
+                    <div class="at-cqdk col-lg-6 col-md-6 col-sm-6 col-xs-6 vsi-grid__property-name">{{control.controlHeading}}</div>
+                    <div class="at-cqdv col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-right">Yes</div>
+                </div>
+                <div data-ng-if="$last && $answer.stringVal">
+                    <div class="at-cqdk col-lg-6 col-md-6 col-sm-6 col-xs-6 vsi-grid__property-name">{{$answer.stringVal}}</div>
+                    <div class="at-cqdv col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-right">Yes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

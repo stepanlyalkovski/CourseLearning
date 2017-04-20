@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using CourseLearning.Application.Interface;
 using CourseLearning.Application.Mapper;
@@ -38,9 +39,18 @@ namespace CourseLearning.Application
             throw new System.NotImplementedException();
         }
 
-        public Task Update(QuizDTO entity)
+        public async Task Update(QuizDTO quizDto)
         {
-            throw new System.NotImplementedException();
+            foreach (var question in quizDto.QuizQuestionList.Select(qq => qq.Question))
+            {
+                if (question.QuestionId == 0)
+                {
+                    question.CreatorId = 1; //TODO Add User
+                }
+            }
+            var quiz = _quizMapper.ToEntity(quizDto);
+            await _unitOfWork.Quizzes.Update(quiz);
+            await _unitOfWork.CompleteAsync();
         }
 
         public async Task<IList<QuizDTO>> GetModuleQuizzes(int moduleId)

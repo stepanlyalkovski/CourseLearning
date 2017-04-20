@@ -8,7 +8,7 @@
 
         public int QuestionId { get; set; }
 
-        public string HeadingText { get; set; }
+        public string ControlHeading { get; set; }
 
         public string AnswerValue { get; set; }
 

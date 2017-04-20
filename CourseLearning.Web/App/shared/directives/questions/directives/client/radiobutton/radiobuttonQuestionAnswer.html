@@ -1,0 +1,36 @@
+﻿<div class="hidden-print" data-ng-if="!vm.isPrintable">
+    <div id="quest-heading-{{ :: vm.getQstId(vm.question) }}"
+         class="common-text__paragraph common-text__paragraph--sub-titled"
+         data-ng-if="vm.question.questionHeading">
+        {{ :: vm.question.questionHeading }}
+        <span data-ng-if="vm.question.config.rules.isRequired" class="warning-color">*</span>
+    </div>
+    <div class="common-text__paragraph">
+        <div data-ng-repeat="control in vm.question.controlList" class="form-group">
+            <div class="col-sm-12">
+                <input id="quest-cntrl-{{ :: vm.getCntrlId(control) }}"
+                       name="quest-val-{{ :: vm.getQstId(vm.question) }}"
+                       type="radio"
+                       class="vsi-input-validate"
+                       ng-model="vm.selectedControl"
+                       ng-value="control"
+                       data-ng-change="vm.selectedControlChange(control)"
+                       data-ng-required=":: vm.question.config.rules.isRequired" />
+                <label for="quest-cntrl-{{ :: vm.getCntrlId(control) }}"
+                       data-ng-class="{'checkbox-required': vm.form.$submitted && vm.form['quest-val-' + vm.getQstId(vm.question)].$invalid }">{{ :: control.controlHeading }}</label>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-ng-class="{'visible-print': !vm.isPrintable }">
+    <div class="common-text__paragraph" data-ng-if="vm.selectedControl">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="at-cqdk common-text__text">{{ vm.question.questionHeading || vm.selectedControl.controlHeading }}</div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="at-cqdv common-text__text">{{ vm.question.questionHeading ? vm.selectedControl.controlHeading : 'Yes' }}</div>
+            </div>
+        </div>
+    </div>
+</div>

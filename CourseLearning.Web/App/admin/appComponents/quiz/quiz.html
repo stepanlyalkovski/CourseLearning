@@ -1,0 +1,24 @@
+﻿<h3>{{quizCtrl.title}}</h3>
+<button class="btn btn-info" ng-click="quizCtrl.addQuestionClick()">Add Question</button>
+<div class="row">
+    <div class="col-md-10 col-md-offset-2">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="quizQuestion in quizCtrl.quiz.quizQuestionList">{{quizQuestion}}</li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10">
+        <ng-form name="quiz">
+            <div class="form-group">
+                <input type="number" ng-model="quizCtrl.quiz.TotalTimeSec" class="form-control" name="quizTotalTime">
+                <input type="number" ng-model="quizCtrl.quiz.passNumber" class="form-control" name="quizPassNumber">
+            </div>
+        </ng-form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <button class="btn btn-success btn-lg" ng-click="quizCtrl.updateQuiz()">Save</button>
+    </div>
+</div>

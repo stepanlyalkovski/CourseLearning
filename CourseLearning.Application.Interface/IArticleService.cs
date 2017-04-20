@@ -5,8 +5,10 @@ using CourseLearning.Model.DTO;
 
 namespace CourseLearning.Application.Interface
 {
-    public interface IArticleService : IEntityService<StorageArticleDTO>
+    public interface IArticleService : IEntityService<ArticleDTO>
     {
-        Task<IList<StorageArticleDTO>> GetModuleArticlesAsync(int moduleId);
+        Task<IList<ArticleDTO>> GetModuleArticlesAsync(int moduleId);
+
+        Task<IList<ArticleDTO>> GetCreatorArticlesAsync(int creatorId);
     }
 }

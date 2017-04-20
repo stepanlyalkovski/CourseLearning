@@ -1,0 +1,16 @@
+﻿{{questionListCtrl.title}}
+<ul>
+    <li ng-repeat="question in questionListCtrl.questions">
+        {{question}}
+        <!--{{article.title}} <br>-->
+        <!--{{article.description}}-->
+    </li>
+    <!--<div ng-repeat="x in courseListCtrl.courses" class="list-group" >-->
+        <!--<a ui-sref="admin.course({id: x.courseId})" class="list-group-item">-->
+            <!--<h3 class="list-group-item-heading">{{::x.name}}</h3>-->
+            <!--<p class="list-group-item-text">{{::x.description}}</p>-->
+        <!--</a>-->
+    <!--</div>-->
+</ul>
+<hr>
+<button class="btn btn-success" ng-click="questionListCtrl.addQuestionClick()">Add question</button>

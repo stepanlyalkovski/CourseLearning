@@ -55,8 +55,8 @@ namespace CourseLearning.Application
 
         public async Task<IList<StorageFolderDTO>> GetStorageFoldersAsync(int storageId)
         {
-            var foldes = await _unitOfWork.StorageFolders.GetStorageFoldersAsync(storageId);
-            return ToEntitiesDTO(foldes);
+            var folders = await _unitOfWork.StorageFolders.GetStorageFoldersAsync(storageId);
+            return ToEntitiesDTO(folders);
         }
     }
 }

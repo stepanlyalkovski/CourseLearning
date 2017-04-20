@@ -18,8 +18,13 @@ namespace CourseLearning.DAL
         {
             return await Context.Set<QuizQuestion>()
                 .Include(q => q.Question.QuestionControlType)
-                .Include(q => q.Question.QuestionControlList)
+                .Include(q => q.Question.ControlList)
                 .Where(q => q.QuizId == quizId).ToListAsync();
+        }
+
+        public async Task<IList<Question>> GetCreatorQuestions(int creatorId)
+        {
+            return await Context.Set<Question>().Where(q => q.CreatorId == creatorId).ToListAsync();
         }
 
         public void AddQuizQuestion(QuizQuestion quizQuestion)
@@ -48,7 +53,7 @@ namespace CourseLearning.DAL
 
         public override async Task<Question> FindAsync(int questionId)
         {
-            return await Context.Set<Question>().Include(q => q.QuestionControlList).FirstOrDefaultAsync(q => q.QuestionId == questionId);
+            return await Context.Set<Question>().Include(q => q.ControlList).FirstOrDefaultAsync(q => q.QuestionId == questionId);
         }
     }
 }

@@ -46,7 +46,7 @@
     <Compile Include="QuestionDTO.cs" />
     <Compile Include="QuizDTO.cs" />
     <Compile Include="QuizQuestionDTO.cs" />
-    <Compile Include="StorageArticleDTO.cs" />
+    <Compile Include="ArticleDTO.cs" />
     <Compile Include="CourseDTO.cs" />
     <Compile Include="ModulleDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

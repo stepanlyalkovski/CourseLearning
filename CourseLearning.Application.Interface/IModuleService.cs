@@ -9,6 +9,6 @@ namespace CourseLearning.Application.Interface
     {
         Task<IList<ModuleDTO>> GetCourseModules(int courseId);
 
-        Task AttachArticle(StorageArticleDTO article, int moduleId);
+        Task AttachArticle(ArticleDTO article, int moduleId);
     }
 }

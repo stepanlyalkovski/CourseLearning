@@ -1,0 +1,45 @@
+﻿ <div class="modal-header ng-scope">
+    <h3 class="modal-title" id="modal-title">{{vm.title}}</h3>
+</div>
+    <div class="modal-body ng-scope" id="modal-body">
+        <ng-form name="storageResourceForm">
+            <div data-ng-show="vm.currentState === 'create_resource'">
+
+                    <div class="form-group">
+                        <label for="resourceName">Resource Name</label>
+                        <input id="resourceName" name="storageResourceName" type="text" class="form-control" data-ng-model="vm.storageResource.name">
+                    </div>
+
+            </div>
+            <div data-ng-show="vm.currentState === 'upload_file'">
+                <fieldset>
+                    <legend>Upload on form submit</legend>
+                    <input type="file" ngf-select ng-model="vm.resourceFile" name="file"
+                           accept="image/*, video/*, audio/*" required
+                           ngf-model-invalid="errorFile">
+                    <i ng-show="storageResourceForm.file.$error.required">*required</i><br>
+                    <i ng-show="storageResourceForm.file.$error.maxSize">File too large
+                        {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+                    <img ng-show="storageResourceForm.file.$valid" ngf-thumbnail="vm.resourceFile" class="thumb"> <button ng-click="picFile = null" ng-show="picFile">Remove</button>
+                    <br>
+                    <button ng-disabled="!storageResourceForm.$valid"
+                            ng-click="uploadPic(vm.resourceFile)">Submit</button>
+                    <span class="progress" ng-show="vm.resourceFile.progress >= 0">
+        <div style="width:{{vm.resourceFile.progress}}%"
+             ng-bind="vm.resourceFile.progress + '%'"></div>
+      </span>
+                    <span ng-show="picFile.result">Upload Successful</span>
+                    <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+                </fieldset>
+                <br>
+{{storageResourceForm.$valid}}
+
+            </div>
+        </ng-form>
+
+
+    </div>
+    <div class="modal-footer ng-scope">
+        <button class="btn btn-warning" type="button" ng-click="vm.cancelClickFn()">Cancel</button>
+        <button class="btn btn-primary" type="button" ng-click="vm.okClickFn()">{{vm.okStateText}}</button>
+    </div>

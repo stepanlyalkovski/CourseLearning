@@ -58,8 +58,8 @@ namespace CourseLearning.Application.Mapper
 
         private static void ConfigureArticleMap(IMapperConfigurationExpression configuration)
         {
-            configuration.CreateMap<StorageArticleDTO, Article>();
-            configuration.CreateMap<Article, StorageArticleDTO>();
+            configuration.CreateMap<ArticleDTO, Article>();
+            configuration.CreateMap<Article, ArticleDTO>();
         }
 
         private static void ConfigureStorageFolderMap(IMapperConfigurationExpression configuration)

@@ -7,14 +7,16 @@ namespace CourseLearning.Model.DTO
     {
         public int QuestionId { get; set; }
 
-        public string Text { get; set; }
+        public string QuestionHeading { get; set; }
 
         public string Category { get; set; }
+
+        public int CreatorId { get; set; }
 
         public QuestionControlTypeDTO QuestionControlType { get; set; }
 
         public IList<LabelDTO> Labels { get; set; }
 
-        public IList<QuestionControlDTO> QuestionControlList { get; set; }
+        public IList<QuestionControlDTO> ControlList { get; set; }
     }
 }

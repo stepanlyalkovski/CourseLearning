@@ -1,0 +1,17 @@
+﻿<h3>{{moduleCtrl.title}}</h3>
+{{moduleCtrl.test}}
+<hr>
+<h4>Quizzes: </h4>
+<ul>
+    <li ng-repeat="moduleQuiz in moduleCtrl.module.quizzes">
+        <a ui-sref="admin.quiz({id: moduleQuiz.quizId})">{{moduleQuiz.title}}</a>
+    </li>
+</ul>
+<button ng-click="moduleCtrl.addQuiz()">Add Quiz</button>
+<hr>
+<h4>Articles: </h4>
+<ul>
+    <li ng-repeat="moduleArticle in moduleCtrl.module.articles">
+        <a ui-sref="admin.article({id: moduleArticle.articleId})">{{moduleArticle.title}}</a>
+    </li>
+</ul>

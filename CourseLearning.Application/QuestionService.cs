@@ -46,10 +46,16 @@ namespace CourseLearning.Application
             throw new System.NotImplementedException();
         }
 
-        public async Task<IList<QuizQuestionDTO>> GetQuizQuestions(int quizId)
+        public async Task<IList<QuizQuestionDTO>> GetQuizQuestionsAsync(int quizId)
         {
            var quizzes = await _unitOfWork.Questions.GetQuizQuestions(quizId);
            return _quizQuestionMapper.ToEntitiesDTO(quizzes);
+        }
+
+        public async Task<IList<QuestionDTO>> GetCreatorQuestionsAsync(int creatorId)
+        {
+            var questions = await _unitOfWork.Questions.GetCreatorQuestions(creatorId);
+            return _questionMapper.ToEntitiesDTO(questions);
         }
 
         public async Task<int> AddQuizQuestion(QuizQuestionDTO quizQuestion)

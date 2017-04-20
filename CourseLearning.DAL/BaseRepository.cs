@@ -30,9 +30,11 @@ namespace CourseLearning.DAL
             Context.Entry(entity).State = EntityState.Added;
         }
 
-        public virtual void Update(TEntity entity)
+        public virtual Task Update(TEntity entity)
         {
+            Context.Set<TEntity>().Attach(entity);
             Context.Entry(entity).State = EntityState.Modified;
+            return Task.FromResult(false);
         }
 
         public virtual void Delete(TEntity entity)

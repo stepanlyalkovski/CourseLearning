@@ -17,5 +17,10 @@ namespace CourseLearning.DAL
         {
             return await Context.Set<Article>().Where(a => a.Modules.Any(m => m.ModuleId == moduleId)).ToListAsync();
         }
+
+        public async Task<IList<Article>> GetCreatorArticlesAsync(int creatorId)
+        {
+            return await Context.Set<Article>().Where(a => a.CreatorId == creatorId).ToListAsync();
+        }
     }
 }

@@ -47,14 +47,18 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
         [HttpPost]
         public async Task<IHttpActionResult> Post(ModuleDTO module)
         {
-            return Ok(await _moduleService.Add(module));
+            int createdId = await _moduleService.Add(module);
+            var createdModule = new ModuleDTO { ModuleId = createdId };
+            return Created(Request.RequestUri + $"/{createdId}", createdModule);
         }
 
         [Route("")]
         [HttpPost]
         public async Task<IHttpActionResult> Post(CourseDTO course)
-        {            
-            return Ok(await _courseService.Add(course));
+        {
+            int createdId = await _courseService.Add(course);
+            var createdCourse = new CourseDTO { CourseId = createdId };
+            return Created(Request.RequestUri + $"/{createdId}", createdCourse);
         }
     }
 }

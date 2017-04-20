@@ -1,0 +1,43 @@
+﻿<div class="hidden-print">
+    <div data-ng-if="vm.question.questionHeading"
+         class="common-text__paragraph common-text__paragraph--sub-titled">
+        {{ :: vm.question.questionHeading}}
+    </div>
+    <div class="common-text__paragraph">
+        <div data-ng-init="vm.bindMetaToSubjectFn(this, control)" class="form-group" data-ng-repeat="control in vm.question.controlList">
+            <label data-ng-if="question.controlHeading" for="inputLabel_{{vm.question.questionId || vm.question.$uid}}_{{control.questionControlId || control.$uid}}"
+                   class="col-lg-3 col-sm-4 col-xs-12 module-form__label vsi-input-label"
+                   data-ng-class="{ 'module-form__label--required-with-padding': control.config.rules.isRequired }">
+                {{control.controlHeading}}
+            </label>
+            <div class="col-lg-4 col-sm-5">
+                <input id="inputLabel_{{vm.question.questionId || vm.question.$uid}}_{{control.questionControlId || control.$uid}}"
+                       name="inputLabel_{{vm.question.questionId || vm.question.$uid}}_{{control.questionControlId || control.$uid}}"
+                       type="text" class="module-form__input vsi-input-validate"
+                       ng-model="$answer.stringVal"
+                       data-ng-required="control.config.rules.isRequired"
+                       data-ng-maxlength="vm.validationRules.input.maxlength"
+                       maxlength="{{ :: vm.validationRules.input.maxlength }}"
+                       data-ng-pattern="vm.bindRegexFn(control.config.rules.pattern)"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-ng-class="{'visible-print': !vm.isPrintable}">
+    <div class="common-text__paragraph" data-ng-if="!vm.isNoAnswersFn()">
+        <div class="row" data-ng-if="vm.question.questionHeading">
+            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                <div class="common-text__text">{{ vm.question.questionHeading }}</div>
+            </div>
+        </div>
+        <div data-ng-init="vm.bindMetaToSubjectFn(this, control)" class="row" data-ng-repeat="control in vm.question.controlList | filter : vm.controlWithAnswerFilter">
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                <div class="common-text__text at-cqdk">{{ control.controlHeading }}</div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 pull-right">
+                <div class="common-text__text at-cqdv">{{ $answer.stringVal }}</div>
+            </div>
+        </div>
+    </div>
+</div>

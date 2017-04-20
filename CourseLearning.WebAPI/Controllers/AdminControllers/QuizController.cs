@@ -34,22 +34,23 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
         [HttpGet]
         public async Task<IHttpActionResult> GetQuizQuestions(int quizId)
         {
-            return Ok(await _questionService.GetQuizQuestions(quizId));
+            return Ok(await _questionService.GetQuizQuestionsAsync(quizId));
         }
 
         [Route("{quizId:int}/questions")]
         [HttpPost]
         public async Task<IHttpActionResult> Post(int quizId,[FromBody] int questionId)
         {
-            return Ok(await _questionService.GetQuizQuestions(quizId));
+            return Ok(await _questionService.GetQuizQuestionsAsync(quizId));
         }
 
-        [Route("{quizId:int}/questions")]
-        [HttpPost]
-        public async Task<IHttpActionResult> Post(int quizId, [FromBody] QuizQuestionDTO quizQuestion)
+        [Route("{quizId:int}")]
+        [HttpPut]
+        public async Task<IHttpActionResult> PutQuiz(int quizId, QuizDTO quiz)
         {
-            quizQuestion.QuizId = quizId;
-            return Ok(await _questionService.GetQuizQuestions(quizId));
+            await _quizService.Update(quiz);
+            return Ok();
         }
+
     }
 }

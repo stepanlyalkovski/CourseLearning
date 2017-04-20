@@ -32,7 +32,19 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
         [HttpPost]
         public async Task<IHttpActionResult> Post(QuestionDTO question)
         {
-            return Ok(await _questionService.Add(question));
+            int creatorId = 1; //TODO update when user will be created
+            question.CreatorId = creatorId;
+            int createdId = await _questionService.Add(question);
+            var createdQuestion = new QuestionDTO {QuestionId = createdId};
+            return Created(Request.RequestUri + $"/{createdId}", createdQuestion);
+        }
+
+        [Route("")]
+        [HttpGet]
+        public async Task<IHttpActionResult> GetCreatedQuestins()
+        {
+            int creatorId = 1; //TODO update when user will be created
+            return Ok(await _questionService.GetCreatorQuestionsAsync(creatorId));
         }
     }
 }

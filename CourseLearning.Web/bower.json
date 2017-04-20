@@ -1,0 +1,22 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "ng-file-upload": "^12.2.12",
+    "angular-ui-tinymce": "latest"
+  },
+  "homepage": "https://github.com/stepanlyalkovski/CourseLearning",
+  "authors": [
+    "StsiapanLialkouski <Stsiapan_Lialkouski@epam.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

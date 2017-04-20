@@ -1,0 +1,26 @@
+﻿{{articleListCtrl.title}}
+<ul>
+    <li ng-repeat="article in articleListCtrl.articles">
+        {{article.title}} <br>
+        {{article.description}}
+    </li>
+    <div ng-repeat="x in courseListCtrl.courses" class="list-group" >
+        <a ui-sref="admin.course({id: x.courseId})" class="list-group-item">
+            <h3 class="list-group-item-heading">{{::x.name}}</h3>
+            <p class="list-group-item-text">{{::x.description}}</p>
+        </a>
+    </div>
+</ul>
+<hr>
+<full-screen-editor settings="articleListCtrl.editorSettings">
+    <div ng-form="articleForm">
+        <label for="articleName">Article Title</label>
+        <input id="articleName" type="text" ng-model="articleListCtrl.createdArticle.title">
+        <hr>
+        <label for="articleDescription">Article Description</label>
+        <textarea name="" id="articleDescription" cols="30" rows="10" ng-model="articleListCtrl.createdArticle.description"></textarea>
+        <hr>
+        <label for="articleContent">Article Content</label>
+        <textarea id="articleContent" ui-tinymce ng-model="articleListCtrl.createdArticle.content"></textarea>
+    </div>
+</full-screen-editor>

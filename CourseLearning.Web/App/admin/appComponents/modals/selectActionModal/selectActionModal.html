@@ -1,0 +1,8 @@
+﻿ <div class="modal-header ng-scope">
+    <h3 class="modal-title" id="modal-title">{{vm.title}}</h3>
+</div>
+    <div class="modal-body ng-scope clearfix" id="modal-body">
+        <div ng-repeat="action in vm.actionItems" class="col-md-3" >
+            <button class="btn btn-info" ng-click="vm.selectAction(action)">{{action.actionText}}</button>
+        </div>
+    </div>

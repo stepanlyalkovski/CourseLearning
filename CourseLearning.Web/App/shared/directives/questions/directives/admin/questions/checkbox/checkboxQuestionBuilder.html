@@ -1,0 +1,32 @@
+﻿<data-ng-form name="chbxQuestion">
+    <div class="form-group">
+        <label for="questionHeading" class="vsi-input-label module-form__label" data-ng-class="{'module-form__label module-form__label--required' : vm.rules.questionHeading.required}">Heading</label>
+        <input id="questionHeading" name="questionHeading" type="text" class="module-form__input vsi-input-validate"
+               maxlength="{{::vm.validationRules.questionHeading.maxlength}}"
+               data-ng-maxlength="vm.validationRules.questionHeading.maxlength"
+               data-ng-required="vm.validationRules.questionHeading.required"
+               data-ng-model="vm.question.questionHeading" />
+    </div>
+
+    <div class="form-group">
+        <label for="checkboxCount" class="vsi-input-label module-form__label module-form__label--required">Number</label>
+        <select id="checkboxCount" name="checkboxCount" class="module-form__select vsi-input-validate"
+                data-ng-options="item for item in vm.countRangeList"
+                data-ng-required="true"
+                data-ng-change="vm.setCountRangeFn()"
+                data-ng-model="vm.countRange"></select>
+    </div>
+    <div data-ng-repeat="control in vm.question.controlList | orderBy:$index+1 track by $index+1">
+        <div class="form-group alert alert-admin" data-ng-hide="control.config.rules.isHidden">
+            <label for="checkboxLabel{{$index}}" class="vsi-input-label module-form__label module-form__label--required">Label{{$index+1}}</label>
+            <input id="checkboxLabel{{$index}}"
+                   name="checkboxLabel{{$index}}"
+                   type="text"
+                   class="module-form__input vsi-input-validate"
+                   data-ng-model="control.controlHeading"
+                   data-ng-required="true"
+                   data-ng-maxlength="vm.validationRules.checkboxHeading.maxlength"
+                   maxlength="{{::vm.validationRules.checkboxHeading.maxlength}}" />
+        </div>
+    </div>
+</data-ng-form>

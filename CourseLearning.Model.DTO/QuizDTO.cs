@@ -10,8 +10,6 @@ namespace CourseLearning.Model.DTO
     {
         public int QuizId { get; set; }
 
-        public ModuleDTO Module { get; set; }
-
         public int ModuleId { get; set; }
 
         public string Title { get; set; }

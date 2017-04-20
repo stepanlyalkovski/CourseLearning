@@ -8,7 +8,7 @@ namespace CourseLearning.Model.ContentStorage
         [ForeignKey("User")]
         public int UserStorageId { get; set; }
 
-        public virtual User User { get; set; }
+        public User User { get; set; }
 
         public string Name { get; set; }
 

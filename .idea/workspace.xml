@@ -2,86 +2,518 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3b05a3-45a8-445c-98b3-cd203457b798" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Application/BaseService.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.DAL/Mapper/DalMapper.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.DAL/Mapper/OrmMapper.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.DAL/Mapper/TestMapper.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Model/BaseEntity.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Model/BaseOrmEntity.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Article.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/ContentStorage/StorageFolder.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/ContentStorage/StorageResource.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/ContentStorage/UserStorage.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Courses/Course.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Courses/CourseSession.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSession.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSessionArticle.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSessionLesson.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSessionLessonPage.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSessionModule.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Enrollments/EnrollmentSessionQuiz.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/IDbEntity.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Label.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Lessons/Lesson.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Lessons/LessonPage.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Lessons/LessonPageTransition.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Lessons/LessonPageTransitionType.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/ModuleArticle.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Modulle.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Questions/Question.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Questions/QuestionAnswer.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Questions/QuestionControl.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Questions/QuestionControlAnswer.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Questions/QuestionControlType.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Questions/QuizQuestion.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/Quiz.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ORM/User.cs" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application.Interface/CourseLearning.Application.Interface.csproj" afterPath="$PROJECT_DIR$/CourseLearning.Application.Interface/CourseLearning.Application.Interface.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application.Interface/ICourseService.cs" afterPath="$PROJECT_DIR$/CourseLearning.Application.Interface/ICourseService.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application/CourseLearning.Application.csproj" afterPath="$PROJECT_DIR$/CourseLearning.Application/CourseLearning.Application.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application/CourseService.cs" afterPath="$PROJECT_DIR$/CourseLearning.Application/CourseService.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL.Interface/CourseLearning.DAL.Interface.csproj" afterPath="$PROJECT_DIR$/CourseLearning.DAL.Interface/CourseLearning.DAL.Interface.csproj" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Model.DTO/StorageArticleDTO.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/App/admin/course/course.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/App/admin/course/course.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/App/admin/course/courseList/courseList.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/App/admin/course/courseList/courseListCtrl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/App/admin/resources/factory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/App/admin/testCtrl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/App/test/mainCtrl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/App/test/test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ar-xb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ce-ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ce.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cu-ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-at.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-bi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-cy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-dk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-il.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-se.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-si.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-xa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fo-dk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ha-gh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ha-ne.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ha-ng.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kk-kz.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ks-in.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ky-kg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lrc-iq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lrc-ir.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lrc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mn-mn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ms-bn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ms-my.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ms-sg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mzn-ir.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mzn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nus-ss.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_prg-001.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_prg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-gq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-lu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_tk-tm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_tk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_tzm-ma.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ug-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_yue-hk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_yue.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application.Interface/IArticleService.cs" afterPath="$PROJECT_DIR$/CourseLearning.Application.Interface/IArticleService.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application.Interface/IModuleService.cs" afterPath="$PROJECT_DIR$/CourseLearning.Application.Interface/IModuleService.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application.Interface/IQuestionService.cs" afterPath="$PROJECT_DIR$/CourseLearning.Application.Interface/IQuestionService.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application/ArticleService.cs" afterPath="$PROJECT_DIR$/CourseLearning.Application/ArticleService.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application/Mapper/MapperConfiguration.cs" afterPath="$PROJECT_DIR$/CourseLearning.Application/Mapper/MapperConfiguration.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application/ModuleService.cs" afterPath="$PROJECT_DIR$/CourseLearning.Application/ModuleService.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application/QuestionService.cs" afterPath="$PROJECT_DIR$/CourseLearning.Application/QuestionService.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Application/QuizService.cs" afterPath="$PROJECT_DIR$/CourseLearning.Application/QuizService.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL.Interface/IArticleRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL.Interface/IArticleRepository.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL.Interface/IQuestionRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL.Interface/IQuestionRepository.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL.Interface/IRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL.Interface/IRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL.Interface/IUnitOfWork.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL.Interface/IUnitOfWork.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/ArticleRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/ArticleRepository.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/BaseRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/BaseRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/CourseLearning.DAL.csproj" afterPath="$PROJECT_DIR$/CourseLearning.DAL/CourseLearning.DAL.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/CourseRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/CourseRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/IRepositoryFactory.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/IRepositoryFactory.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/UnitOfWork.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/UnitOfWork.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/UserRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/UserRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DependencyResolver/Resolverconfig.cs" afterPath="$PROJECT_DIR$/CourseLearning.DependencyResolver/Resolverconfig.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/QuestionRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/QuestionRepository.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/QuizRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/QuizRepository.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.DAL/StorageFolderRepository.cs" afterPath="$PROJECT_DIR$/CourseLearning.DAL/StorageFolderRepository.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model.DTO/CourseLearning.Model.DTO.csproj" afterPath="$PROJECT_DIR$/CourseLearning.Model.DTO/CourseLearning.Model.DTO.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model.DTO/ModulleDTO.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model.DTO/ModulleDTO.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model.DTO/QuestionControlDTO.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model.DTO/QuestionControlDTO.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model.DTO/QuestionDTO.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model.DTO/QuestionDTO.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model.DTO/QuizDTO.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model.DTO/QuizDTO.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model.DTO/QuizQuestionDTO.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model.DTO/QuizQuestionDTO.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model.DTO/StorageFolderDTO.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model.DTO/StorageFolderDTO.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model.DTO/StorageResourceDTO.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model.DTO/StorageResourceDTO.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Article.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Article.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/ContentStorage/StorageFolder.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/ContentStorage/StorageFolder.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/ContentStorage/StorageResource.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/ContentStorage/StorageResource.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/ContentStorage/UserStorage.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/ContentStorage/UserStorage.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/CourseLearning.Model.csproj" afterPath="$PROJECT_DIR$/CourseLearning.Model/CourseLearning.Model.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Courses/Course.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Courses/Course.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Courses/CourseSession.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Courses/CourseSession.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSession.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSession.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionArticle.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionArticle.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionLesson.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionLesson.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionLessonPage.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionLessonPage.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionModule.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionModule.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionQuiz.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Enrollments/EnrollmentSessionQuiz.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Lessons/Lesson.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Lessons/Lesson.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Lessons/LessonPage.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Lessons/LessonPage.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Lessons/LessonPageTransition.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Lessons/LessonPageTransition.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/ModuleArticle.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/ModuleArticle.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Modulle.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Modulle.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Questions/Question.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Questions/Question.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuestionAnswer.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuestionAnswer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuestionControlAnswer.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuestionControlAnswer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuizQuestion.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuizQuestion.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Quiz.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Quiz.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/User.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/User.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/packages.config" afterPath="$PROJECT_DIR$/CourseLearning.Model/packages.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuestionControl.cs" afterPath="$PROJECT_DIR$/CourseLearning.Model/Questions/QuestionControl.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/App/admin/_master/_master.html" afterPath="$PROJECT_DIR$/CourseLearning.Web/App/admin/_master/_master.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/App/appAdmin.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/App/appAdmin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/App/appClient.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/App/appClient.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/App/config/app.config.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/App/config/app.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/App_Start/BundleConfig.cs" afterPath="$PROJECT_DIR$/CourseLearning.Web/App_Start/BundleConfig.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/CourseLearning.Web.csproj" afterPath="$PROJECT_DIR$/CourseLearning.Web/CourseLearning.Web.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/_references.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/_references.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-animate.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-animate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-animate.min.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-animate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-animate.min.js.map" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-animate.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-aria.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-aria.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-aria.min.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-aria.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-aria.min.js.map" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-aria.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-cookies.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-cookies.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-cookies.min.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-cookies.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-cookies.min.js.map" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-cookies.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-loader.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-loader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-loader.min.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-loader.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-loader.min.js.map" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-loader.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-message-format.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-message-format.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-message-format.min.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-message-format.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-message-format.min.js.map" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-message-format.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-messages.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-messages.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-messages.min.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-messages.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-messages.min.js.map" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-messages.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-mocks.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-mocks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-parse-ext.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-parse-ext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-parse-ext.min.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-parse-ext.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-parse-ext.min.js.map" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-parse-ext.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-resource.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-resource.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-resource.min.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-resource.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-resource.min.js.map" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-resource.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-route.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-route.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-route.min.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-route.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-route.min.js.map" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-route.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-sanitize.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-sanitize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-sanitize.min.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-sanitize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-sanitize.min.js.map" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-sanitize.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-scenario.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-scenario.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-touch.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-touch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-touch.min.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-touch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-touch.min.js.map" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular-touch.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular.min.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular.min.js.map" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/angular.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/errors.json" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/errors.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_af-na.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_af-na.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_af-za.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_af-za.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_af.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_af.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ak-gh.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ak-gh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ak.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ak.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_am-et.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_am-et.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_am.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_am.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ar-il.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ar-il.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ar-km.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ar-km.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ar-ma.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ar-ma.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_asa-tz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_asa-tz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_asa.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_asa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ast-es.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ast-es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ast.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ast.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_az-cyrl-az.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_az-cyrl-az.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_az-cyrl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_az-cyrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_az-latn-az.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_az-latn-az.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_az-latn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_az-latn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_az.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_az.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_be-by.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_be-by.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_be.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_be.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bez-tz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bez-tz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bez.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bez.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bg-bg.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bg-bg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bg.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bm-ml.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bm-ml.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bo-cn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bo-cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bo-in.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bo-in.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bo.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_bo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_br-fr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_br-fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_br.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_br.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cgg-ug.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cgg-ug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cgg.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cgg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-arab-iq.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-arab-iq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-arab-ir.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-arab-ir.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-arab.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-arab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-iq.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-iq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-ir.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-ir.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-latn-iq.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-latn-iq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-latn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb-latn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ckb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cs-cz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cs-cz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cs.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cy-gb.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cy-gb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cy.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_cy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_da-dk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_da-dk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_da-gl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_da-gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_da.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_da.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_dav-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_dav-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_dav.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_dav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_de-at.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_de-at.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ebu-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ebu-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ebu.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ebu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ee-tg.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ee-tg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-150.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-150.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-ai.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-ai.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-au.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-au.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-be.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-be.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-cc.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-cc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-ck.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-ck.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-cm.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-cm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-cx.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-cx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-dg.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-dg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-fk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-fk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-gb.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-gb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-gg.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-gg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-gi.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-gi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-ie.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-ie.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-im.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-im.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-io.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-io.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-je.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-je.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-mg.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-mg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-ms.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-ms.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-mt.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-mt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-mu.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-mu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-nf.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-nf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-nr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-nr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-nu.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-nu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-pn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-pn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-rw.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-rw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-sc.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-sc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-sh.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-sh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-sx.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-sx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-tk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-tk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-tv.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-tv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-tz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-tz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-ug.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_en-ug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-419.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-419.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ar.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-bo.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-bo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-cl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-cl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-co.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-co.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-cr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-cr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-cu.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-cu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-do.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-do.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ea.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ea.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ec.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-es.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-gq.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-gq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-gt.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-gt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-hn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-hn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ic.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-mx.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-mx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ni.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ni.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-pa.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-pa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-pe.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-pe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ph.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ph.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-pr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-pr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-py.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-py.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-sv.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-sv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-us.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-us.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-uy.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-uy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ve.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es-ve.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_et-ee.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_et-ee.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_et.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_et.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fa-af.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fa-af.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ff-mr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ff-mr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fo-fo.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fo-fo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fo.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-be.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-be.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-bf.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-bf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-bi.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-bi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-bj.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-bj.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-bl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-bl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-cd.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-cd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-cf.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-cf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-cg.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-cg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ch.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ci.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ci.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-cm.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-cm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-dj.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-dj.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-dz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-dz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-fr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ga.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ga.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-gf.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-gf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-gn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-gn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-gp.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-gp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-gq.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-gq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ht.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ht.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-km.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-km.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-lu.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-lu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ma.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ma.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-mc.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-mc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-mf.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-mf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-mg.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-mg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ml.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ml.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-mq.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-mq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-mr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-mr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-mu.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-mu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-nc.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-nc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ne.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-ne.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-pf.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-pf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-pm.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-pm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-re.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-re.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-rw.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-rw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-sc.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-sc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-sn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-sn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-sy.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-sy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-td.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-td.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-tg.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-tg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-tn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-tn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-vu.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-vu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-wf.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-wf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-yt.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr-yt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fy-nl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fy-nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fy.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_fy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_gl-es.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_gl-es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_gl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_gu-in.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_gu-in.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_gu.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_gu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_guz-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_guz-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_guz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_guz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_gv-im.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_gv-im.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_gv.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_gv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ha.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ha.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_hr-ba.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_hr-ba.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_hr-hr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_hr-hr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_hr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_hr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_hy-am.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_hy-am.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_hy.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_hy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ii-cn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ii-cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ii.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ii.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_it-ch.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_it-ch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_it-it.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_it-it.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_it-sm.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_it-sm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_it.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_it.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_jgo-cm.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_jgo-cm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_jgo.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_jgo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_jmc-tz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_jmc-tz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_jmc.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_jmc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ka-ge.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ka-ge.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ka.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ka.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kab-dz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kab-dz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kab.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kam-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kam-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kam.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kam.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kde-tz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kde-tz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kde.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kde.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ki-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ki-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ki.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ki.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kl-gl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kl-gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kln-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kln-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kln.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kln.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_km-kh.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_km-kh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_km.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_km.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kn-in.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kn-in.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_kn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ko-kp.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ko-kp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ko-kr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ko-kr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ko.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ko.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ksb-tz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ksb-tz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ksb.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ksb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ky.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ky.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lag-tz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lag-tz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lag.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lg-ug.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lg-ug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lg.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_luo-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_luo-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_luo.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_luo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_luy-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_luy-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_luy.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_luy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lv-lv.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lv-lv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lv.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_lv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mas-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mas-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mas-tz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mas-tz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mas.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mer-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mer-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mer.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mgh-mz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mgh-mz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mgh.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mgh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ml-in.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ml-in.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ml.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ml.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_mn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nb-no.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nb-no.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nb-sj.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nb-sj.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nb.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ne-in.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ne-in.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-aw.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-aw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-be.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-be.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-bq.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-bq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-cw.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-cw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-nl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-sr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-sr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-sx.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl-sx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nn-no.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nn-no.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nnh-cm.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nnh-cm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nnh.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nnh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_no-no.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_no-no.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_no.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_no.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nus.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nus.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nyn-ug.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nyn-ug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nyn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_nyn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_om-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_om-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_os-ge.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_os-ge.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_os-ru.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_os-ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_os.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_os.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pa-arab-pk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pa-arab-pk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pa-arab.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pa-arab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-ao.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-ao.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-br.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-br.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-cv.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-cv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-gw.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-gw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-mo.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-mo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-mz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-mz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-pt.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-pt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-st.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-st.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-tl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt-tl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_pt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_qu-bo.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_qu-bo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_qu-ec.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_qu-ec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_qu-pe.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_qu-pe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_qu.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_qu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ro-md.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ro-md.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ro-ro.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ro-ro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ro.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_rof-tz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_rof-tz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_rof.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_rof.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru-by.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru-by.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru-kg.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru-kg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru-kz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru-kz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru-md.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru-md.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru-ru.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru-ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru-ua.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru-ua.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_rwk-tz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_rwk-tz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_rwk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_rwk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sah-ru.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sah-ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sah.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sah.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_saq-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_saq-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_saq.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_saq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sbp-tz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sbp-tz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sbp.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sbp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_si-lk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_si-lk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_si.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_si.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sk-sk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sk-sk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sl-si.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sl-si.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_so-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_so-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sq-al.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sq-al.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sq-mk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sq-mk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sq-xk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sq-xk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sq.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-cyrl-ba.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-cyrl-ba.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-cyrl-me.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-cyrl-me.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-cyrl-rs.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-cyrl-rs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-cyrl-xk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-cyrl-xk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-cyrl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-cyrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-latn-ba.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-latn-ba.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-latn-me.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-latn-me.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-latn-rs.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-latn-rs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-latn-xk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-latn-xk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-latn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr-latn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sv-ax.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sv-ax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sv-fi.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sv-fi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sv-se.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sv-se.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sv.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sw-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sw-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sw-tz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sw-tz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sw-ug.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sw-ug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sw.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_sw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ta-in.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ta-in.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ta-lk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ta-lk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ta-my.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ta-my.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ta-sg.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ta-sg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ta.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ta.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_teo-ke.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_teo-ke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_teo-ug.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_teo-ug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_teo.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_teo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_tr-cy.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_tr-cy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_tr-tr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_tr-tr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_tr.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_tr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_tzm.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_tzm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ug.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uk-ua.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uk-ua.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ur-pk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ur-pk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ur.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_ur.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz-arab-af.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz-arab-af.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz-arab.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz-arab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz-cyrl-uz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz-cyrl-uz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz-cyrl.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz-cyrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz-latn-uz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz-latn-uz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz-latn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz-latn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_uz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_vi-vn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_vi-vn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_vi.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_vi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_vo-001.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_vo-001.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_vo.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_vo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_vun-tz.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_vun-tz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_vun.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_vun.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_xog-ug.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_xog-ug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_xog.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_xog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_yi-001.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_yi-001.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_yi.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_yi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh-cn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh-cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh-hans-cn.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh-hans-cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh-hans.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh-hans.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh-hant-hk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh-hant-hk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh-hant-mo.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh-hant-mo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh-hk.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh-hk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zu-za.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zu-za.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zu.js" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/i18n/angular-locale_zu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Scripts/version.json" afterPath="$PROJECT_DIR$/CourseLearning.Web/Scripts/version.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/Views/Admin/Index.cshtml" afterPath="$PROJECT_DIR$/CourseLearning.Web/Views/Admin/Index.cshtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.Web/packages.config" afterPath="$PROJECT_DIR$/CourseLearning.Web/packages.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.WebAPI/App_Start/WebApiConfig.cs" afterPath="$PROJECT_DIR$/CourseLearning.WebAPI/App_Start/WebApiConfig.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/AdminControllers/AdminArticleController.cs" afterPath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/AdminControllers/AdminArticleController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/AdminControllers/AdminModuleController.cs" afterPath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/AdminControllers/AdminModuleController.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/AdminControllers/CourseController.cs" afterPath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/AdminControllers/CourseController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/TestController.cs" afterPath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/TestController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.WebAPI/CourseLearning.WebAPI.csproj" afterPath="$PROJECT_DIR$/CourseLearning.WebAPI/CourseLearning.WebAPI.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.sln" afterPath="$PROJECT_DIR$/CourseLearning.sln" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ORM/CourseDbContext.cs" afterPath="$PROJECT_DIR$/ORM/CourseDbContext.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ORM/CourseDbInitializer.cs" afterPath="$PROJECT_DIR$/ORM/CourseDbInitializer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ORM/ORM.csproj" afterPath="$PROJECT_DIR$/ORM/ORM.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/AdminControllers/QuestionController.cs" afterPath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/AdminControllers/QuestionController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/AdminControllers/QuizController.cs" afterPath="$PROJECT_DIR$/CourseLearning.WebAPI/Controllers/AdminControllers/QuizController.cs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -98,7 +530,18 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="appAdmin.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CourseLearning.Web/App/appAdmin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -118,10 +561,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="269" />
-    <option name="y" value="109" />
-    <option name="width" value="1400" />
-    <option name="height" value="844" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -139,7 +582,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -180,80 +622,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CourseLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CourseLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CourseLearning.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CourseLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CourseLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CourseLearning.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CourseLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CourseLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CourseLearning.Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="D:/opt_soft/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CourseLearning.Web" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -268,17 +649,18 @@
       <updated>1490543491924</updated>
       <workItem from="1490543493200" duration="3273000" />
       <workItem from="1491853530283" duration="168000" />
+      <workItem from="1492671861024" duration="22000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3441000" />
+    <option name="totallyTimeSpent" value="3463000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="269" y="109" width="1400" height="844" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24944974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24907847" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -311,10 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1490647960008" expanded="true" signature="783:905" ph="{...}" />
-            <marker date="1490647960008" expanded="true" signature="783:788" ph="{&quot;templateUrl&quot;: '/App/test/test.html'...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -322,7 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -331,10 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-          <folding>
-            <marker date="1490647960008" expanded="true" signature="783:905" ph="{...}" />
-            <marker date="1490647960008" expanded="true" signature="783:788" ph="{&quot;templateUrl&quot;: '/App/test/test.html'...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -342,6 +715,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="37" column="19" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CourseLearning.Web/App/appAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

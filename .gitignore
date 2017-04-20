@@ -241,3 +241,5 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 /ConsoleApp
+/CourseLearning.WebAPI/App_Data
+/CourseLearning.WebAPI/App_Data

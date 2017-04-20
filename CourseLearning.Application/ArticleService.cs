@@ -8,7 +8,7 @@ using CourseLearning.Model.DTO;
 
 namespace CourseLearning.Application
 {
-    public class ArticleService : BaseEntityService<Article, StorageArticleDTO>, IArticleService
+    public class ArticleService : BaseEntityService<Article, ArticleDTO>, IArticleService
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -17,42 +17,43 @@ namespace CourseLearning.Application
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<int> Add(StorageArticleDTO articleDTO)
+        public async Task<int> Add(ArticleDTO articleDTO)
         {
             var article = ToEntity(articleDTO);
 
-            var storageFolder = await _unitOfWork.StorageFolders.FindAsync(article.StorageFolderId);
             //current user check
-            if (storageFolder == null)
-            {
-                throw new ArgumentException("storage folder with current id doesn't exist", nameof(articleDTO.StorageFolderId));
-            }
 
             _unitOfWork.Articles.Add(article);
             await _unitOfWork.CompleteAsync();
             return article.ArticleId;
         }
 
-        public async Task<StorageArticleDTO> Get(int id)
+        public async Task<ArticleDTO> Get(int id)
         {
             var article = await _unitOfWork.Articles.FindAsync(id);
             return ToEntityDTO(article);
         }
 
-        public Task Delete(StorageArticleDTO entity)
+        public Task Delete(ArticleDTO entity)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task Update(StorageArticleDTO entity)
+        public Task Update(ArticleDTO entity)
         {
             throw new System.NotImplementedException();
         }
 
-        public async Task<IList<StorageArticleDTO>> GetModuleArticlesAsync(int moduleId)
+        public async Task<IList<ArticleDTO>> GetModuleArticlesAsync(int moduleId)
         {
             var moduleArticles = await _unitOfWork.Articles.GetModuleArticlesAsync(moduleId);
             return ToEntitiesDTO(moduleArticles);
+        }
+
+        public async Task<IList<ArticleDTO>> GetCreatorArticlesAsync(int creatorId)
+        {
+            var articles = await _unitOfWork.Articles.GetCreatorArticlesAsync(creatorId);
+            return ToEntitiesDTO(articles);
         }
     }
 }

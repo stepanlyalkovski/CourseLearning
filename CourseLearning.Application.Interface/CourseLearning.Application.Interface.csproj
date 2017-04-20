@@ -47,6 +47,7 @@
     <Compile Include="IQuestionService.cs" />
     <Compile Include="IQuizService.cs" />
     <Compile Include="IStorageFolderService.cs" />
+    <Compile Include="IResourceService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

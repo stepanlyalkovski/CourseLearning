@@ -14,7 +14,7 @@ namespace CourseLearning.Model.DTO
 
         public IList<StorageResourceDTO> Resources { get; set; }
 
-        public IList<StorageArticleDTO> Articles { get; set; }
+        public IList<ArticleDTO> Articles { get; set; }
 
         public bool IsDefaultFolder { get; set; }
     }

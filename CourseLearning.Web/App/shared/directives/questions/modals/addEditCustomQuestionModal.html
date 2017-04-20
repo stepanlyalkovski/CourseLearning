@@ -1,0 +1,61 @@
+﻿<div class="vsi-modal">
+    <div class="modal-header">
+        <span>{{vm.title}}</span>
+        <span class="icon icon-close btn pull-right"  ng-click="vm.cancelClickFn()"></span>
+    </div>
+    <div class="modal-body">
+        <data-ng-form name="frmAddCustomQuestionModal" novalidate>
+
+            <div data-ng-if="vm.currentState === 'select_type'">
+                <div class="form-group">
+                    <label for="category" >Category</label>
+                    <input class="form-control" id="category" type="text" data-ng-model="vm.question.category">
+                </div>
+                <div class="form-group">
+                    <label for="questionControlTypeList" class="vsi-input-label module-form__label module-form__label--required">Control Type</label>
+                    <select id="questionControlTypeList" name="questionControlTypeList" class="form-control"
+                            data-ng-options="control.questionControlTypeId as control.name  disable when control.$count===control.$questionsMaxLimit for control in vm.questionControlTypeList"
+                            data-ng-required="vm.validationRules.questionControlTypeList.required"
+                            data-ng-model="vm.question.questionControlType"
+                            data-ng-disabled="vm.isEditMode">
+                        <option value="" class="hidden" disabled>Select One</option>
+                    </select>
+                </div>
+            </div>
+
+            <div data-ng-if="vm.currentState === 'configure_question'">
+                <div class="form-group">
+                    <dynamic-form-question question="vm.question"></dynamic-form-question>
+                </div>
+            </div>
+
+            <div data-ng-if="vm.currentState === 'configure_answer'">
+                Enter or Select right answer
+                <div data-ng-if="vm.questionControlTypeList.input.questionControlTypeId === vm.question.questionControlType">
+                    <inputtext-question-answer question="vm.question" subject="vm.subject"></inputtext-question-answer>
+                </div>
+
+                <div data-ng-if="vm.questionControlTypeList.checkbox.questionControlTypeId === vm.question.questionControlType">
+                    <checkbox-question-answer question="vm.question" subject="vm.subject"></checkbox-question-answer>
+                </div>
+
+                <div data-ng-if="vm.questionControlTypeList.radiobutton.questionControlTypeId === vm.question.questionControlType">
+                    <radiobutton-question-answer question="vm.question" subject="vm.subject"></radiobutton-question-answer>
+                </div>
+                <!--<div class="selected-custom-question" data-ng-if="vm.questions.length > 0" data-ng-repeat="question in vm.questions | orderBy:'questionSeqNum'">-->
+                    <!--<div data-ng-if="vm.isAppAdmin" class="vsi-custom-question-header">{{vm.getQuestionTitleFn(question)}}</div>-->
+
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<dynamic-form-question question="vm.question"></dynamic-form-question>-->
+                <!--</div>-->
+            </div>
+        </data-ng-form>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-default btn-sm" ng-click="vm.cancelClickFn()">Cancel</button>
+        <button auto-focus="vm.autoFocusConfig" class="btn btn-primary btn-sm" ng-click="vm.addClickFn()">{{vm.getOkButtonTitleFn()}}</button>
+    </div>
+
+</div>
