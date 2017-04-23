@@ -56,8 +56,7 @@
 
         function successUpload(response) {
             $timeout(function () {
-                vm.resourceFile.result = response.data;
-                vm.storageResource.file = vm.resourceFile;
+                vm.storageResource = response.data;
                 $uibModalInstance.close(vm.storageResource);
             });
         }

@@ -7,7 +7,7 @@
         <a ui-sref="admin.quiz({id: moduleQuiz.quizId})">{{moduleQuiz.title}}</a>
     </li>
 </ul>
-<button ng-click="moduleCtrl.addQuiz()">Add Quiz</button>
+<button ng-click="moduleCtrl.addQuizClick()">Add Quiz</button>
 <hr>
 <h4>Articles: </h4>
 <ul>
@@ -15,3 +15,12 @@
         <a ui-sref="admin.article({id: moduleArticle.articleId})">{{moduleArticle.title}}</a>
     </li>
 </ul>
+<button ng-click="moduleCtrl.addArticleClick()">Add Article</button>
+<hr>
+<h4>Lessons: </h4>
+<ul>
+    <li ng-repeat="moduleLesson in moduleCtrl.module.lessons">
+        <a ui-sref="admin.lesson({id: moduleLesson.lessonId})">{{moduleLesson.title}}</a>
+    </li>
+</ul>
+<button class="btn btn-info" ng-click="moduleCtrl.addLessonClick()">Add Lesson</button>

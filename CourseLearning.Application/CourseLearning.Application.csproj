@@ -47,6 +47,7 @@
     <Compile Include="ArticleService.cs" />
     <Compile Include="BaseEntityService.cs" />
     <Compile Include="CourseService.cs" />
+    <Compile Include="LessonService.cs" />
     <Compile Include="Mapper\DtoMapper.cs" />
     <Compile Include="Mapper\MapperConfiguration.cs" />
     <Compile Include="ModuleService.cs" />

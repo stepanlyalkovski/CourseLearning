@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="IArticleRepository.cs" />
     <Compile Include="ICourseRepository.cs" />
+    <Compile Include="ILessonRepository.cs" />
     <Compile Include="IModuleRepository.cs" />
     <Compile Include="IQuestionRepository.cs" />
     <Compile Include="IQuizRepository.cs" />

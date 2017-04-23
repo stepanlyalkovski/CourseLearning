@@ -32,5 +32,10 @@ namespace CourseLearning.DAL
                 .Include(f => f.Resources)
                 .FirstOrDefaultAsync(f => f.StorageFolderId == storageFolderId);
         }
+
+        public async Task<StorageFolder> GetMainFolderAsync(int userId)
+        {
+            return await Context.Set<StorageFolder>().FirstOrDefaultAsync(f => f.UserStorageId == userId && f.IsDefaultFolder);
+        }
     }
 }

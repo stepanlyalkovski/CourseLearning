@@ -71,6 +71,13 @@
                     params : { createdQuiz: null },
                     templateUrl: '/App/admin/appComponents/quiz/quiz.html',
                     controller: 'quizCtrl as quizCtrl'
+                })
+            .state('admin.lesson',
+                {
+                    url: '/lesson/:id',
+                    params : { createdQuiz: null },
+                    templateUrl: '/App/admin/appComponents/lesson/lesson.html',
+                    controller: 'lessonCtrl as lessonCtrl'
                 });
         $urlRouterProvider.otherwise('admin/course');
         //$routeProvider

@@ -8,6 +8,7 @@
             article: '/api/admin/article',
             question: '/api/admin/question',
             quiz: '/api/admin/quiz',
+            lesson: '/api/admin/lesson',
             storage: '/api/admin/storage',
             storageFolder: '/api/admin/storageFolder',
             file: '/api/admin/file'

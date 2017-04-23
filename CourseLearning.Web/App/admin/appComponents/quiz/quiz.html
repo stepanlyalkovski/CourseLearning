@@ -11,8 +11,10 @@
     <div class="col-md-10">
         <ng-form name="quiz">
             <div class="form-group">
-                <input type="number" ng-model="quizCtrl.quiz.TotalTimeSec" class="form-control" name="quizTotalTime">
-                <input type="number" ng-model="quizCtrl.quiz.passNumber" class="form-control" name="quizPassNumber">
+                <label for="totalTime">Total time(seconds)</label>
+                <input id="totalTime" type="number" ng-model="quizCtrl.quiz.totalTimeSec" class="form-control" name="quizTotalTime">
+                <label for="passNumber">Number of rights answered questions to pass</label>
+                <input id="passNumber" type="number" ng-model="quizCtrl.quiz.passNumber" class="form-control" name="quizPassNumber">
             </div>
         </ng-form>
     </div>

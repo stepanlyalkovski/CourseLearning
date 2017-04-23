@@ -5,9 +5,9 @@
         .module('app')
         .factory('modalSvc', modalSvc);
 
-    modalSvc.$inject = ['$http', '$uibModal'];
+    modalSvc.$inject = ['$http', '$uibModal', 'appEnum'];
 
-    function modalSvc($http, $uibModal) {
+    function modalSvc($http, $uibModal, appEnum) {
         var selectActionModalTemplate = {
             animation: true,
             backdrop: "static",
@@ -31,9 +31,43 @@
             size: "lg"
         };
 
+        var createPreviewModalTemplate = {
+            animation: true,
+            backdrop: "static",
+            keyboard: true,
+            templateUrl: "/App/admin/appComponents/modals/addEditPreviewModel/addEditPreviewModal.html",
+            controller: "addEditPreviewModalCtrl as vm",
+            size: "lg"
+        };
+
+        var questionModalTemplate = {
+            animation: true,
+            backdrop: "static",
+            keyboard: false,
+            templateUrl: "/App/shared/directives/questions/modals/addEditCustomQuestionModal.html",
+            controller: "addEditCustomQuestionModalCtrl as vm",
+            size: "lg",
+            resolve: {
+                additionalData: function () {
+
+                }
+            }
+        };
+
+        // var questionControlTypeList = angular.copy(appEnum.questionControlTypes);
+        // for(var key in questionControlTypeList) {
+        //     if (questionControlTypeList.hasOwnProperty(key)) {
+        //         if (questionControlTypeList[key].$isHideForStandAloneUsage === true) {
+        //             delete questionControlTypeList[key];
+        //         }
+        //     }
+        // }
+
         var service = {
             addSelectActionModal: addSelectActionModal,
-            addCreateStorageResourceModal: addCreateStorageResourceModal
+            addCreateStorageResourceModal: addCreateStorageResourceModal,
+            addCreatePreviewModal: addCreatePreviewModal,
+            addCreateQuestionModal: addCreateQuestionModal
         };
 
         return service;
@@ -60,5 +94,30 @@
             return modalInstance.result;
         }
 
+        function addCreatePreviewModal(settings) {
+            settings.modalName = settings.modalName || 'Preview Model';
+            var template = angular.copy(createPreviewModalTemplate);
+            template.resolve = {
+                settings: function () {
+                    return settings;
+                }
+            };
+
+            var modalInstance = $uibModal.open(template);
+            return modalInstance.result;
+        }
+
+        function addCreateQuestionModal() {
+
+            var template = angular.copy(questionModalTemplate);
+            template.resolve.additionalData = function () {
+                return {
+                    title: "Add Custom Question",
+                    questionControlTypeList: appEnum.questionControlTypes
+                };
+            };
+
+            return $uibModal.open(template).result;
+        }
     }
 })();

@@ -24,6 +24,8 @@ namespace CourseLearning.DAL
 
         public IQuestionRepository Questions { get; }
 
+        public ILessonRepository Lessons { get; }
+
         public IUserRepository Users { get; }
 
         public UnitOfWork(DbContext context, IRepositoryFactory repositoryFactory)
@@ -39,6 +41,7 @@ namespace CourseLearning.DAL
             Resources = repositoryFactory.CreateResourceRepository(context);
             Quizzes = repositoryFactory.CreateQuizRepository(context);
             Questions = repositoryFactory.CreateQuestionRepository(context);
+            Lessons = repositoryFactory.CreateLessonRepository(context);
         }
 
         public Task<int> CompleteAsync()

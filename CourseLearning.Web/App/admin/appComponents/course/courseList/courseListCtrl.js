@@ -5,17 +5,17 @@
         .module('app')
         .controller('courseListCtrl', courseListCtrl);
 
-    courseListCtrl.$inject = ['$location', '$scope', 'courseSvc'];
+    courseListCtrl.$inject = ['$location', '$scope', 'Course', 'modalSvc'];
 
-    function courseListCtrl($location, $scope, courseSvc) {
+    function courseListCtrl($location, $scope, Course, modalSvc) {
         /* jshint validthis:true */
         var vm = this;
-        var Course = courseSvc.getCourseResource();
+
         vm.createdCourse = {};
         vm.title = 'courseListCtrl';
-        vm.saveCourseForm = saveCourseForm;
         vm.courses = null;
 
+        vm.saveCourseForm = saveCourseForm;
 
         activate();
 
@@ -42,5 +42,6 @@
                 console.log(vm.courses);
             });
         }
+
     }
 })();

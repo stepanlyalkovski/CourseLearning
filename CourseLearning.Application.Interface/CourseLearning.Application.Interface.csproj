@@ -43,6 +43,7 @@
     <Compile Include="IArticleService.cs" />
     <Compile Include="ICourseService.cs" />
     <Compile Include="IEntityService.cs" />
+    <Compile Include="ILessonService.cs" />
     <Compile Include="IModuleService.cs" />
     <Compile Include="IQuestionService.cs" />
     <Compile Include="IQuizService.cs" />

@@ -35,3 +35,19 @@ textarea {
 .dragover {
     border: 5px dashed blue;
 }
+
+.lesson-builder {
+    background-color: gray;
+}
+
+.lesson-page-list {
+    background-color: antiquewhite;
+}
+
+.lesson-page-builder {
+    background-color: aqua;
+}
+
+.active-list {
+    border: 2px solid red;
+}

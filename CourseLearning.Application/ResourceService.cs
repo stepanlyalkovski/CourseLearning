@@ -26,7 +26,10 @@ namespace CourseLearning.Application
 
             if (resource.StorageFolderId == 0)
             {
-                throw new ArgumentException("storage folder is not specified", nameof(resource.StorageFolderId));
+                //TODO Get user main folder
+                int userId = 1;
+                var mainFolder = await _unitOfWork.StorageFolders.GetMainFolderAsync(userId);
+                resource.StorageFolderId = mainFolder.StorageFolderId;
             }
 
             var newResource = _resourceMapper.ToEntity(resource);
@@ -48,6 +51,24 @@ namespace CourseLearning.Application
         public Task Update(StorageResourceDTO entity)
         {
             throw new System.NotImplementedException();
+        }
+
+        public async Task<StorageResourceDTO> AddResource(StorageResourceDTO storageResourceDto)
+        {
+            //TODO validate User
+
+            if (storageResourceDto.StorageFolderId == 0)
+            {
+                //TODO Get user main folder
+                int userId = 1;
+                var mainFolder = await _unitOfWork.StorageFolders.GetMainFolderAsync(userId);
+                storageResourceDto.StorageFolderId = mainFolder.StorageFolderId;
+            }
+
+            var newResource = _resourceMapper.ToEntity(storageResourceDto);
+            _unitOfWork.Resources.Add(newResource);
+            await _unitOfWork.CompleteAsync();
+            return _resourceMapper.ToEntityDTO(newResource);
         }
     }
 }

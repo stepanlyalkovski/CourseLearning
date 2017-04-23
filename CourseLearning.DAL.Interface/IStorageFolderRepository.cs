@@ -9,5 +9,7 @@ namespace CourseLearning.DAL.Interface
         Task<IList<StorageFolder>> GetStorageFoldersAsync(int storageId);
 
         Task<StorageFolder> FindAsync(int storageFolderId, bool includeFolderContent);
+
+        Task<StorageFolder> GetMainFolderAsync(int userId);
     }
 }

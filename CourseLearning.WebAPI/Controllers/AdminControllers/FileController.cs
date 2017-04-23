@@ -48,7 +48,8 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
                     StorageFolderId = storageResource.StorageFolderId,
                     MimeType = provider.FileData.First().Headers.ContentType.ToString()
                 };
-                int createdId = await _resourceService.Add(createdResource);
+
+                var newResource = await _resourceService.AddResource(createdResource);
                 // This illustrates how to get the file names.
                 foreach (MultipartFileData file in provider.FileData)
                 {
@@ -66,7 +67,7 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
                     }
                 }
 
-                return Created(Request.RequestUri + $"/{createdId}", new StorageResourceDTO { StorageResourceId = createdId });
+                return Created(Request.RequestUri + $"/{newResource.StorageResourceId}", newResource);
             }
             catch (System.Exception e)
             {

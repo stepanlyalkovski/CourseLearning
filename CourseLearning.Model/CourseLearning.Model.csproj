@@ -70,7 +70,7 @@
     <Compile Include="Lessons\LessonPage.cs" />
     <Compile Include="Lessons\LessonPageTransition.cs" />
     <Compile Include="Lessons\LessonPageTransitionType.cs" />
-    <Compile Include="ModuleArticle.cs" />
+    <Compile Include="Lessons\LessonPageType.cs" />
     <Compile Include="Modulle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Questions\Question.cs" />

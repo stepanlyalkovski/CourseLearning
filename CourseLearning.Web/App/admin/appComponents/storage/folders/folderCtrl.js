@@ -58,9 +58,8 @@
         function addStorageResource() {
             var modalResult = modalSvc.addCreateStorageResourceModal(vm.folder.storageFolderId);
             modalResult.then(function(storageResource) {
-                storageResource.storageResourceId = storageResource.file.result.storageResourceId;
                 vm.folder.resources.push(storageResource);
-            })
+            });
         }
     }
 })();

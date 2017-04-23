@@ -51,6 +51,5 @@ namespace ORM
 
         public DbSet<UserStorage> UserStorage { get; set; }
 
-        public DbSet<ModuleArticle> ModuleArticles { get; set; }
     }
 }

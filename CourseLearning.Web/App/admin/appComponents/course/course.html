@@ -10,18 +10,18 @@
 </ul>
 
 <a ui-sref="admin.courseList" class="btn btn-info">Back</a>
-
-<h2>Demo Module add</h2>
-<ng-form name="moduleForm">
-    <label for="module-title">Course Title</label>
-    <input id ="module-title" type="text" name="courseTitle" ng-model="courseCtrl.createdModule.name" required>
-    <br>
-    <label for="module-description">Course Description</label>
-    <textarea name="moduleDescription"
-              id="module-description"
-              cols="30"
-              rows="10"
-              ng-model="courseCtrl.createdModule.description">
-    </textarea>
-    <button type="submit" ng-click="courseCtrl.addModule()">Save</button>
-</ng-form>
+<button class="btn btn-warning" ng-click="courseCtrl.addModuleClick()">Add module</button>
+<!--<h2>Demo Module add</h2>-->
+<!--<ng-form name="moduleForm">-->
+    <!--<label for="module-title">Course Title</label>-->
+    <!--<input id ="module-title" type="text" name="courseTitle" ng-model="courseCtrl.createdModule.name" required>-->
+    <!--<br>-->
+    <!--<label for="module-description">Course Description</label>-->
+    <!--<textarea name="moduleDescription"-->
+              <!--id="module-description"-->
+              <!--cols="30"-->
+              <!--rows="10"-->
+              <!--ng-model="courseCtrl.createdModule.description">-->
+    <!--</textarea>-->
+    <!--<button type="submit" ng-click="courseCtrl.addModule()">Save</button>-->
+<!--</ng-form>-->

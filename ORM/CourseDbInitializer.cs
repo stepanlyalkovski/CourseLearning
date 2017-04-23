@@ -5,7 +5,7 @@ using CourseLearning.Model.ContentStorage;
 
 namespace ORM
 {
-    public class CourseDbInitializer : CreateDatabaseIfNotExists<CourseDbContext>
+    public class CourseDbInitializer : DropCreateDatabaseIfModelChanges<CourseDbContext>
     {
         protected override void Seed(CourseDbContext db)
         {

@@ -1,0 +1,21 @@
+<h5>Page Builder</h5>
+{{vm.lessonPage}}
+<div class="row">
+    <div ng-if="!vm.lessonPage">
+        No Page Selected
+    </div>
+    <div ng-if="vm.lessonPage" class="lesson-page-builder">
+        You've selected following type: {{vm.lessonPage.lessonPageType}}
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input id="title" class="form-control" type="text" ng-model="vm.lessonPage.title">
+        </div>
+        <div ng-if="vm.lessonPage.lessonPageType == vm.pageTypes.standard">
+            <standard-page-builder settings="vm.settings" lesson-page="vm.lessonPage"></standard-page-builder>
+        </div>
+        <div ng-if="vm.lessonPage.lessonPageType === vm.pageTypes.question">
+            <question-page-builder settings="vm.settings" lesson-page="vm.lessonPage"></question-page-builder>
+        </div>
+    </div>
+
+</div>

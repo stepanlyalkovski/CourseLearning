@@ -5,9 +5,9 @@
         .module('app')
         .controller('courseCtrl', courseCtrl);
 
-    courseCtrl.$inject = ['$scope', 'Course', '$state'];
+    courseCtrl.$inject = ['$scope', 'Course', '$state', 'modalSvc'];
 
-    function courseCtrl($scope, Course, $state) {
+    function courseCtrl($scope, Course, $state, modalSvc) {
         /* jshint validthis:true */
         var vm = this;
 
@@ -16,7 +16,7 @@
         vm.createdModule = {};
 
         vm.addModule = addModule;
-
+        vm.addModuleClick = addModuleClick;
 
         activate();
 
@@ -31,14 +31,23 @@
             console.log(vm.courseModules);
         }
 
-        function addModule() {
-            vm.createdModule.course = { courseId: vm.course.courseId };
-            Course.addModule({id: vm.course.courseId}, vm.createdModule, function(data) {
+        function addModule(module) {
+            module.name = module.title;
+            module.course = { courseId: vm.course.courseId };
+            Course.addModule({id: vm.course.courseId}, module, function(data) {
                 console.log(data);
-                vm.createdModule.moduleId = data.moduleId;
-                vm.courseModules.push(vm.createdModule);
+                module.moduleId = data.moduleId;
+                vm.courseModules.push(module);
                 console.log(vm.courseModules);
             });
+        }
+
+        function addModuleClick() {
+            var settings = {
+                moduleName: 'Module'
+            };
+
+            modalSvc.addCreatePreviewModal(settings).then(addModule);
         }
     }
 

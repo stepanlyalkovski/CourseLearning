@@ -41,11 +41,11 @@ namespace CourseLearning.DAL
             var questionList = quizEntry.Collection(q => q.QuizQuestionList);
             await questionList.LoadAsync();
 
-            foreach (var dbQuizQuestion in questionList.CurrentValue)
+            foreach (var dbQuizQuestion in questionList.CurrentValue.ToList())
             {
                 if (quiz.QuizQuestionList.All(q => q.QuizQuestionId != dbQuizQuestion.QuizQuestionId))
                 {
-                    questionList.CurrentValue.Remove(dbQuizQuestion);
+                    Context.Set<QuizQuestion>().Remove(dbQuizQuestion);
                 }
             }
 

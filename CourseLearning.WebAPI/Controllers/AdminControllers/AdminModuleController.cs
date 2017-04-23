@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using CourseLearning.Application.Interface;
 using CourseLearning.Model.DTO;
+using CourseLearning.Model.DTO.Lessons;
 
 namespace CourseLearning.WebAPI.Controllers.AdminControllers
 {
@@ -16,14 +17,16 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
         private readonly IModuleService _moduleService;
         private readonly IArticleService _articleService;
         private readonly IQuizService _quizService;
+        private readonly ILessonService _lessonService;
 
-        public AdminModuleController(IModuleService moduleService, IArticleService articleService, IQuizService quizService)
+        public AdminModuleController(IModuleService moduleService, IArticleService articleService, IQuizService quizService, ILessonService lessonService)
         {
             _moduleService = moduleService;
             _articleService = articleService;
             _quizService = quizService;
+            _lessonService = lessonService;
         }
-
+       
         [Route("{id:int}")]
         [HttpGet]
         public async Task<IHttpActionResult> Get(int id)
@@ -63,5 +66,20 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
             return Created(Request.RequestUri + $"/{createdId}", createdQuiz);
         }
 
+        [Route("{moduleId:int}/lessons")]
+        [HttpGet]
+        public async Task<IHttpActionResult> GetModuleLessons(int moduleId)
+        {
+            return Ok(await _lessonService.GetModuleLessons(moduleId));
+        }
+
+        [Route("{moduleId:int}/lessons")]
+        [HttpPost]
+        public async Task<IHttpActionResult> AddLesson(int moduleId, [FromBody] LessonDTO lesson)
+        {
+            lesson.ModuleId = moduleId; //TODO find a better solution to set module id
+            int createdId = await _lessonService.Add(lesson);
+            return Created(Request.RequestUri + $"/{createdId}", new LessonDTO { LessonId = createdId, ModuleId = moduleId});
+        }
     }
 }

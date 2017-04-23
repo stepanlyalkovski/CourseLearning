@@ -236,6 +236,7 @@
     <Compile Include="Controllers\AdminControllers\AdminUserStorageController.cs" />
     <Compile Include="Controllers\AdminControllers\CourseController.cs" />
     <Compile Include="Controllers\AdminControllers\FileController.cs" />
+    <Compile Include="Controllers\AdminControllers\LessonController.cs" />
     <Compile Include="Controllers\AdminControllers\QuestionController.cs" />
     <Compile Include="Controllers\AdminControllers\QuizController.cs" />
     <Compile Include="Controllers\AdminControllers\StorageFolderController.cs" />

@@ -1,0 +1,53 @@
+<div class="row lesson-builder">
+    <div class="col-md-9">
+        <lesson-page-builder lesson-page="vm.selectedPage"></lesson-page-builder>
+        <div ng-if="vm.selectedPage" class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="form-group">
+                    {{vm.selectedPage.lessonPageTransitions}}
+                    <label for="transitionTypes">Transition Type:</label>
+                    <select name="transitionTypes"
+                            id="transitionTypes"
+                            class="form-control"
+                            ng-options="transition.name for transition in vm.transitionOptions"
+                            data-ng-model="vm.selectedTransition"
+                            data-ng-disabled="!vm.isQuestionPageType()">
+                        <option value="" class="hidden" disabled>{{vm.isQuestionPageType() ? 'Select One' : 'Default'}}</option>
+                    </select>
+                    {{vm.selectedTransition}}
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-2">
+                        <div ng-show="vm.selectedTransition.type === vm.transitionTypes.yesNo">
+                            <div class="row">
+                                <span class="col-md-3">Yes</span>
+                                <button class="col-md-3" ng-click="vm.createYesNoTransition(true)">Add</button>
+                                <span class="col-md-3">No</span>
+                                <button class="col-md-3" ng-click="vm.createYesNoTransition(false)">Add</button>
+                            </div>
+                        </div>
+                        <div ng-show="vm.selectedTransition.type === vm.transitionTypes.custom">
+                            <div class="row" ng-repeat="questionControl in vm.selectedPage.question.controlList">
+                                <span class="col-md-3">{{questionControl.controlHeading}}</span>
+                                <button class="col-md-3" ng-click="vm.createCustomTransition(questionControl.controlHeading)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <b ng-show="vm.isPageSelectMode()">Select Page for transition</b>
+        <button class="btn btn-success btn-lg" ng-click="vm.createPage()">Add Page</button>
+        <ul class="lesson-page-list" ng-class="{'active-list': vm.isPageSelectMode()}">
+            <li ng-repeat="lessonPage in vm.lesson.lessonPages">
+                <button class="btn btn-info" ng-click="vm.selectLessonPage(lessonPage)">
+                    {{(lessonPage.title ? lessonPage.title : 'No Title') + '(id: ' + lessonPage.lessonPageId + ')'}}
+                </button>
+            </li>
+        </ul>
+    </div>
+    <button class="btn btn-info" ng-click="vm.saveLessonClick()">Save Lesson</button>
+</div>

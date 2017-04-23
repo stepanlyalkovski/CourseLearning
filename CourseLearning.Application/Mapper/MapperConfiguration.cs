@@ -2,6 +2,8 @@
 using CourseLearning.Model;
 using CourseLearning.Model.ContentStorage;
 using CourseLearning.Model.DTO;
+using CourseLearning.Model.DTO.Lessons;
+using CourseLearning.Model.Lessons;
 using CourseLearning.Model.Questions;
 using Course = CourseLearning.Model.Courses.Course;
 
@@ -28,6 +30,7 @@ namespace CourseLearning.Application.Mapper
             ConfigureStorageFolderMap(config);
             ConfigureStorageResourceMap(config);
             ConfigureQuizMap(config);
+            ConfigureLessonMap(config);
         }
 
         private static void ConfigureCourseMap(IMapperConfigurationExpression configuration)
@@ -95,6 +98,24 @@ namespace CourseLearning.Application.Mapper
 
             configuration.CreateMap<QuestionControlTypeDTO, QuestionControlType>();
             configuration.CreateMap<QuestionControlType, QuestionControlTypeDTO>();
+        }
+
+        private static void ConfigureLessonMap(IMapperConfigurationExpression configuration)
+        {
+            configuration.CreateMap<LessonDTO, Lesson>();
+            configuration.CreateMap<Lesson, LessonDTO>();
+
+            configuration.CreateMap<LessonPageDTO, LessonPage>();
+            configuration.CreateMap<LessonPage, LessonPageDTO>();
+
+            configuration.CreateMap<LessonPageTypeDTO, LessonPageType>();
+            configuration.CreateMap<LessonPageType, LessonPageTypeDTO>();
+
+            configuration.CreateMap<LessonPageTransitionDTO, LessonPageTransition>();
+            configuration.CreateMap<LessonPageTransition, LessonPageTransitionDTO>();
+
+            configuration.CreateMap<LessonPageTransitionTypeDTO, LessonPageTransitionType>();
+            configuration.CreateMap<LessonPageTransitionType, LessonPageTransitionTypeDTO>();
         }
     }
 }

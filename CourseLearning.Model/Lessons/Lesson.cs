@@ -12,6 +12,8 @@ namespace CourseLearning.Model.Lessons
 
         public Module Module { get; set; }
 
+        public int ModuleId { get; set; }
+
         public IList<LessonPage> LessonPages { get; set; }
 
         public int? FirstPageId { get; set; }

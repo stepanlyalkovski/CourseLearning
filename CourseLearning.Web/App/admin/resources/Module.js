@@ -36,6 +36,19 @@
                     params: {
                         subResource: 'articles'
                     }
+                },
+                getLessons: {
+                    method:'GET',
+                    params: {
+                        subResource: 'lessons'
+                    },
+                    isArray: true
+                },
+                addLesson: {
+                    method:'POST',
+                    params: {
+                        subResource: 'lessons'
+                    }
                 }
             });
     }

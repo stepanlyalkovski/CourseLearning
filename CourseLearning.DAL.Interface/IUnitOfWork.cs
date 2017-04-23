@@ -24,6 +24,8 @@ namespace CourseLearning.DAL.Interface
 
         IQuestionRepository Questions { get; }
 
+        ILessonRepository Lessons { get; }
+
         Task<int> CompleteAsync();
     }
 }
