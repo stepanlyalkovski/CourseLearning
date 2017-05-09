@@ -54,6 +54,14 @@
             }
         };
 
+        var createCourseModalTemplate = {
+            animation: true,
+            backdrop: "static",
+            keyboard: false,
+            templateUrl: "/App/admin/appComponents/modals/addEditCourseModal/addEditCourseModal.html",
+            controller: "addEditCourseModalCtrl as vm"
+        };
+
         // var questionControlTypeList = angular.copy(appEnum.questionControlTypes);
         // for(var key in questionControlTypeList) {
         //     if (questionControlTypeList.hasOwnProperty(key)) {
@@ -67,7 +75,8 @@
             addSelectActionModal: addSelectActionModal,
             addCreateStorageResourceModal: addCreateStorageResourceModal,
             addCreatePreviewModal: addCreatePreviewModal,
-            addCreateQuestionModal: addCreateQuestionModal
+            addCreateQuestionModal: addCreateQuestionModal,
+            addCreateCourseModal: addCreateCourseModal,
         };
 
         return service;
@@ -117,6 +126,11 @@
                 };
             };
 
+            return $uibModal.open(template).result;
+        }
+
+        function addCreateCourseModal() {
+            var template = angular.copy(createCourseModalTemplate);
             return $uibModal.open(template).result;
         }
     }

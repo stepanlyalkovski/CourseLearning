@@ -22,5 +22,7 @@ namespace CourseLearning.DAL
         IQuestionRepository CreateQuestionRepository(DbContext context);
 
         ILessonRepository CreateLessonRepository(DbContext context);
+
+        IEnrollmentRepository CreateCourseEnrollmentRepository(DbContext context);
     }
 }

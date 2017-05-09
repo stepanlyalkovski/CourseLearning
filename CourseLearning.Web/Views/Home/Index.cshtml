@@ -1,28 +1,87 @@
-﻿<!DOCTYPE html>
+﻿@using CourseLearning.Web.Configuration
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/angular") 
+    @*@Styles.Render("~/Content/css")*@
+
+    @Scripts.Render("~/bundles/angular")
     @Scripts.Render("~/bundles/angular.route")
     @Scripts.Render("~/bundles/angular.ui-router")
+    @Scripts.Render("~/bundles/angular.ui")
+    @Scripts.Render("~/bundles/angular.resource")
+    @Scripts.Render("~/bundles/lodash")
     
-    @Scripts.Render("~/bundles/clientApp")
-    @Scripts.Render("~/bundles/sharedApp")
-</head>
-<body ng-app="app">
-<h1>Start Page!</h1>
-<a ui-sref="test">Link to test</a>
-<div ng-controller="mainCtrl" class="container">
-    <div ui-view></div>
+    <link href="../../bower_components/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../../bower_components/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../../bower_components/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../../bower_components/gentelella/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
 
-    <pre>$location.path() = {{$location.path()}}</pre>
-    <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
-    <pre>$route.current.params = {{$route.current.params}}</pre>
-    <pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
-    <pre>$routeParams = {{$routeParams}}</pre>   
+    <!-- bootstrap-progressbar -->
+    <link href="../../bower_components/gentelella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="../../bower_components/gentelella/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <!-- bootstrap-daterangepicker -->
+    <link href="../../bower_components/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../../bower_components/gentelella/build/css/custom.min.css" rel="stylesheet" />      
+
+
+</head>
+<body ng-app="app" class="nav-md">
+
+<div class="container body" data-ui-view>
+
 </div>
+<script>
+    var courseLearningWebApiUrl = '@CourseLearningConfiguration.CourseLearningWebApiUrl'
+</script>
+<script src="../../bower_components/gentelella/vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../../bower_components/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/gentelella/vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../../bower_components/gentelella/vendors/nprogress/nprogress.js"></script>
+<!-- Chart.js -->
+<script src="../../bower_components/gentelella/vendors/Chart.js/dist/Chart.min.js"></script>
+<!-- gauge.js -->
+<script src="../../bower_components/gentelella/vendors/gauge.js/dist/gauge.min.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="../../bower_components/gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="../../bower_components/gentelella/vendors/iCheck/icheck.min.js"></script>
+<!-- Skycons -->
+<script src="../../bower_components/gentelella/vendors/skycons/skycons.js"></script>
+<!-- Flot -->
+<script src="../../bower_components/gentelella/vendors/Flot/jquery.flot.js"></script>
+<script src="../../bower_components/gentelella/vendors/Flot/jquery.flot.pie.js"></script>
+<script src="../../bower_components/gentelella/vendors/Flot/jquery.flot.time.js"></script>
+<script src="../../bower_components/gentelella/vendors/Flot/jquery.flot.stack.js"></script>
+<script src="../../bower_components/gentelella/vendors/Flot/jquery.flot.resize.js"></script>
+<!-- Flot plugins -->
+<script src="../../bower_components/gentelella/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+<script src="../../bower_components/gentelella/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+<script src="../../bower_components/gentelella/vendors/flot.curvedlines/curvedLines.js"></script>
+<!-- DateJS -->
+<script src="../../bower_components/gentelella/vendors/DateJS/build/date.js"></script>
+<!-- JQVMap -->
+<script src="../../bower_components/gentelella/vendors/jqvmap/dist/jquery.vmap.js"></script>
+<script src="../../bower_components/gentelella/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+<script src="../../bower_components/gentelella/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="../../bower_components/gentelella/vendors/moment/min/moment.min.js"></script>
+<script src="../../bower_components/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="../../bower_components/gentelella/build/js/custom.min.js"></script>
 </body>
 </html>
+
+

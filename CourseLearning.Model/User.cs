@@ -12,9 +12,12 @@ namespace CourseLearning.Model
 
         public string Name { get; set; }
 
+        [Index("UserEmail", IsUnique = true)]
+        [MaxLength(50)]
+        public string Email { get; set; }
+
         public IList<EnrollmentSession> EnrollmentSessions { get; set; }
 
         public UserStorage UserStorage { get; set; }
-
     }
 }

@@ -59,12 +59,14 @@
     <Compile Include="ContentStorage\UserStorage.cs" />
     <Compile Include="Courses\Course.cs" />
     <Compile Include="Courses\CourseSession.cs" />
+    <Compile Include="Courses\CourseType.cs" />
     <Compile Include="Enrollments\EnrollmentSession.cs" />
     <Compile Include="Enrollments\EnrollmentSessionArticle.cs" />
     <Compile Include="Enrollments\EnrollmentSessionLesson.cs" />
     <Compile Include="Enrollments\EnrollmentSessionLessonPage.cs" />
     <Compile Include="Enrollments\EnrollmentSessionModule.cs" />
     <Compile Include="Enrollments\EnrollmentSessionQuiz.cs" />
+    <Compile Include="Enrollments\EnrollmentSessionQuizQuestion.cs" />
     <Compile Include="Label.cs" />
     <Compile Include="Lessons\Lesson.cs" />
     <Compile Include="Lessons\LessonPage.cs" />

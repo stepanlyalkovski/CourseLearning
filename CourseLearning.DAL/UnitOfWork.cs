@@ -8,7 +8,6 @@ namespace CourseLearning.DAL
     public class UnitOfWork : IUnitOfWork
     {
         private readonly DbContext _context;
-        private readonly IRepositoryFactory _repositoryFactory;
 
         public ICourseRepository Courses { get; }
 
@@ -26,11 +25,12 @@ namespace CourseLearning.DAL
 
         public ILessonRepository Lessons { get; }
 
+        public IEnrollmentRepository Enrollments { get; }
+
         public IUserRepository Users { get; }
 
         public UnitOfWork(DbContext context, IRepositoryFactory repositoryFactory)
         {
-            _repositoryFactory = repositoryFactory;
             _context = context;
 
             Courses = repositoryFactory.CreateCourseRepository(context);
@@ -42,6 +42,7 @@ namespace CourseLearning.DAL
             Quizzes = repositoryFactory.CreateQuizRepository(context);
             Questions = repositoryFactory.CreateQuestionRepository(context);
             Lessons = repositoryFactory.CreateLessonRepository(context);
+            Enrollments = repositoryFactory.CreateCourseEnrollmentRepository(context);
         }
 
         public Task<int> CompleteAsync()

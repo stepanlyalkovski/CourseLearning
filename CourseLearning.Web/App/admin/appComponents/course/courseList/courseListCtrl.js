@@ -16,6 +16,7 @@
         vm.courses = null;
 
         vm.saveCourseForm = saveCourseForm;
+        vm.addCourseClick = addCourseClick;
 
         activate();
 
@@ -40,6 +41,16 @@
                 createdResource.courseId = data.courseId;
                 vm.courses.push(createdResource);
                 console.log(vm.courses);
+            });
+        }
+
+        function addCourseClick() {
+            modalSvc.addCreateCourseModal().then(function(course) {
+                Course.save(course, function(data) {
+                    course.courseId = data.courseId;
+                    vm.courses.push(course);
+                    console.log(vm.courses);
+                });
             });
         }
 

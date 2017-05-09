@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web;
 using CourseLearning.Application.Interface;
 using CourseLearning.Application.Mapper;
 using CourseLearning.DAL.Interface;
@@ -41,11 +42,12 @@ namespace CourseLearning.Application
 
         public async Task Update(QuizDTO quizDto)
         {
+            var user = await _unitOfWork.Users.GetAsync(HttpContext.Current.User.Identity.Name);
             foreach (var question in quizDto.QuizQuestionList.Select(qq => qq.Question))
             {
                 if (question.QuestionId == 0)
                 {
-                    question.CreatorId = 1; //TODO Add User
+                    question.CreatorId = user.UserId;
                 }
             }
             var quiz = _quizMapper.ToEntity(quizDto);

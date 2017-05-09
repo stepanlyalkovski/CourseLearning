@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using CourseLearning.DAL.Interface;
+using CourseLearning.Model;
 using CourseLearning.Model.ContentStorage;
 using CourseLearning.Model.Lessons;
 using CourseLearning.Model.Questions;
@@ -121,7 +122,6 @@ namespace CourseLearning.DAL
 
             if (page.Question.QuestionId == 0)
             {
-                //TODO add user
                 int creatorId = 1;
                 page.Question.CreatorId = creatorId;
                 //var question = Context.Set<Question>().Add(page.Question);

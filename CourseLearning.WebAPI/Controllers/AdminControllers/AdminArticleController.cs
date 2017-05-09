@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
 using CourseLearning.Application.Interface;
 using CourseLearning.Model.DTO;
@@ -15,11 +16,14 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
     {
         private readonly IArticleService _articleService;
 
-        public AdminArticleController(IArticleService articleService)
+        private readonly IUserService _userService;
+
+        public AdminArticleController(IArticleService articleService, IUserService userService)
         {
             _articleService = articleService;
+            _userService = userService;
         }
-
+        
         [Route("{id:int}")]
         [HttpGet]
         public async Task<IHttpActionResult> Get(int id)
@@ -31,8 +35,8 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
         [HttpPost]
         public async Task<IHttpActionResult> Post(ArticleDTO article)
         {
-            int creatorId = 1; //TODO update when user will be created
-            article.CreatorId = creatorId;
+            var user = await _userService.Get(User.Identity.Name);
+            article.CreatorId = user.UserId;
             int createdId = await _articleService.Add(article);
             return Created(Request.RequestUri + $"/{createdId}", new ArticleDTO { ArticleId = createdId });
         }
@@ -41,8 +45,8 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
         [HttpGet]
         public async Task<IHttpActionResult> GetCreatedArticles()
         {
-            int creatorId = 1; //TODO update when user will be created
-            return Ok(await _articleService.GetCreatorArticlesAsync(creatorId));
+            var user = await _userService.Get(User.Identity.Name);
+            return Ok(await _articleService.GetCreatorArticlesAsync(user.UserId));
         }
     }
 }

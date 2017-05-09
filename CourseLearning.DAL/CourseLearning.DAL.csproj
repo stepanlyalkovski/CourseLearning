@@ -56,6 +56,7 @@
     <Compile Include="ArticleRepository.cs" />
     <Compile Include="BaseRepository.cs" />
     <Compile Include="CourseRepository.cs" />
+    <Compile Include="EnrollmentRepository.cs" />
     <Compile Include="IRepositoryFactory.cs" />
     <Compile Include="LessonRepository.cs" />
     <Compile Include="ModuleRepository.cs" />

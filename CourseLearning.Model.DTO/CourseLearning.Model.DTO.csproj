@@ -40,12 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CourseSession.cs" />
+    <Compile Include="CourseTypeDTO.cs" />
+    <Compile Include="Enrollments\EnrollmentSessionDTO.cs" />
+    <Compile Include="Enrollments\EnrollmentSessionArticleDTO.cs" />
+    <Compile Include="Enrollments\EnrollmentSessionLessonDTO.cs" />
+    <Compile Include="Enrollments\EnrollmentSessionLessonPageDTO.cs" />
+    <Compile Include="Enrollments\EnrollmentSessionModuleDTO.cs" />
+    <Compile Include="Enrollments\EnrollmentSessionQuizDTO.cs" />
+    <Compile Include="Enrollments\EnrollmentSessionQuizQuestion.cs" />
     <Compile Include="LabelDTO.cs" />
     <Compile Include="Lessons\LessonDTO.cs" />
     <Compile Include="Lessons\LessonPageDTO.cs" />
     <Compile Include="Lessons\LessonPageTransitionDTO.cs" />
     <Compile Include="Lessons\LessonPageTransitionTypeDTO.cs" />
     <Compile Include="Lessons\LessonPageTypeDTO.cs" />
+    <Compile Include="QuestionAnswer.cs" />
+    <Compile Include="QuestionControlAnswer.cs" />
     <Compile Include="QuestionControlDTO.cs" />
     <Compile Include="QuestionControlTypeDTO.cs" />
     <Compile Include="QuestionDTO.cs" />

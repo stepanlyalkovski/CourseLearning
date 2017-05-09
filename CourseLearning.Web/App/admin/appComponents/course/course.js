@@ -14,9 +14,15 @@
         vm.course = null;
         vm.courseModules = null;
         vm.createdModule = {};
+        vm.currentSession = {};
+
+        vm.options = {
+            minDate: new Date()
+        };
 
         vm.addModule = addModule;
         vm.addModuleClick = addModuleClick;
+        vm.createCourseSession = createCourseSession;
 
         activate();
 
@@ -28,6 +34,8 @@
             var courseId = $state.params.id;
             vm.course = Course.get({id: courseId});
             vm.courseModules = Course.getModules({id: courseId});
+            vm.currentSession.courseId = courseId;
+            vm.currentSession.startDate = new Date();
             console.log(vm.courseModules);
         }
 
@@ -48,6 +56,10 @@
             };
 
             modalSvc.addCreatePreviewModal(settings).then(addModule);
+        }
+
+        function createCourseSession() {
+            Course.addSession({id: vm.course.courseId}, vm.currentSession);
         }
     }
 

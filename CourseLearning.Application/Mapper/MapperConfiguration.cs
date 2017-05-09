@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
 using CourseLearning.Model;
 using CourseLearning.Model.ContentStorage;
+using CourseLearning.Model.Courses;
 using CourseLearning.Model.DTO;
+using CourseLearning.Model.DTO.Enrollments;
 using CourseLearning.Model.DTO.Lessons;
+using CourseLearning.Model.Enrollments;
 using CourseLearning.Model.Lessons;
 using CourseLearning.Model.Questions;
 using Course = CourseLearning.Model.Courses.Course;
@@ -37,6 +40,13 @@ namespace CourseLearning.Application.Mapper
         {
             configuration.CreateMap<CourseDTO, Course>();
             configuration.CreateMap<Course, CourseDTO>();
+
+            configuration.CreateMap<CourseTypeDTO, CourseType>();
+            configuration.CreateMap<CourseType, CourseTypeDTO>();
+
+
+            configuration.CreateMap<CourseSessionDTO, CourseSession>();
+            configuration.CreateMap<CourseSession, CourseSessionDTO>();
         }
 
         private static void ConfigureModuleMap(IMapperConfigurationExpression configuration)
@@ -47,10 +57,13 @@ namespace CourseLearning.Application.Mapper
 
         private static void ConfigureUserMap(IMapperConfigurationExpression configuration)
         {
-            configuration.CreateMap<UserDTO, User>()
-                .ForMember(u => u.EnrollmentSessions, config => config.Ignore())
-                .ForMember(u => u.UserStorage, config => config.Ignore());
+            configuration.CreateMap<UserDTO, User>();
+                //.ForMember(u => u.EnrollmentSessions, config => config.Ignore())
+                //.ForMember(u => u.UserStorage, config => config.Ignore());
             configuration.CreateMap<User, UserDTO>();
+
+            configuration.CreateMap<UserStorageDTO, UserStorage>();
+            configuration.CreateMap<UserStorage, UserStorageDTO>();
         }
 
         private static void ConfigureLabelMap(IMapperConfigurationExpression configuration)
@@ -116,6 +129,34 @@ namespace CourseLearning.Application.Mapper
 
             configuration.CreateMap<LessonPageTransitionTypeDTO, LessonPageTransitionType>();
             configuration.CreateMap<LessonPageTransitionType, LessonPageTransitionTypeDTO>();
+        }
+
+        private static void ConfigureEnrollmentMap(IMapperConfigurationExpression configuration)
+        {
+            configuration.CreateMap<EnrollmentSessionDTO, EnrollmentSession>();
+            configuration.CreateMap<EnrollmentSession, EnrollmentSessionDTO>();
+
+            configuration.CreateMap<EnrollmentSessionModuleDTO, EnrollmentSessionModule>();
+            configuration.CreateMap<EnrollmentSessionModule, EnrollmentSessionModuleDTO>();
+
+            configuration.CreateMap<EnrollmentSessionArticleDTO, EnrollmentSessionArticle>();
+            configuration.CreateMap<EnrollmentSessionArticle, EnrollmentSessionArticleDTO>();
+
+            configuration.CreateMap<EnrollmentSessionLessonDTO, EnrollmentSessionLesson>();
+            configuration.CreateMap<EnrollmentSessionLesson, EnrollmentSessionLessonDTO>();
+
+            configuration.CreateMap<EnrollmentSessionQuizDTO, EnrollmentSessionQuiz>();
+            configuration.CreateMap<EnrollmentSessionQuiz, EnrollmentSessionQuizDTO>();
+
+            configuration.CreateMap<EnrollmentSessionQuizQuestionDTO, EnrollmentSessionQuizQuestion>();
+            configuration.CreateMap<EnrollmentSessionQuizQuestion, EnrollmentSessionQuizQuestionDTO>();
+
+            configuration.CreateMap<QuestionAnswerDTO, QuestionAnswer>();
+            configuration.CreateMap<QuestionAnswer, QuestionAnswerDTO>();
+
+            configuration.CreateMap<QuestionControlAnswerDTO, QuestionControlAnswer>();
+            configuration.CreateMap<QuestionControlAnswer, QuestionControlAnswerDTO>();
+
         }
     }
 }

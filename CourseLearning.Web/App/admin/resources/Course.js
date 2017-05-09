@@ -23,6 +23,12 @@
                     params: {
                         subResource: 'modules'
                     }
+                },
+                addSession: {
+                    method:'POST',
+                    params: {
+                        subResource: 'courseSessions'
+                    }
                 }
             });
     }

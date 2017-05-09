@@ -15,6 +15,8 @@ namespace CourseLearning.Model.Enrollments
 
         public User User { get; set; }
 
+        public int UserId { get; set; }
+
         public IList<EnrollmentSessionModule> EnrollmentSessionModules { get; set; }
     }
 }

@@ -4,21 +4,33 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
 using CourseLearning.Application.Interface;
 
 namespace CourseLearning.WebAPI.Controllers
 {
+    [Authorize]
     public class TestController : ApiController
     {
         private readonly ICourseService _courseService;
 
-        public TestController(ICourseService courseService)
+        private readonly IUserService _userService;
+
+        public TestController(ICourseService courseService, IUserService userService)
         {
-            this._courseService = courseService;
+            _courseService = courseService;
+            _userService = userService;
+        }
+        
+        [HttpGet]
+        public async Task<IHttpActionResult> Get()
+        {
+            var user = HttpContext.Current.User;
+            var result = await _userService.Get(user.Identity.Name);
+            return Ok(User);
         }
 
-        
         //[HttpGet]
         //public async Task<IHttpActionResult> Values(int id)
         //{

@@ -5,6 +5,6 @@ namespace CourseLearning.DAL.Interface
 {
     public interface IUserRepository : IRepository<User>
     {
-        Task<User> GetAsync(string name);
+        Task<User> GetAsync(string email);
     }
 }

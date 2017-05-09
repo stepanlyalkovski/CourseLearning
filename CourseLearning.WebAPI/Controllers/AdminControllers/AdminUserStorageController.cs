@@ -15,6 +15,14 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
     {
         private readonly IStorageFolderService _storageFolderService;
 
+        private readonly IUserService _userService;
+
+        public AdminUserStorageController(IStorageFolderService storageFolderService, IUserService userService)
+        {
+            _storageFolderService = storageFolderService;
+            _userService = userService;
+        }
+
         public AdminUserStorageController(IStorageFolderService storageFolderService)
         {
             _storageFolderService = storageFolderService;
@@ -25,8 +33,8 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
         [HttpGet]
         public async Task<IHttpActionResult> GetStorageFolders()
         {
-            int creatorId = 1; //TODO User id
-           return Ok(await _storageFolderService.GetStorageFoldersAsync(creatorId));
+           var user = await _userService.Get(User.Identity.Name);
+           return Ok(await _storageFolderService.GetStorageFoldersAsync(user.UserId));
         }
 
         //[Route("{id:int}/modules")]

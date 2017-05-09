@@ -47,15 +47,33 @@ namespace CourseLearning.Web
                 .Include("~/App/appAdmin.js")
                 .IncludeDirectory("~/App/admin", "*.js", true));
 
-            //bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-            //            "~/Scripts/jquery.validate*"));
 
-            //// Use the development version of Modernizr to develop with and learn from. Then, when you're
-            //// ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            //bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-            //            "~/Scripts/modernizr-*"));
+            //bundles.Add(new ScriptBundle("~/bundles/gentelella")
+            //    .Include("~/bower_components/gentelella/vendors/jquery/dist/jquery.min.js")
+            //    .Include("~/bower_components/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js")
+            //    .Include("~/bower_components/gentelella/vendors/fastclick/lib/fastclick.js")
+            //    .Include("~/bower_components/gentelella/vendors/vendors/nprogress/nprogress.js")
+            //    .Include("~/bower_components/gentelella/vendors/Chart.js/dist/Chart.min.js")
+            //    .Include("~/bower_components/gentelella/vendors/gauge.js/dist/gauge.min.js")
+            //    .Include("~/bower_components/gentelella/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js")
+            //    .Include("~/bower_components/gentelella/vendors/iCheck/icheck.min.js")
+            //    .Include("~/bower_components/gentelella/vendors/skycons/skycons.js")
+            //    .Include("~/bower_components/gentelella/vendors/Flot/jquery.flot.js")
+            //    .Include("~/bower_components/gentelella/vendors/Flot/jquery.flot.pie.js")
+            //    .Include("~/bower_components/gentelella/vendors/jquery/dist/jquery.min.js")
+            //    .Include("~/bower_components/gentelella/vendors/jquery/dist/jquery.min.js")
+            //    .Include("~/bower_components/gentelella/vendors/jquery/dist/jquery.min.js")
+            //    .Include("~/bower_components/gentelella/vendors/jquery/dist/jquery.min.js")
+            //    .Include("~/bower_components/gentelella/vendors/jquery/dist/jquery.min.js")
+                                    //bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+                                    //            "~/Scripts/jquery.validate*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                                    //// Use the development version of Modernizr to develop with and learn from. Then, when you're
+                                    //// ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
+                                    //bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+                                    //            "~/Scripts/modernizr-*"));
+
+                                    bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 

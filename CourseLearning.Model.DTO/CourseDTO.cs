@@ -10,6 +10,8 @@ namespace CourseLearning.Model.DTO
 
         public string Description { get; set; }
 
+        public CourseTypeDTO CourseType { get; set; }
+
         public IList<LabelDTO> Labels { get; set; }
 
         public IList<ModuleDTO> Modules { get; set; }

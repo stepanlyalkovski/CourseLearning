@@ -12,6 +12,8 @@ namespace CourseLearning.Model.Courses
         [MaxLength(50)]
         public string Name { get; set; }
 
+        public CourseType CourseType { get; set; }
+
         public string Description { get; set; }
 
         public IList<Label> Labels { get; set; }

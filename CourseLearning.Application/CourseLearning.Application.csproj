@@ -36,6 +36,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,7 +47,9 @@
   <ItemGroup>
     <Compile Include="ArticleService.cs" />
     <Compile Include="BaseEntityService.cs" />
+    <Compile Include="EnrollmentService.cs" />
     <Compile Include="CourseService.cs" />
+    <Compile Include="Helpers\UserHelper.cs" />
     <Compile Include="LessonService.cs" />
     <Compile Include="Mapper\DtoMapper.cs" />
     <Compile Include="Mapper\MapperConfiguration.cs" />
@@ -56,6 +59,7 @@
     <Compile Include="QuizService.cs" />
     <Compile Include="ResourceService.cs" />
     <Compile Include="StorageFolderService.cs" />
+    <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CourseLearning.Application.Interface\CourseLearning.Application.Interface.csproj">

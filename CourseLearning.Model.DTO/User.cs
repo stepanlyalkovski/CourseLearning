@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using CourseLearning.Model.DTO.Enrollments;
 
 namespace CourseLearning.Model.DTO
 {
@@ -8,9 +9,11 @@ namespace CourseLearning.Model.DTO
 
         public string Name { get; set; }
 
-        //public IList<EnrollmentSession> EnrollmentSessions { get; set; }
+        public string Email { get; set; }
 
-        //public UserStorage UserStorage { get; set; }
+        public IList<EnrollmentSessionDTO> EnrollmentSessions { get; set; }
+
+        public UserStorageDTO UserStorage { get; set; }
 
     }
 }

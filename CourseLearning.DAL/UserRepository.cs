@@ -12,9 +12,9 @@ namespace CourseLearning.DAL
         {
         }
 
-        public async Task<User> GetAsync(string name)
+        public async Task<User> GetAsync(string email)
         {
-            return await Context.Set<User>().FirstOrDefaultAsync(u => u.Name == name);
+            return await Context.Set<User>().FirstOrDefaultAsync(u => u.Email == email);
         }
 
         public override async Task<User> FindAsync(int id)

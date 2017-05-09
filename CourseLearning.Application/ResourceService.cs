@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using System.Web;
 using CourseLearning.Application.Interface;
 using CourseLearning.Application.Mapper;
 using CourseLearning.DAL.Interface;
@@ -26,9 +27,8 @@ namespace CourseLearning.Application
 
             if (resource.StorageFolderId == 0)
             {
-                //TODO Get user main folder
-                int userId = 1;
-                var mainFolder = await _unitOfWork.StorageFolders.GetMainFolderAsync(userId);
+                var user = await _unitOfWork.Users.GetAsync(HttpContext.Current.User.Identity.Name);
+                var mainFolder = await _unitOfWork.StorageFolders.GetMainFolderAsync(user.UserId);
                 resource.StorageFolderId = mainFolder.StorageFolderId;
             }
 
@@ -55,13 +55,10 @@ namespace CourseLearning.Application
 
         public async Task<StorageResourceDTO> AddResource(StorageResourceDTO storageResourceDto)
         {
-            //TODO validate User
-
             if (storageResourceDto.StorageFolderId == 0)
             {
-                //TODO Get user main folder
-                int userId = 1;
-                var mainFolder = await _unitOfWork.StorageFolders.GetMainFolderAsync(userId);
+                var user = await _unitOfWork.Users.GetAsync(HttpContext.Current.User.Identity.Name);
+                var mainFolder = await _unitOfWork.StorageFolders.GetMainFolderAsync(user.UserId);
                 storageResourceDto.StorageFolderId = mainFolder.StorageFolderId;
             }
 

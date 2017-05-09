@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CourseLearning.Model.Courses
 {
@@ -12,7 +13,11 @@ namespace CourseLearning.Model.Courses
 
         public bool IsActive { get; set; }
 
+        public bool IsStatic { get; set; }
+
         public Course Course { get; set; }
 
+        [ForeignKey("Course")]
+        public int CourseId { get; set; }
     }
 }

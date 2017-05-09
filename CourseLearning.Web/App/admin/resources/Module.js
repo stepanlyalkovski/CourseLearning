@@ -9,7 +9,7 @@
 
     function Module($http, $resource, apiUrlsBuilderSvc) {
         var moduleUrl = apiUrlsBuilderSvc.getAdminUrl('module');
-        return $resource(moduleUrl +'/:id' + '/:subResource', {},
+        return $resource(moduleUrl +'/:id' + '/:subResource', {id: '@courseId'},
             {
                 getQuizzes: {
                     method:'GET',

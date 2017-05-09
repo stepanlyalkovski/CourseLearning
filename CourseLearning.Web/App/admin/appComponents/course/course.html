@@ -11,6 +11,36 @@
 
 <a ui-sref="admin.courseList" class="btn btn-info">Back</a>
 <button class="btn btn-warning" ng-click="courseCtrl.addModuleClick()">Add module</button>
+<div class="row" ng-show="courseCtrl.course.courseType == 1">
+    <hr>
+    <h3>Course Sessions</h3>
+    <div class="col-md-5 col-md-offset-2">
+        <div class="row">
+            <div class="col-md-10">
+                Start Date:
+                <pre>Start Date date is: <em>{{courseCtrl.currentSession.startDate | date:'fullDate' }}</em></pre>
+            </div>
+        </div>
+        <div style="display:inline-block; min-height:290px;">
+            <div uib-datepicker ng-model="courseCtrl.currentSession.startDate" class="well well-sm" datepicker-options="courseCtrl.options"></div>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-10">
+                End Date:
+                <pre>End Date date is: <em>{{courseCtrl.currentSession.endDate | date:'fullDate' }}</em></pre>
+            </div>
+        </div>
+        <div style="display:inline-block; min-height:290px;">
+            <div uib-datepicker ng-model="courseCtrl.currentSession.endDate" class="well well-sm" datepicker-options="courseCtrl.options"></div>
+        </div>
+        <button class="btn btn-info btn-lg" ng-click="courseCtrl.createCourseSession()">Create Course Session</button>
+    </div>
+<!--<button type="button" class="btn btn-sm btn-info" ng-click="today()">Today</button>-->
+<!--<button type="button" class="btn btn-sm btn-default" ng-click="setDate(2009, 7, 24)">2009-08-24</button>-->
+<!--<button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button>-->
+<!--<button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" uib-tooltip="After today restriction">Min date</button>-->
 <!--<h2>Demo Module add</h2>-->
 <!--<ng-form name="moduleForm">-->
     <!--<label for="module-title">Course Title</label>-->

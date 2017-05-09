@@ -52,8 +52,9 @@ namespace CourseLearning.DependencyResolver
             kernel.Bind<ILessonService>().To<LessonService>();
             kernel.Bind<IQuestionService>().To<QuestionService>();
             kernel.Bind<IResourceService>().To<ResourceService>();
-
-
+            kernel.Bind<IUserService>().To<UserService>();
+            kernel.Bind<ICourseEnrollmentService>().To<EnrollmentService>();
+            
             // Repositories
 
             kernel.Bind<ICourseRepository>().To<CourseRepository>();
@@ -65,6 +66,7 @@ namespace CourseLearning.DependencyResolver
             kernel.Bind<IQuizRepository>().To<QuizRepository>();
             kernel.Bind<IQuestionRepository>().To<QuestionRepository>();
             kernel.Bind<ILessonRepository>().To<LessonRepository>();
+            kernel.Bind<IEnrollmentRepository>().To<EnrollmentRepository>();
 
 
 
