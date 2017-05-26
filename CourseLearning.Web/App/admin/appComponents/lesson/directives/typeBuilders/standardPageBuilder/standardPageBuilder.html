@@ -4,6 +4,13 @@
 <div class="col-md-6">
     <div ng-if="vm.lessonPage.storageResources.length !== 0">
         {{vm.lessonPage.storageResources[0]}}
+        <div>
+            {{vm.resourceUrl + '/' + vm.lessonPage.storageResources[0].storageResourceId}}
+        </div>
+        <!--<video width="480" height="320" controls="controls">
+            <source src="{{vm.resourceUrl + '/' + vm.lessonPage.storageResources[0].storageResourceId}}" type="{{vm.lessonPage.storageResources[0].mimeType}}">
+        </video>-->
+        <img width="400" height="400" ng-src="{{vm.resourceUrl + '/' + vm.lessonPage.storageResources[0].storageResourceId}}"/>
     </div>
     <button class="btn btn-info" ng-click="vm.settings.addResourceClick()">Add Resource</button>
 </div>
