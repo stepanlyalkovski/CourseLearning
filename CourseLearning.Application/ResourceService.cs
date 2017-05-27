@@ -38,9 +38,10 @@ namespace CourseLearning.Application
             return newResource.StorageResourceId;
         }
 
-        public Task<StorageResourceDTO> Get(int id)
+        public async Task<StorageResourceDTO> Get(int id)
         {
-            throw new System.NotImplementedException();
+            var resource = await _unitOfWork.Resources.FindAsync(id);
+            return _resourceMapper.ToEntityDTO(resource);
         }
 
         public Task Delete(StorageResourceDTO entity)

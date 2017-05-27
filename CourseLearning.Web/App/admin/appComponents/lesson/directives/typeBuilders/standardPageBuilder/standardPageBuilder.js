@@ -26,8 +26,10 @@
         }
     }
 
-    function standardPageBuilderCtrl() {
-
+    standardPageBuilderCtrl.$inject = ['apiUrlsBuilderSvc'];
+    function standardPageBuilderCtrl(apiUrlsBuilderSvc) {
+        var vm = this;
+        vm.resourceUrl = apiUrlsBuilderSvc.getAdminUrl('file');
     }
 
 })();
