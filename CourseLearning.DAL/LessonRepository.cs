@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Diagnostics;
+using System.Text;
 using System.Threading.Tasks;
 using CourseLearning.DAL.Interface;
-using CourseLearning.Model;
 using CourseLearning.Model.ContentStorage;
 using CourseLearning.Model.Lessons;
-using CourseLearning.Model.Questions;
 
 namespace CourseLearning.DAL
 {
@@ -107,6 +106,11 @@ namespace CourseLearning.DAL
                 Context.Entry(dbTransition).CurrentValues.SetValues(transition);
             }
 
+            AddNewPageTransitions(page, dbPage);
+        }
+
+        private void AddNewPageTransitions(LessonPage page, LessonPage dbPage)
+        {
             foreach (var newTransition in page.LessonPageTransitions.Where(t => t.LessonPageTransitionId == 0))
             {
                 dbPage.LessonPageTransitions.Add(newTransition);

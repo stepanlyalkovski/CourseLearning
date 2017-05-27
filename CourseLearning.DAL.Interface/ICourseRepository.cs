@@ -15,6 +15,8 @@ namespace CourseLearning.DAL.Interface
 
         Task<IList<CourseSession>> GetCourseSessionsAsync(int[] courseIds);
 
+        Task<IList<CourseSession>> GetCourseSessionsAsync(int userId);
+
         void CreateCourseSession(CourseSession courseSession);
 
         Task UpdateCourseSessions();

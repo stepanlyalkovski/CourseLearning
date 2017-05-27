@@ -26,9 +26,9 @@
         }
     }
 
-    lessonBuilderCtrl.$inject = ['$scope', 'appEnum', 'modalSvc', 'Lesson'];
+    lessonBuilderCtrl.$inject = ['$scope', 'appEnum', 'modalSvc', 'Lesson', '$timeout'];
 
-    function lessonBuilderCtrl($scope, appEnum, modalSvc, Lesson) {
+    function lessonBuilderCtrl($scope, appEnum, modalSvc, Lesson, $timeout) {
         var vm = this;
 
         var pageBuilderModes = {
@@ -40,14 +40,6 @@
             {
                 actionText: 'Text + Resource',
                 pageType: appEnum.lessonPageTypes.standard
-            },
-            {
-                actionText: 'Resource Only',
-                pageType: appEnum.lessonPageTypes.resourceOnly
-            },
-            {
-                actionText: 'Text Only',
-                pageType: appEnum.lessonPageTypes.textOnly
             },
             {
                 actionText: 'Question',
@@ -76,6 +68,7 @@
             selectLessonPage: selectLessonPage
         };
 
+        vm.getTransitionEndPage = getTransitionEndPage;
         vm.createPage = createPage;
         vm.selectLessonPage = selectLessonPage;
         vm.saveLessonClick = saveLessonClick;
@@ -87,6 +80,10 @@
         $scope.$watch('vm.selectedTransition', function(newVal) {
             debugger;
             if(!vm.selectedPage) {
+                return;
+            }
+
+            if(!newVal) {
                 return;
             }
 
@@ -104,11 +101,18 @@
                     lessonId: vm.lesson.lessonId
                 };
 
-                Lesson.createPage(createdPage, function(page) {
-                    vm.lesson.lessonPages.push(page);
-                    vm.selectedPage = page;
-                });
+                Lesson.createPage(createdPage, addPageToLesson);
             });
+        }
+
+        function addPageToLesson(page) {
+            if(vm.lesson.lessonPages.length === 0) {
+                vm.lesson.firstPageId = page.lessonPageId;
+            }
+
+            vm.lesson.lessonPages.push(page);
+            vm.lesson.lastPageId = page.lessonPageId;
+            vm.selectedPage = page;
         }
 
         function selectLessonPage(lessonPage) {
@@ -117,13 +121,24 @@
                 return;
             }
 
-            vm.selectedPage = lessonPage;
+            if(vm.selectedPage) {
+                vm.selectedPage.isCurrent = false;
+            }
 
+            vm.selectedPage = lessonPage;
+            vm.selectedPage.isCurrent = true;
             vm.selectedTransition = _.find(vm.transitionOptions, {type: lessonPage.lessonPageTransitionType});
         }
 
         function saveLessonClick() {
-            Lesson.update(vm.lesson);
+            Lesson.update(vm.lesson, updateSuccessCallback);
+        }
+
+        function updateSuccessCallback() {
+            vm.lessonBuilderMessage = 'Lesson was updated';
+            $timeout(function () {
+                vm.lessonBuilderMessage = '';
+            }, 5000);
         }
 
         function isQuestionPageType() {
@@ -138,7 +153,6 @@
 
             vm.pageBuilderMode = pageBuilderModes.transitionPageSelect;
             vm.selectedPage.lessonPageTransitionType = vm.selectedTransition.type;
-
         }
 
         function isPageSelectMode() {
@@ -149,7 +163,7 @@
             currentTransition.endPageId = endLessonPage.lessonPageId;
             vm.selectedPage.lessonPageTransitions = vm.selectedPage.lessonPageTransitions || [];
             vm.selectedPage.lessonPageTransitions.push(currentTransition);
-            currentTransition = false;
+            currentTransition = null;
             vm.pageBuilderMode = pageBuilderModes.default;
         }
 
@@ -161,6 +175,23 @@
 
             vm.pageBuilderMode = pageBuilderModes.transitionPageSelect;
             vm.selectedPage.lessonPageTransitionType = vm.selectedTransition.type;
+        }
+
+        function getTransitionEndPage(isQuestionPage, signalValue) {
+            if(isQuestionPage) {
+                if(!vm.selectedPage.lessonPageTransitions || !vm.selectedPage.lessonPageTransitions.length === 0) {
+                    return 'No page selected';
+                }
+
+                var transition = _.find(vm.selectedPage.lessonPageTransitions, {yesNoSignal: signalValue});
+                if(!transition) {
+                    return 'No page selected';
+                }
+
+                var page = _.find(vm.lesson.lessonPages, {lessonPageId: transition.endPageId });
+                return ' -> ' + (page.title || 'untitled') + '. PageId: ' + page.lessonPageId;
+            }
+
         }
 
     }

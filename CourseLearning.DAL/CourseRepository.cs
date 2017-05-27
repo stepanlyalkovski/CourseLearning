@@ -29,6 +29,11 @@ namespace CourseLearning.DAL
             return await Context.Set<CourseSession>().Include(s => s.Course).Where(s => courseIds.Contains(s.CourseId)).ToListAsync();
         }
 
+        public Task<IList<CourseSession>> GetCourseSessionsAsync(int userId)
+        {
+            throw new NotImplementedException();
+        }
+
         public void CreateCourseSession(CourseSession courseSession)
         {
             Context.Set<CourseSession>().Add(courseSession);

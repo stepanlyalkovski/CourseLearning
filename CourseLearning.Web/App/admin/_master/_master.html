@@ -13,9 +13,10 @@
             <ul class="nav navbar-nav">
                 <li ui-sref-active="active"><a ui-sref="admin.courseList">Course Catalog</a></li>
                 <li ui-sref-active="active"><a ui-sref="admin.storage">Storage</a></li>
-                <li ui-sref-active="active"><a ui-sref="admin.article">Articles</a></li>
+                <li ui-sref-active="active"><a ui-sref="admin.articleList">Articles</a></li>
                 <li ui-sref-active="active"><a ui-sref="admin.questionList">Questions</a></li>
                 <li><a ui-sref="admin.course">Course</a></li>
+                <li ng-click="masterCtrl.logOut()"><a href="#">Log out</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

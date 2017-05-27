@@ -39,9 +39,11 @@ namespace CourseLearning.Application
             throw new System.NotImplementedException();
         }
 
-        public Task Update(ArticleDTO entity)
+        public async Task Update(ArticleDTO articleDto)
         {
-            throw new System.NotImplementedException();
+            var article = ToEntity(articleDto);
+            await _unitOfWork.Articles.Update(article);
+            await _unitOfWork.CompleteAsync();
         }
 
         public async Task<IList<ArticleDTO>> GetModuleArticlesAsync(int moduleId)

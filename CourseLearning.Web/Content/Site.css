@@ -37,17 +37,40 @@ textarea {
 }
 
 .lesson-builder {
-    background-color: gray;
+    background-color: mintcream;
 }
 
 .lesson-page-list {
     background-color: antiquewhite;
+    list-style: none;
+    padding: 0;
 }
 
 .lesson-page-builder {
-    background-color: aqua;
+    /*background-color: aqua;*/
 }
 
 .active-list {
     border: 2px solid red;
+}
+
+.lesson-pages-block {
+    background-color: beige;
+    margin-bottom: 20px;
+}
+
+.lesson-editor {
+    margin-bottom: 30px;
+}
+
+.lesson-page-list-element {
+    margin-bottom: 5px;
+}
+
+.lesson-page-builder {
+    margin-bottom: 30px;
+}
+
+.lesson-page-builder-directive {
+    margin-bottom: 20px;
 }

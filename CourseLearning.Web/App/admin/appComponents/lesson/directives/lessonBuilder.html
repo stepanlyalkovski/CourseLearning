@@ -1,10 +1,14 @@
 <div class="row lesson-builder">
-    <div class="col-md-9">
-        <lesson-page-builder lesson-page="vm.selectedPage"></lesson-page-builder>
+    <div ng-show="!!vm.lessonBuilderMessage" class="alert alert-success" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        {{vm.lessonBuilderMessage}}
+    </div>
+    <div class="col-md-9 lesson-editor">
+        <lesson-page-builder lesson-page="vm.selectedPage" class="clearfix lesson-page-builder-directive"></lesson-page-builder>
         <div ng-if="vm.selectedPage" class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-8" ng-show="vm.isQuestionPageType()">
                 <div class="form-group">
-                    {{vm.selectedPage.lessonPageTransitions}}
+                    <!--{{vm.selectedPage.lessonPageTransitions}}-->
                     <label for="transitionTypes">Transition Type:</label>
                     <select name="transitionTypes"
                             id="transitionTypes"
@@ -14,10 +18,10 @@
                             data-ng-disabled="!vm.isQuestionPageType()">
                         <option value="" class="hidden" disabled>{{vm.isQuestionPageType() ? 'Select One' : 'Default'}}</option>
                     </select>
-                    {{vm.selectedTransition}}
+                    <!--{{vm.selectedTransition}}-->
                 </div>
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-2">
+                    <div class="col-md-10 col-md-offset-2 clearfix">
                         <div ng-show="vm.selectedTransition.type === vm.transitionTypes.yesNo">
                             <div class="row">
                                 <span class="col-md-3">Yes</span>
@@ -27,10 +31,21 @@
                             </div>
                         </div>
                         <div ng-show="vm.selectedTransition.type === vm.transitionTypes.custom">
-                            <div class="row" ng-repeat="questionControl in vm.selectedPage.question.controlList">
+                            <p class="row" ng-repeat="questionControl in vm.selectedPage.question.controlList">
                                 <span class="col-md-3">{{questionControl.controlHeading}}</span>
                                 <button class="col-md-3" ng-click="vm.createCustomTransition(questionControl.controlHeading)">Add</button>
-                            </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div ng-show="vm.selectedPage.lessonPageTransitionType === vm.transitionTypes.yesNo">
+                            <div>Yes: {{vm.getTransitionEndPage(true, true)}} </div>
+                            <div>No: {{vm.getTransitionEndPage(true, false)}} </div>
+                        </div>
+                        <div ng-show="vm.selectedPage.type === vm.transitionTypes.custom">
+
                         </div>
                     </div>
                 </div>
@@ -38,16 +53,17 @@
         </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3 lesson-pages-block">
         <b ng-show="vm.isPageSelectMode()">Select Page for transition</b>
-        <button class="btn btn-success btn-lg" ng-click="vm.createPage()">Add Page</button>
+        <button class="btn btn-success btn-block" ng-click="vm.createPage()">Add Page</button>
+        <p>Lesson Page List</p>
         <ul class="lesson-page-list" ng-class="{'active-list': vm.isPageSelectMode()}">
-            <li ng-repeat="lessonPage in vm.lesson.lessonPages">
-                <button class="btn btn-info" ng-click="vm.selectLessonPage(lessonPage)">
+            <li class="lesson-page-list-element" ng-repeat="lessonPage in vm.lesson.lessonPages">
+                <button class="btn btn-info btn-block" ng-class="{disabled: lessonPage.isCurrent}" ng-click="vm.selectLessonPage(lessonPage)">
                     {{(lessonPage.title ? lessonPage.title : 'No Title') + '(id: ' + lessonPage.lessonPageId + ')'}}
                 </button>
             </li>
         </ul>
     </div>
-    <button class="btn btn-info" ng-click="vm.saveLessonClick()">Save Lesson</button>
+    <button class="btn btn-info btn-block item-add-btn" ng-click="vm.saveLessonClick()">Save Lesson</button>
 </div>

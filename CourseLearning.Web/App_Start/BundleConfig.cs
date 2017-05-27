@@ -32,6 +32,9 @@ namespace CourseLearning.Web
                 .Include("~/bower_components/ng-file-upload/ng-file-upload-shim.js")
                 .Include("~/bower_components/ng-file-upload/ng-file-upload.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/localStorage")
+                .Include("~/bower_components/angular-local-storage/dist/angular-local-storage.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/tinymce")
                 .Include("~/bower_components/tinymce/tinymce.js")
                 .Include("~/bower_components/angular-ui-tinymce/src/tinymce.js"));

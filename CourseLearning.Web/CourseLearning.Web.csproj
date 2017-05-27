@@ -131,6 +131,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\admin\appComponents\articles\article.html" />
+    <Content Include="App\admin\appComponents\articles\articleCtrl.js" />
     <Content Include="App\admin\appComponents\articles\articleList.html" />
     <Content Include="App\admin\appComponents\articles\articleListCtrl.js" />
     <Content Include="App\admin\appComponents\course\course.html" />
@@ -147,6 +149,8 @@
     <Content Include="App\admin\appComponents\lesson\directives\typeBuilders\standardPageBuilder\standardPageBuilder.js" />
     <Content Include="App\admin\appComponents\lesson\lesson.html" />
     <Content Include="App\admin\appComponents\lesson\lessonCtrl.js" />
+    <Content Include="App\admin\appComponents\modals\addEditCourseModal\addEditCourseModal.html" />
+    <Content Include="App\admin\appComponents\modals\addEditCourseModal\addEditCourseModalCtrl.js" />
     <Content Include="App\admin\appComponents\modals\addEditPreviewModel\addEditPreviewModal.html" />
     <Content Include="App\admin\appComponents\modals\addEditPreviewModel\addEditPreviewModalCtrl.js" />
     <Content Include="App\admin\appComponents\modals\addEditQuiz\addEditQuizModal.html" />
@@ -167,6 +171,12 @@
     <Content Include="App\admin\appComponents\storage\storageCtrl.js" />
     <Content Include="App\admin\directives\fullScreenEditor.html" />
     <Content Include="App\admin\directives\fullScreenEditor.js" />
+    <Content Include="App\admin\login\landing.html" />
+    <Content Include="App\admin\login\landingCtrl.js" />
+    <Content Include="App\admin\login\login.html" />
+    <Content Include="App\admin\login\loginController.js" />
+    <Content Include="App\admin\login\signup.html" />
+    <Content Include="App\admin\login\signupController.js" />
     <Content Include="App\admin\resources\Article.js" />
     <Content Include="App\admin\resources\Course.js" />
     <Content Include="App\admin\resources\Lesson.js" />
@@ -176,10 +186,14 @@
     <Content Include="App\admin\resources\Storage.js" />
     <Content Include="App\admin\resources\StorageFolder.js" />
     <Content Include="App\admin\services\courseSvc.js" />
+    <Content Include="App\admin\services\modalSvc.js" />
+    <Content Include="App\admin\services\questionSvc.js" />
     <Content Include="App\admin\_master\masterCtrl.js" />
     <Content Include="App\admin\_master\_master.html" />
     <Content Include="App\appAdmin.js" />
     <Content Include="App\appClient.js" />
+    <Content Include="App\client\_master\masterCtrl.js" />
+    <Content Include="App\client\_master\_master.html" />
     <Content Include="App\config\app.config.js" />
     <Content Include="App\config\app.enum.js" />
     <Content Include="App\shared\directives\questions\customQuestions.html" />
@@ -201,6 +215,25 @@
     <Content Include="App\shared\directives\questions\modals\addEditCustomQuestionModalCtrl.js" />
     <Content Include="App\shared\directives\questions\services\customQuestionsSvc.js" />
     <Content Include="App\shared\helpers\apiUrlsBuilderSvc.js" />
+    <Content Include="App\shared\services\authInterceptorService.js" />
+    <Content Include="App\shared\services\authService.js" />
+    <Content Include="App\shared\services\storageFileSvc.js" />
+    <Content Include="bower_components\angular-loading-bar\build\loading-bar.css" />
+    <Content Include="bower_components\angular-loading-bar\build\loading-bar.js" />
+    <Content Include="bower_components\angular-loading-bar\build\loading-bar.min.css" />
+    <Content Include="bower_components\angular-loading-bar\build\loading-bar.min.js" />
+    <Content Include="bower_components\angular-loading-bar\Gruntfile.js" />
+    <Content Include="bower_components\angular-loading-bar\index.js" />
+    <Content Include="bower_components\angular-loading-bar\src\loading-bar.css" />
+    <Content Include="bower_components\angular-loading-bar\src\loading-bar.js" />
+    <Content Include="bower_components\angular-local-storage\.gitattributes" />
+    <Content Include="bower_components\angular-local-storage\.gitignore" />
+    <Content Include="bower_components\angular-local-storage\demo\demo-app.js" />
+    <Content Include="bower_components\angular-local-storage\demo\demo-style.css" />
+    <Content Include="bower_components\angular-local-storage\demo\demo.html" />
+    <Content Include="bower_components\angular-local-storage\dist\angular-local-storage.js" />
+    <Content Include="bower_components\angular-local-storage\dist\angular-local-storage.min.js" />
+    <Content Include="bower_components\angular-local-storage\index.js" />
     <Content Include="bower_components\angular-ui-tinymce\dist\tinymce.min.js" />
     <Content Include="bower_components\angular-ui-tinymce\src\tinymce.js" />
     <Content Include="bower_components\angular\angular-csp.css" />
@@ -4563,6 +4596,25 @@
     <Content Include="bower_components\gentelella\vendors\transitionize\package.json" />
     <Content Include="bower_components\gentelella\vendors\validator\README.md" />
     <Content Include="bower_components\gentelella\vendors\validator\validator.jquery.json" />
+    <Content Include="bower_components\angular-local-storage\.bower.json" />
+    <Content Include="bower_components\angular-local-storage\.bowerrc" />
+    <Content Include="bower_components\angular-local-storage\.editorconfig" />
+    <Content Include="bower_components\angular-local-storage\.travis.yml" />
+    <Content Include="bower_components\angular-local-storage\bower.json" />
+    <Content Include="bower_components\angular-local-storage\CHANGELOG.md" />
+    <Content Include="bower_components\angular-local-storage\dist\angular-local-storage.min.js.map" />
+    <Content Include="bower_components\angular-local-storage\LICENSE" />
+    <Content Include="bower_components\angular-local-storage\package.json" />
+    <Content Include="bower_components\angular-local-storage\README.md" />
+    <Content Include="bower_components\angular-loading-bar\.bower.json" />
+    <Content Include="bower_components\angular-loading-bar\bower.json" />
+    <Content Include="bower_components\angular-loading-bar\CHANGELOG.md" />
+    <Content Include="bower_components\angular-loading-bar\CONTRIBUTING.md" />
+    <Content Include="bower_components\angular-loading-bar\ISSUE_TEMPLATE.md" />
+    <Content Include="bower_components\angular-loading-bar\LICENSE" />
+    <Content Include="bower_components\angular-loading-bar\package.json" />
+    <Content Include="bower_components\angular-loading-bar\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="bower_components\angular-loading-bar\README.md" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -5341,7 +5393,6 @@
     <Content Include="Scripts\version.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App\shared\services\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>

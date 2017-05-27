@@ -4,9 +4,9 @@
         .module('app')
         .controller('masterCtrl', masterCtrl);
 
-    masterCtrl.$inject = ['$location', 'MyService'];
+    masterCtrl.$inject = ['$location'];
 
-    function masterCtrl($location, MyService) {
+    function masterCtrl($location) {
         /* jshint validthis:true */
         var vm = this;
         vm.title = 'Admin main controller';
@@ -14,7 +14,7 @@
         activate();
 
         function activate() {
-            MyService.setName('service qwerty');
+
         }
     }
 })();

@@ -9,6 +9,10 @@
 
     function Article($http, $resource, config, apiUrlsBuilderSvc) {
         var articleUrl = apiUrlsBuilderSvc.getAdminUrl('article');
-        return $resource(articleUrl +'/:id', {id: '@id'});
+        return $resource(articleUrl +'/:id', {id: '@id'}, {
+            update: {
+                method: 'PUT'
+            }
+        });
     }
 })();

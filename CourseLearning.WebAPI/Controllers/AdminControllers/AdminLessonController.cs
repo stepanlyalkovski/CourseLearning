@@ -29,7 +29,7 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
 
         [Route("{lessonId:int}/pages")]
         [HttpPost]
-        public async Task<IHttpActionResult> AddPage(LessonPageDTO lessonPage)
+        public async Task<IHttpActionResult> AddPagePost(LessonPageDTO lessonPage)
         {
             var createdPage = await _lessonService.AddLessonPage(lessonPage);
             return Created(Request.RequestUri + $"/{createdPage.LessonPageId}", createdPage);

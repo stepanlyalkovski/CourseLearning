@@ -1,4 +1,8 @@
 ﻿<h3>{{quizCtrl.title}}</h3>
+<div ng-show="!!quizCtrl.quizMessage" class="alert alert-success" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    {{quizCtrl.quizMessage}}
+</div>
 <button class="btn btn-info" ng-click="quizCtrl.addQuestionClick()">Add Question</button>
 <div class="row">
     <div class="col-md-10 col-md-offset-2">

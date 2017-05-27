@@ -36,7 +36,6 @@
             vm.courseModules = Course.getModules({id: courseId});
             vm.currentSession.courseId = courseId;
             vm.currentSession.startDate = new Date();
-            console.log(vm.courseModules);
         }
 
         function addModule(module) {

@@ -1,9 +1,10 @@
-﻿<div class="col-md-6">
+﻿<div class="col-md-9">
     <textarea id="pageContent" ui-tinymce ng-model="vm.lessonPage.mainText"></textarea>
 </div>
-<div class="col-md-6">
+<div class="col-md-3" style="margin-bottom: 20px;">
     <div ng-if="vm.lessonPage.storageResources.length !== 0">
-        {{vm.lessonPage.storageResources[0]}}
+        <div>Resource added here. Name: {{vm.lessonPage.storageResources[0].name + ' type: ' +  vm.lessonPage.storageResources[0].mimeType}}</div>
+        <!--{{vm.lessonPage.storageResources[0]}}-->
     </div>
-    <button class="btn btn-info" ng-click="vm.settings.addResourceClick()">Add Resource</button>
+    <button class="btn btn-default btn-block" ng-click="vm.settings.addResourceClick()">Add Resource</button>
 </div>

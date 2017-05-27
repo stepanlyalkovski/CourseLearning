@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 using CourseLearning.Application.Interface;
@@ -10,6 +11,7 @@ using CourseLearning.Model.DTO;
 
 namespace CourseLearning.WebAPI.Controllers.AdminControllers
 {
+    [Authorize]
     [RoutePrefix("api/admin/course")]
     public class AdminCourseController : ApiController
     {
@@ -32,6 +34,7 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
         [HttpGet]
         public async Task<IHttpActionResult> Get(int? id = null)
         {
+            Thread.Sleep(1000);
             var user = await _userService.Get(User.Identity.Name);
             if (id == null)
             {

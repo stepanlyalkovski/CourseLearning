@@ -1,0 +1,26 @@
+﻿
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form role="form">
+                <h2 class="form-login-heading">Login</h2>
+                <div  class="form-group">
+                    <input type="text" class="form-control"
+                           placeholder="Email" data-ng-model="loginData.userName" required autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control"
+                           placeholder="Password" data-ng-model="loginData.password" required>
+                </div>
+                <button class="btn btn-lg btn-info"
+                        type="submit" data-ng-click="login()">
+                    Login
+                </button>
+                <div data-ng-hide="message == ''" class="alert alert-danger">
+                    {{message}}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -5,9 +5,9 @@
         .module('app')
         .controller('quizCtrl', quizCtrl);
 
-    quizCtrl.$inject = ['$location', 'Module', '$state', '$uibModal', 'Quiz', 'modalSvc', 'questionSvc'];
+    quizCtrl.$inject = ['$location', 'Module', '$state', '$timeout', 'Quiz', 'modalSvc', 'questionSvc'];
 
-    function quizCtrl($location, Module, $state, $uibModal, Quiz, modalSvc, questionSvc) {
+    function quizCtrl($location, Module, $state, $timeout, Quiz, modalSvc, questionSvc) {
         /* jshint validthis:true */
         var vm = this;
         vm.title = 'quizCtrl';
@@ -60,7 +60,7 @@
                     question: question,
                     sequenceNumber: seqNumber
                 };
-
+                vm.quiz.quizQuestionList = vm.quiz.quizQuestionList || [];
                 vm.quiz.quizQuestionList.push(quizQuestion);
                 // Question.save(question, function(data) {
                 //     question.questionId = data.questionId;
@@ -77,6 +77,10 @@
             Quiz.update(vm.quiz, function(data) {
                 console.log('updated!');
                 console.log(data);
+                vm.quizMessage = 'Quiz was update';
+                $timeout(function () {
+                    vm.quizMessage = '';
+                }, 4000);
             })
         }
     }

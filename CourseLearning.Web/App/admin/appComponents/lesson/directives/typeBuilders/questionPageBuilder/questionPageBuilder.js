@@ -33,9 +33,10 @@
             vm.addQuestionClick = addQuestionClick;
 
             function addQuestionClick() {
-                modalSvc.addCreateQuestionModal().then(function(question) {
-                    vm.lessonPage.question = question;
-                })
+                modalSvc.addCreateQuestionModal()
+                    .then(function(question) {
+                        vm.lessonPage.question = question;
+                    });
             }
     }
 

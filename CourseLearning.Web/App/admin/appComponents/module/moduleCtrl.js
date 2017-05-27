@@ -5,9 +5,9 @@
         .module('app')
         .controller('moduleCtrl', moduleCtrl);
 
-    moduleCtrl.$inject = ['$location', 'Module', '$state', '$uibModal', 'Quiz', 'modalSvc'];
+    moduleCtrl.$inject = ['$location', 'Module', '$state', '$uibModal', 'Quiz', 'modalSvc', 'Article'];
 
-    function moduleCtrl($location, Module, $state, $uibModal, Quiz, modalSvc) {
+    function moduleCtrl($location, Module, $state, $uibModal, Quiz, modalSvc, Article) {
         /* jshint validthis:true */
         var vm = this;
         vm.title = 'moduleCtrl';
@@ -35,7 +35,7 @@
 
         function addQuizClick() {
             var settings = {
-                moduleName: 'Quiz'
+                modelName: 'Quiz'
             };
 
             modalSvc.addCreatePreviewModal(settings).then(addQuiz);
@@ -51,7 +51,7 @@
 
         function addLessonClick() {
             var settings = {
-                moduleName: 'Lesson'
+                modelName: 'Lesson'
             };
 
             modalSvc.addCreatePreviewModal(settings).then(addLesson);
@@ -66,6 +66,22 @@
         }
 
         function addArticleClick() {
+            var settings = {
+                modelName: 'Article'
+            };
+
+            modalSvc.addCreatePreviewModal(settings).then(addArticle);
+        }
+
+        function addArticle(article) {
+            Article.save(article, function(newArticle) {
+                article.articleId = newArticle.articleId;
+                article.moduleId = vm.module.moduleId;
+                Module.addArticle({id: article.moduleId}, article, function (article) {
+                    vm.module.articles.push(article);
+                    $state.go('admin.article', {id: article.articleId});
+                });
+            });
 
         }
     }

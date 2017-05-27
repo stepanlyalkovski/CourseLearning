@@ -11,6 +11,7 @@ using CourseLearning.Model.DTO;
 namespace CourseLearning.WebAPI.Controllers.AdminControllers
 {
     [RoutePrefix("api/admin/storage")]
+    [Authorize]
     public class AdminUserStorageController : ApiController
     {
         private readonly IStorageFolderService _storageFolderService;

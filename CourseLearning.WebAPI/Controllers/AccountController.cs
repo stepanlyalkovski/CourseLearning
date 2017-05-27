@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.ModelBinding;
 using CourseLearning.Application.Interface;
 using CourseLearning.Model.DTO;
@@ -23,6 +24,7 @@ namespace CourseLearning.WebAPI.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]
+    [EnableCors("http://localhost:49637/", "*", "*")]
     public class AccountController : ApiController
     {
         private const string LocalLoginProvider = "Local";

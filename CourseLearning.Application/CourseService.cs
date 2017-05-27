@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
+using CourseLearning.Application.Helpers;
 using CourseLearning.Application.Interface;
 using CourseLearning.Application.Mapper;
 using CourseLearning.DAL.Interface;
@@ -81,10 +83,11 @@ namespace CourseLearning.Application
             return sessionMapper.ToEntitiesDTO(courseSessions);
         }
 
-        public Task<IList<CourseSessionDTO>> GetUserCourseSessions()
+        public async Task<IList<CourseSessionDTO>> GetUserCourseSessions()
         {
-            int userId = 1;//TODO for God's sake make user already
-            throw new NotImplementedException();
+            var user = await UserHelper.GetCurrentUser();
+            var sessions = await _unitOfWork.Courses.GetCourseSessionsAsync(user.UserId);
+            return sessionMapper.ToEntitiesDTO(sessions);
         }
 
         public async Task<int> Add(CourseDTO courseDTO)
@@ -111,18 +114,25 @@ namespace CourseLearning.Application
 
         public async Task<CourseDTO> Get(int id)
         {
+
             var course = await _unitOfWork.Courses.FindAsync(id);
             return ToEntityDTO(course);
         }
 
-        public Task Delete(CourseDTO entity)
+        public async Task Delete(CourseDTO courseDto)
         {
-            throw new NotImplementedException();
+            ValiteCourseCreator(courseDto);
+            var course = ToEntity(courseDto);
+            _unitOfWork.Courses.Delete(course);
+            await _unitOfWork.CompleteAsync();
         }
 
-        public Task Update(CourseDTO entity)
+        public async Task Update(CourseDTO courseDto)
         {
-            throw new NotImplementedException();
+            ValiteCourseCreator(courseDto);
+            var course = ToEntity(courseDto);
+            await _unitOfWork.Courses.Update(course);
+            await _unitOfWork.CompleteAsync();
         }
 
         private void CreateStaticCourseSession(Course course)
@@ -154,6 +164,15 @@ namespace CourseLearning.Application
             if (DateTime.Compare(courseSession.StartDate, courseSession.EndDate) > 0)
             {
                 throw new ArgumentException("End Date cannot happen earlier than Start Date", nameof(courseSession.EndDate));
+            }
+        }
+
+        private async void ValiteCourseCreator(CourseDTO course)
+        {
+            var currentUser = await UserHelper.GetCurrentUser();
+            if (currentUser.UserId != course.CreatorId)
+            {
+                throw new ArgumentException("Course doesn't belong to current user", nameof(course.Creator));
             }
         }
     }

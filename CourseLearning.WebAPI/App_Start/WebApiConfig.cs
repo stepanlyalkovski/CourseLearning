@@ -14,8 +14,7 @@ namespace CourseLearning.WebAPI
     {
         public static void Register(HttpConfiguration config)
         {
-            var cors = new EnableCorsAttribute("*", "*", "*") {SupportsCredentials = true};
-            config.EnableCors(cors);
+ 
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
@@ -24,6 +23,9 @@ namespace CourseLearning.WebAPI
             config.Formatters.JsonFormatter.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+            //var cors = new EnableCorsAttribute("*", "*", "*") { SupportsCredentials = true };
+            //config.EnableCors(cors);
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

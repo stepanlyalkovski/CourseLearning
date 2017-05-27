@@ -7,22 +7,42 @@
         'ngResource',
         'ui.bootstrap',
         'ngFileUpload',
-        'ui.tinymce'
+        'ui.tinymce',
+        'LocalStorageModule',
+        'angular-loading-bar'
     ])
         .config(config);
 
-    config.$inject = ['$routeProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider'];
+    config.$inject = ['$routeProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider', '$httpProvider', 'cfpLoadingBarProvider'];
 
-    function config($routeProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
+    function config($routeProvider, $locationProvider, $stateProvider, $urlRouterProvider, $httpProvider, cfpLoadingBarProvider) {
 
         $stateProvider
             .state('admin',
-            {
-                abstract: true,
-                url: '/admin',
-                templateUrl: '/App/admin/_master/_master.html',
-                controller: 'masterCtrl as masterCtrl'
-            })
+                {
+                    abstract: true,
+                    url: '/admin',
+                    templateUrl: '/App/admin/_master/_master.html',
+                    controller: 'masterCtrl as masterCtrl'
+                })
+            .state('landing',
+                {
+                    url: '/admin/landing',
+                    templateUrl: '/App/admin/login/landing.html',
+                    controller: 'landingCtrl as landingCtrl'
+                })
+            .state('login',
+                {
+                    url: '/admin/login',
+                    templateUrl: '/App/admin/login/login.html',
+                    controller: 'loginController as loginController'
+                })
+            .state('signup',
+                {
+                    url: '/admin/signup',
+                    templateUrl: '/App/admin/login/signup.html',
+                    controller: 'signupController as signupController'
+                })
             .state('admin.courseList',
             {
                 url: '/course',
@@ -53,11 +73,17 @@
                     templateUrl: '/App/admin/appComponents/storage/folders/folder.html',
                     controller: 'folderCtrl as folderCtrl'
                 })
-            .state('admin.article',
+            .state('admin.articleList',
                 {
                     url: '/article',
                     templateUrl: '/App/admin/appComponents/articles/articleList.html',
                     controller: 'articleListCtrl as articleListCtrl'
+                })
+            .state('admin.article',
+                {
+                    url: '/article/:id',
+                    templateUrl: '/App/admin/appComponents/articles/article.html',
+                    controller: 'articleCtrl as articleCtrl'
                 })
             .state('admin.questionList',
                 {
@@ -79,7 +105,7 @@
                     templateUrl: '/App/admin/appComponents/lesson/lesson.html',
                     controller: 'lessonCtrl as lessonCtrl'
                 });
-        $urlRouterProvider.otherwise('admin/course');
+        $urlRouterProvider.otherwise('admin/landing');
         //$routeProvider
         //    .when('/Application/test', {
         //        templateUrl: '/App/test/test.html',
@@ -90,5 +116,10 @@
             enabled: true,
             requireBase: false
         });
+
+        $httpProvider.interceptors.push('authInterceptorService');
+
+        cfpLoadingBarProvider.includeBar = true;
+        cfpLoadingBarProvider.includeSpinner = true;
     }
 })();

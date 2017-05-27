@@ -1,0 +1,12 @@
+﻿<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div ng-show="!!articleCtrl.message" class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            {{articleCtrl.message}}
+        </div>
+        <ng-form>
+            <textarea ng-model="articleCtrl.article.content" ui-tinymce="articleCtrl.tinymceOptions"></textarea>
+            <button class="btn btn-success btn-large" ng-click="articleCtrl.save()">Save</button>
+        </ng-form>
+    </div>
+</div>

@@ -38,7 +38,7 @@
 
     function lessonPageBuilderCtrl(modalSvc, appEnum) {
         var vm = this;
-
+        vm.isCollapsed = false;
         vm.settings = {
             addResourceClick: addResourceClick
         };
@@ -53,7 +53,6 @@
                 //TODO allow multiple resources from client
                 vm.lessonPage.storageResources =  []; //vm.lessonPage.storageResources ||
                 vm.lessonPage.storageResources.push(storageResource);
-                console.log(vm.lessonPage);
             });
         }
 

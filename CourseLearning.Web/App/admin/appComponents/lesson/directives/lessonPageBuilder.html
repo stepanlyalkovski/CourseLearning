@@ -1,15 +1,20 @@
 <h5>Page Builder</h5>
-{{vm.lessonPage}}
+<!--{{vm.lessonPage}}-->
 <div class="row">
     <div ng-if="!vm.lessonPage">
         No Page Selected
     </div>
-    <div ng-if="vm.lessonPage" class="lesson-page-builder">
+    <div ng-if="vm.lessonPage" class="lesson-page-builder col-md-12">
         You've selected following type: {{vm.lessonPage.lessonPageType}}
-        <div class="form-group">
-            <label for="title">Title</label>
-            <input id="title" class="form-control" type="text" ng-model="vm.lessonPage.title">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label for="title">Page Title</label>
+                    <input id="title" class="form-control" type="text" ng-model="vm.lessonPage.title">
+                </div>
+            </div>
         </div>
+        <hr>
         <div ng-if="vm.lessonPage.lessonPageType == vm.pageTypes.standard">
             <standard-page-builder settings="vm.settings" lesson-page="vm.lessonPage"></standard-page-builder>
         </div>
@@ -17,5 +22,4 @@
             <question-page-builder settings="vm.settings" lesson-page="vm.lessonPage"></question-page-builder>
         </div>
     </div>
-
 </div>

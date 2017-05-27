@@ -1,8 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using CourseLearning.Application.Interface;
 using CourseLearning.Application.Mapper;
 using CourseLearning.DAL.Interface;
 using CourseLearning.Model;
+using CourseLearning.Model.ContentStorage;
 using CourseLearning.Model.DTO;
 
 namespace CourseLearning.Application
@@ -22,6 +24,15 @@ namespace CourseLearning.Application
         {
             var user = _userMapper.ToEntity(userDto);
             _unitOfWork.Users.Add(user);
+            var storage = new UserStorage
+            {
+                Name = "storage",
+                StorageFolders = new List<StorageFolder>
+                {
+                    new StorageFolder { IsDefaultFolder = true, Name = "Main" }
+                }
+            };
+            user.UserStorage = storage;
             await _unitOfWork.CompleteAsync();
             return user.UserId;
         }

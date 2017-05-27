@@ -42,6 +42,14 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
         }
 
         [Route("")]
+        [HttpPut]
+        public async Task<IHttpActionResult> UpdateArticle(ArticleDTO article)
+        {
+            await _articleService.Update(article);
+            return Ok();
+        }
+
+        [Route("")]
         [HttpGet]
         public async Task<IHttpActionResult> GetCreatedArticles()
         {

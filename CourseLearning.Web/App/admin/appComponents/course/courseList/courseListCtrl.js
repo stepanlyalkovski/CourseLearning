@@ -12,7 +12,7 @@
         var vm = this;
 
         vm.createdCourse = {};
-        vm.title = 'courseListCtrl';
+        vm.title = 'Admin Course List';
         vm.courses = null;
 
         vm.saveCourseForm = saveCourseForm;
