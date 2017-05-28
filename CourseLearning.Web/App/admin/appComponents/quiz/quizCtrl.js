@@ -54,6 +54,7 @@
 
             modalInstance.result.then(function (question) {
                 console.log(question);
+                vm.quiz.quizQuestionList = vm.quiz.quizQuestionList || [];
                 var seqNumber = vm.quiz.quizQuestionList.length + 1;
                 var quizQuestion = {
                     quizId: vm.quiz.quizId,

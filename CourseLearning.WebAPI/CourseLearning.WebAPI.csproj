@@ -258,6 +258,8 @@
     <Compile Include="Controllers\AdminControllers\AdminQuizController.cs" />
     <Compile Include="Controllers\AdminControllers\AdminStorageFolderController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\CourseSessionController.cs" />
+    <Compile Include="Controllers\EnrollmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

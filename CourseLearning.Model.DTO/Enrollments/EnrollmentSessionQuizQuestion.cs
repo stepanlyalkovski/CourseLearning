@@ -6,11 +6,7 @@
 
         public int EnrollmentSessionQuizId { get; set; }
 
-        public QuestionDTO Question { get; set; }
-
         public int QuestionId { get; set; }
-
-        public QuestionAnswerDTO QuestionAnswer { get; set; }
 
         public int? QuestionAnswerId { get; set; }
     }

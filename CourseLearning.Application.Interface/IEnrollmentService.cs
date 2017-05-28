@@ -5,10 +5,12 @@ using CourseLearning.Model.Enrollments;
 
 namespace CourseLearning.Application.Interface
 {
-    public interface ICourseEnrollmentService
+    public interface IEnrollmentService
     {
         Task<IList<EnrollmentSessionDTO>> GetUserEnrollments();
 
         Task<EnrollmentSessionDTO> GetCourseEnrollment(int courseSessionId);
+
+        Task<EnrollmentSessionDTO> CreateEnrollment(int courseSessionId);
     }
 }

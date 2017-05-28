@@ -14,7 +14,7 @@ namespace CourseLearning.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
                 name: "ClientApp",
-                url: "Application/{action}",
+                url: "Application/{*.}",
                 defaults: new { controller = "Home", action = "Index"}
             );
 

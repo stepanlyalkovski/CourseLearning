@@ -14,7 +14,7 @@
         activate();
 
         function activate() {
-
+            console.log('test');
         }
     }
 })();

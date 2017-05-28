@@ -26,10 +26,13 @@
         }
     }
 
-    standardPageBuilderCtrl.$inject = ['apiUrlsBuilderSvc'];
-    function standardPageBuilderCtrl(apiUrlsBuilderSvc) {
+    standardPageBuilderCtrl.$inject = ['apiUrlsBuilderSvc', '$scope', '$sce'];
+    function standardPageBuilderCtrl(apiUrlsBuilderSvc, $scope, $sce) {
         var vm = this;
         vm.resourceUrl = apiUrlsBuilderSvc.getAdminUrl('file');
+        $scope.trustSrc = function(src) {
+            return $sce.trustAsResourceUrl(src);
+        }
     }
 
 })();

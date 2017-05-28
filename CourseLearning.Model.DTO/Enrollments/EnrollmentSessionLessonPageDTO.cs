@@ -6,11 +6,7 @@ namespace CourseLearning.Model.DTO.Enrollments
     {
         public int EnrollmentSessionLessonPageId { get; set; }
 
-        public EnrollmentSessionLessonDTO EnrollmentSessionLesson { get; set; }
-
         public int EnrollmentSessionLessonId { get; set; }
-
-        public LessonPageDTO LessonPage { get; set; }
 
         public int LessonPageId { get; set; }
 

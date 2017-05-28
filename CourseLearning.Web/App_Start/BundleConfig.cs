@@ -44,7 +44,8 @@ namespace CourseLearning.Web
                 .IncludeDirectory("~/App/shared", "*.js", true));
 
             bundles.Add(new ScriptBundle("~/bundles/clientApp")
-                .Include("~/App/appClient.js"));
+                .Include("~/App/appClient.js")
+                .IncludeDirectory("~/App/client", "*.js", true));
 
             bundles.Add(new ScriptBundle("~/bundles/adminApp")
                 .Include("~/App/appAdmin.js")

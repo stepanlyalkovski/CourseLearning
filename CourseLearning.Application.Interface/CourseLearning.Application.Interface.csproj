@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IArticleService.cs" />
-    <Compile Include="ICourseEnrollmentService.cs" />
+    <Compile Include="IEnrollmentService.cs" />
     <Compile Include="ICourseService.cs" />
     <Compile Include="IEntityService.cs" />
     <Compile Include="ILessonService.cs" />

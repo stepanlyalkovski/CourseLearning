@@ -16,5 +16,6 @@ namespace CourseLearning.Model.DTO
 
         public int CourseId { get; set; }
 
+        public CourseDTO Course { get; set; }
     }
 }

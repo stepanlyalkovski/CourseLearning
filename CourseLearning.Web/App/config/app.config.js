@@ -14,7 +14,9 @@
             file: '/api/admin/file'
         },
         apiUrls : {
-
+            course: '/api/client/course',
+            enrollment: '/api/client/enrollment',
+            courseSession: '/api/client/courseSession'
         }
     };
 

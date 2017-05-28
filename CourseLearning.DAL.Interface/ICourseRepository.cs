@@ -20,5 +20,7 @@ namespace CourseLearning.DAL.Interface
         void CreateCourseSession(CourseSession courseSession);
 
         Task UpdateCourseSessions();
+
+        Task<Course> GetFullCourse(int courseId);
     }
 }

@@ -53,7 +53,7 @@ namespace CourseLearning.DependencyResolver
             kernel.Bind<IQuestionService>().To<QuestionService>();
             kernel.Bind<IResourceService>().To<ResourceService>();
             kernel.Bind<IUserService>().To<UserService>();
-            kernel.Bind<ICourseEnrollmentService>().To<EnrollmentService>();
+            kernel.Bind<IEnrollmentService>().To<EnrollmentService>();
             
             // Repositories
 

@@ -5,14 +5,27 @@
     <div ng-if="vm.lessonPage.storageResources.length !== 0">
         <div>Resource added here. Name: {{vm.lessonPage.storageResources[0].name + ' type: ' +  vm.lessonPage.storageResources[0].mimeType}}</div>
         <!--{{vm.lessonPage.storageResources[0]}}-->
-        {{vm.lessonPage.storageResources[0]}}
-        <div>
-            {{vm.resourceUrl + '/' + vm.lessonPage.storageResources[0].storageResourceId}}
+        <!--{{vm.lessonPage.storageResources[0]}}-->
+        <!--<div>-->
+            <!--{{vm.resourceUrl + '/' + vm.lessonPage.storageResources[0].storageResourceId}}-->
+        <!--</div>-->
+        <div ng-if="vm.lessonPage.storageResources[0].mimeType.indexOf('video') !== -1">
+            <video width="480" height="320" controls="controls">
+                <source ng-src="{{trustSrc(vm.resourceUrl + '/' + vm.lessonPage.storageResources[0].storageResourceId)}}" type="{{vm.lessonPage.storageResources[0].mimeType}}">
+            </video>
         </div>
-        <!--<video width="480" height="320" controls="controls">
-            <source src="{{vm.resourceUrl + '/' + vm.lessonPage.storageResources[0].storageResourceId}}" type="{{vm.lessonPage.storageResources[0].mimeType}}">
-        </video>-->
-        <img width="400" height="400" ng-src="{{vm.resourceUrl + '/' + vm.lessonPage.storageResources[0].storageResourceId}}"/>
+        <div ng-if="vm.lessonPage.storageResources[0].mimeType.indexOf('audio') !== -1">
+            <audio controls>
+                <source ng-src="{{trustSrc(vm.resourceUrl + '/' + vm.lessonPage.storageResources[0].storageResourceId)}}" type="{{vm.lessonPage.storageResources[0].mimeType}}">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div>
+            {{vm.lessonPage.storageResources[0].mimeType}}
+        </div>
+        <div ng-if="vm.lessonPage.storageResources[0].mimeType.indexOf('image') !== -1">
+            <img width="400" height="400" ng-src="{{vm.resourceUrl + '/' + vm.lessonPage.storageResources[0].storageResourceId}}"/>
+        </div>
     </div>
     <button class="btn btn-default btn-block" ng-click="vm.settings.addResourceClick()">Add Resource</button>
 </div>

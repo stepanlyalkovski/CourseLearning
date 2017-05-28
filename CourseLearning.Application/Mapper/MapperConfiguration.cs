@@ -34,6 +34,7 @@ namespace CourseLearning.Application.Mapper
             ConfigureStorageResourceMap(config);
             ConfigureQuizMap(config);
             ConfigureLessonMap(config);
+            ConfigureEnrollmentMap(config);
         }
 
         private static void ConfigureCourseMap(IMapperConfigurationExpression configuration)

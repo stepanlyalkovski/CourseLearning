@@ -61,5 +61,14 @@ namespace CourseLearning.DAL
                 session.IsActive = false;
             }
         }
+
+        public async Task<Course> GetFullCourse(int courseId)
+        {
+            return await Context.Set<Course>()
+                .Include(c => c.Modules.Select(m => m.Articles))
+                .Include(c => c.Modules.Select(m => m.Lessons))
+                .Include(c => c.Modules.Select(m => m.Quizzes))
+                .FirstOrDefaultAsync(c => c.CourseId == courseId);
+        }
     }
 }

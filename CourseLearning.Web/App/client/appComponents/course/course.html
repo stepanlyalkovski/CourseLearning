@@ -1,0 +1,15 @@
+﻿<h2>{{courseCtrl.course.name}}</h2>
+<p ng-bind="courseCtrl.course.description"></p>
+<hr>
+<div ng-if="courseCtrl.enrollment != undefined">
+    <div ng-repeat="courseModule in courseCtrl.courseModules" class="list-group" >
+        <a ui-sref="client.module({id: courseModule.moduleId})" class="list-group-item">
+            <h3 class="list-group-item-heading">{{courseModule.name}}</h3>
+            <p class="list-group-item-text">{{courseModule.description}}</p>
+        </a>
+    </div>
+</div>
+<div ng-if="courseCtrl.enrollment == undefined">
+    <button class="btn btn-success" ng-click="courseCtrl.attendCourse()">Attend Course</button>
+</div>
+

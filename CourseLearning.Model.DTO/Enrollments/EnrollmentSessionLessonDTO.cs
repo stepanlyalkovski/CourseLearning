@@ -9,11 +9,7 @@ namespace CourseLearning.Model.DTO.Enrollments
 
         public bool IsCompleted { get; set; }
 
-        public EnrollmentSessionModuleDTO EnrollmentSessionModule { get; set; }
-
         public int EnrollmentSessionModuleId { get; set; }
-
-        public LessonDTO Lesson { get; set; }
 
         public int LessonId { get; set; }
 

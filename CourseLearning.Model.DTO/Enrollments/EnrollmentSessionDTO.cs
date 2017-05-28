@@ -10,8 +10,6 @@ namespace CourseLearning.Model.DTO.Enrollments
 
         public int CourseSessionId { get; set; }
 
-        public CourseSessionDTO CourseSession { get; set; }
-
         public int UserId { get; set; }
 
         public IList<EnrollmentSessionModuleDTO> EnrollmentSessionModules { get; set; }

@@ -27,12 +27,6 @@ namespace CourseLearning.Application
             _unitOfWork = unitOfWork;
         }
 
-        public int Test()
-        {
-            Debug.Write("-------------------- Test debug write!!! --------------------");
-            return 999;
-        }
-
         public async Task<IList<CourseDTO>> GetUserCreatedCoursesAsync(int userId)
         {
             var courses = await _unitOfWork.Courses.GetUserCreatedCourses(userId);
@@ -85,7 +79,7 @@ namespace CourseLearning.Application
 
         public async Task<IList<CourseSessionDTO>> GetUserCourseSessions()
         {
-            var user = await UserHelper.GetCurrentUser();
+            var user = await UserHelper.GetCurrentUser(_unitOfWork);
             var sessions = await _unitOfWork.Courses.GetCourseSessionsAsync(user.UserId);
             return sessionMapper.ToEntitiesDTO(sessions);
         }
@@ -169,7 +163,7 @@ namespace CourseLearning.Application
 
         private async void ValiteCourseCreator(CourseDTO course)
         {
-            var currentUser = await UserHelper.GetCurrentUser();
+            var currentUser = await UserHelper.GetCurrentUser(_unitOfWork);
             if (currentUser.UserId != course.CreatorId)
             {
                 throw new ArgumentException("Course doesn't belong to current user", nameof(course.Creator));

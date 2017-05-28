@@ -10,8 +10,6 @@ namespace CourseLearning.Application.Interface
 {
     public interface ICourseService : IEntityService<CourseDTO>
     {
-        int Test();
-
         Task<IList<CourseDTO>> GetUserCreatedCoursesAsync(int userId);
 
         Task<int> CreateCourseSession(CourseSessionDTO courseSessionDto);

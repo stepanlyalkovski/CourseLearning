@@ -28,16 +28,21 @@ namespace CourseLearning.WebAPI
             //config.EnableCors(cors);
 
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                name: "AdminApi",
+                routeTemplate: "api/admin/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
 
             config.Routes.MapHttpRoute(
-                name: "AdminApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+            name: "ClientApi",
+            routeTemplate: "api/client/{controller}/{id}",
+            defaults: new { id = RouteParameter.Optional }
+        );
+            config.Routes.MapHttpRoute(
+            name: "DefaultApi",
+            routeTemplate: "api/{controller}/{id}",
+            defaults: new { id = RouteParameter.Optional }
+        );
         }
     }
 }

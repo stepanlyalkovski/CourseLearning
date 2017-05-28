@@ -11,17 +11,10 @@ namespace CourseLearning.Application.Helpers
 {
     public class UserHelper
     {
-        private static IUnitOfWork _unitOfWork;
-
-        UserHelper(IUnitOfWork unitOfWork)
-        {
-            _unitOfWork = unitOfWork;
-        }
-
-        public static async Task<User> GetCurrentUser()
+        public static async Task<User> GetCurrentUser(IUnitOfWork unitOfWork)
         {
             string email = HttpContext.Current.User.Identity.Name; 
-            return await _unitOfWork.Users.GetAsync(email);
+            return await unitOfWork.Users.GetAsync(email);
         }
     }
 }

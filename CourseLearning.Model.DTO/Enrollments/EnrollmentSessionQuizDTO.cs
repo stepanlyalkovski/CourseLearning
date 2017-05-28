@@ -8,11 +8,7 @@ namespace CourseLearning.Model.DTO.Enrollments
 
         public int QuizId { get; set; }
 
-        public QuizDTO Quiz { get; set; }
-
         public int EnrollmentSessionModuleId { get; set; }
-
-        public EnrollmentSessionModuleDTO EnrollmentSessionModule { get; set; }
 
         public EnrollmentSessionQuizQuestionDTO EnrollmentSessionQuizQuestion { get; set; }
 

@@ -9,7 +9,8 @@
         'ngFileUpload',
         'ui.tinymce',
         'LocalStorageModule',
-        'angular-loading-bar'
+        'angular-loading-bar',
+        'ngSanitize'
     ])
         .config(config);
 

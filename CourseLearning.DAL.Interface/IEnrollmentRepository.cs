@@ -4,7 +4,7 @@ using CourseLearning.Model.Enrollments;
 
 namespace CourseLearning.DAL.Interface
 {
-    public interface IEnrollmentRepository
+    public interface IEnrollmentRepository : IRepository<EnrollmentSession>
     {
         Task<IList<EnrollmentSession>> GetUserEnrollments(int userId);
 

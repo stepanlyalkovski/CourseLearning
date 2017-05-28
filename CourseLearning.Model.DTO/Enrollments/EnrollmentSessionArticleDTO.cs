@@ -8,8 +8,6 @@
 
         public int ArticleId { get; set; }
 
-        public ArticleDTO Article { get; set; }
-
         public int EnrollmentSessionModuleId { get; set; }
     }
 }

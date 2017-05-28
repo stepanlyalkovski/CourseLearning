@@ -99,12 +99,11 @@ namespace CourseLearning.WebAPI.Controllers.AdminControllers
                 return result;
             }
 
-            response.Content = new PushStreamContent(resourceFileStream.WriteToVideoStream, new MediaTypeHeaderValue(resource.MimeType));
 
-            //if (MimeMapping.GetMimeMapping(resource.MimeType).Contains("video"))
-            //{
-            //    response.Content = new PushStreamContent(resourceFileStream.WriteToVideoStream, new MediaTypeHeaderValue(resource.MimeType));
-            //}
+            if (resource.MimeType.Contains("video") || resource.MimeType.Contains("audio"))
+            {
+                response.Content = new PushStreamContent(resourceFileStream.WriteToVideoStream, new MediaTypeHeaderValue(resource.MimeType));
+            }
 
             return response;
         }
